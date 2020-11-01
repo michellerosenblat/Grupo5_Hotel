@@ -19,12 +19,13 @@ namespace Grupo5_Hotel
         public ClienteForm()
         {
             InitializeComponent();
-            clienteServicio = new ClienteServicio();
+            
             
         }
 
         private void ClienteForm_Load(object sender, EventArgs e)
         {
+            clienteServicio = new ClienteServicio();
             altaForm = new AltaClienteForm();
         }
 

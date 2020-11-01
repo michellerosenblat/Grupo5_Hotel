@@ -32,12 +32,16 @@ namespace Grupo5_Hotel
                 {
                     mensaje += error + "\n";
                 }
-                MessageBox.Show(mensaje);
             }
-            else {
+            if (mensaje != "")
+             {
                 clienteServicio.InsertarCliente(CrearCliente());
                 MessageBox.Show("Se ha ingresado correctamente el cliente");
                 BorrarCampos();
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
             }
         }
         private List <string> ValidarDatos()
