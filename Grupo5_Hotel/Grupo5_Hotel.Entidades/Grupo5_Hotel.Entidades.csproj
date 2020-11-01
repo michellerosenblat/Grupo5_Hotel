@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Hotel.cs" />
     <Compile Include="Entidades\Persona.cs" />
     <Compile Include="Entidades\TransactionResult.cs" />
     <Compile Include="Excepciones\ClienteExistenteException.cs" />

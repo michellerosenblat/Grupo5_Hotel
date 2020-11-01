@@ -37,9 +37,10 @@
             // 
             // btnCliente
             // 
-            this.btnCliente.Location = new System.Drawing.Point(280, 83);
+            this.btnCliente.Location = new System.Drawing.Point(249, 66);
+            this.btnCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(177, 49);
+            this.btnCliente.Size = new System.Drawing.Size(157, 39);
             this.btnCliente.TabIndex = 0;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
@@ -47,27 +48,31 @@
             // 
             // btnReserva
             // 
-            this.btnReserva.Location = new System.Drawing.Point(280, 164);
+            this.btnReserva.Location = new System.Drawing.Point(249, 131);
+            this.btnReserva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReserva.Name = "btnReserva";
-            this.btnReserva.Size = new System.Drawing.Size(177, 54);
+            this.btnReserva.Size = new System.Drawing.Size(157, 43);
             this.btnReserva.TabIndex = 1;
             this.btnReserva.Text = "Reserva";
             this.btnReserva.UseVisualStyleBackColor = true;
             // 
             // btnHotel
             // 
-            this.btnHotel.Location = new System.Drawing.Point(280, 255);
+            this.btnHotel.Location = new System.Drawing.Point(249, 204);
+            this.btnHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHotel.Name = "btnHotel";
-            this.btnHotel.Size = new System.Drawing.Size(177, 52);
+            this.btnHotel.Size = new System.Drawing.Size(157, 42);
             this.btnHotel.TabIndex = 2;
             this.btnHotel.Text = "Hotel";
             this.btnHotel.UseVisualStyleBackColor = true;
+            this.btnHotel.Click += new System.EventHandler(this.btnHotel_Click);
             // 
             // btnHabitacion
             // 
-            this.btnHabitacion.Location = new System.Drawing.Point(280, 335);
+            this.btnHabitacion.Location = new System.Drawing.Point(249, 268);
+            this.btnHabitacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHabitacion.Name = "btnHabitacion";
-            this.btnHabitacion.Size = new System.Drawing.Size(177, 50);
+            this.btnHabitacion.Size = new System.Drawing.Size(157, 40);
             this.btnHabitacion.TabIndex = 3;
             this.btnHabitacion.Text = "Habitación";
             this.btnHabitacion.UseVisualStyleBackColor = true;
@@ -75,22 +80,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(276, 31);
+            this.label1.Location = new System.Drawing.Point(245, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 20);
+            this.label1.Size = new System.Drawing.Size(167, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Elija una opción de menú";
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHabitacion);
             this.Controls.Add(this.btnHotel);
             this.Controls.Add(this.btnReserva);
             this.Controls.Add(this.btnCliente);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Menu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Menu_Load);
