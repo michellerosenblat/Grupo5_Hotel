@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grupo5_Hotel.Datos
 {
-    public class Class1
+    public class HotelesMapper
     {
     }
 }

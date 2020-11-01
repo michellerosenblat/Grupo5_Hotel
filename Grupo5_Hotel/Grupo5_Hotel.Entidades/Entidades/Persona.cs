@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,10 +13,10 @@ namespace Grupo5_Hotel.Entidades
         protected string nombre;
         protected string apellido;
         protected string direccion;
-        protected long telefono;
+        protected string telefono;
         protected string mail;
 
-        public Persona(int id, string nombre, string apellido, string direccion, long telefono, string mail)
+        public Persona(int id, string nombre, string apellido, string direccion, string telefono, string mail)
         {
             this.id = id;
             this.nombre = nombre;
@@ -25,6 +26,7 @@ namespace Grupo5_Hotel.Entidades
             this.mail = mail;
         }
 
+        public Persona() { }
         public string Nombre { 
             get 
             {
@@ -68,7 +70,7 @@ namespace Grupo5_Hotel.Entidades
                 this.mail = value;
             }
         }
-        public long Telefono
+        public string Telefono
         {
             get
             {
@@ -77,6 +79,17 @@ namespace Grupo5_Hotel.Entidades
             set
             {
                 this.telefono = value;
+            }
+        }
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+            set
+            {
+                this.id = value;
             }
         }
     }
