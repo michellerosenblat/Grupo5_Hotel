@@ -15,15 +15,29 @@ namespace Grupo5_Hotel
     public partial class HotelesForm : Form
     {
         HotelServicio hotelServicio;
+        AltaHotelForm altaHotel;
         public HotelesForm()
         {
             InitializeComponent();
-            hotelServicio = new HotelServicio();
+            altaHotel = new AltaHotelForm();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataHoteles.DataSource = hotelServicio.TraerHoteles();
+            ListHoteles.DataSource = hotelServicio.TraerHoteles();
+        }
+
+        private void HotelesForm_Load(object sender, EventArgs e)
+        {
+            hotelServicio = new HotelServicio();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            altaHotel.Owner = this;
+            altaHotel.Show();
+            this.Hide();
         }
     }
 }

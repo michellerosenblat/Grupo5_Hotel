@@ -22,11 +22,11 @@ namespace Grupo5_Hotel.Datos
         {
             return JsonConvert.DeserializeObject<List<Hotel>>(json);
         }
-        private TransactionResult MapResultado(string json)
+        public TransactionResult MapResultado(string json)
         {
             return JsonConvert.DeserializeObject<TransactionResult>(json);
         }
-        private NameValueCollection ReverseMap(Hotel hotel)
+        public NameValueCollection ReverseMap(Hotel hotel)
         {
             NameValueCollection n = new NameValueCollection();
             n.Add("estrellas", hotel.Estrellas.ToString());

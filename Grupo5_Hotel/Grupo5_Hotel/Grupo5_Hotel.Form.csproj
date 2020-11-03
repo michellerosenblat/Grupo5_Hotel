@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaHotelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaHotelForm.Designer.cs">
+      <DependentUpon>AltaHotelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AltaClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AltaHotelForm.resx">
+      <DependentUpon>AltaHotelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltaClienteForm.resx">
       <DependentUpon>AltaClienteForm.cs</DependentUpon>
     </EmbeddedResource>
