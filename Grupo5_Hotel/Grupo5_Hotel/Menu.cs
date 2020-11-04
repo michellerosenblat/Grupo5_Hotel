@@ -14,11 +14,13 @@ namespace Grupo5_Hotel
     {
         private ClienteForm clienteForm;
         private HotelesForm hotelesForm;
+        private HabitacionForm habitacionForm;
         public Menu()
         {
             InitializeComponent();
             clienteForm = new ClienteForm();
             hotelesForm = new HotelesForm();
+            habitacionForm = new HabitacionForm();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -38,6 +40,13 @@ namespace Grupo5_Hotel
         {
             hotelesForm.Owner = this;
             hotelesForm.Show();
+            this.Hide();
+        }
+
+        private void btnHabitacion_Click(object sender, EventArgs e)
+        {
+            habitacionForm.Owner = this;
+            habitacionForm.Show();
             this.Hide();
         }
     }

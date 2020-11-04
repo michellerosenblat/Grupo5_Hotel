@@ -35,10 +35,10 @@ namespace Grupo5_Hotel.Negocio
                 throw new ClienteExistenteException(cliente.Id);
             }
             else {
-                TransactionResult resultado = mapper.Insert(cliente);
-                if (!resultado.IsOk)
+                TransactionResult result = mapper.Insert(cliente);
+                if (!result.IsOk)
                 {
-                    throw new Exception("Hubo un error en la petición al servidor. Detalle: " + resultado.Error);
+                    throw new ErrorServidorException(result.Error);
                 }
                 else
                 {

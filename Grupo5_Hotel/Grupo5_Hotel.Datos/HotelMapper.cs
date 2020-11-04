@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Grupo5_Hotel.Datos
 {
-    public class HotelesMapper
+    public class HotelMapper
     {
 
         public List<Hotel> TraerHoteles()

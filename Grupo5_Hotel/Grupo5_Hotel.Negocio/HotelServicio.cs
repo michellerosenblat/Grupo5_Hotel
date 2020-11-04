@@ -11,11 +11,11 @@ namespace Grupo5_Hotel.Negocio
 {
     public class HotelServicio
     {
-        HotelesMapper mapper;
+        HotelMapper mapper;
         List<Hotel> cacheHoteles;
         public HotelServicio()
         {
-            mapper = new HotelesMapper();
+            mapper = new HotelMapper();
             RefrescarCache();
         }
 
@@ -36,10 +36,10 @@ namespace Grupo5_Hotel.Negocio
             }
             else
             {
-                TransactionResult resultado = mapper.Insert(hotel);
-                if (!resultado.IsOk)
+                TransactionResult result = mapper.Insert(hotel);
+                if (!result.IsOk)
                 {
-                    throw new Exception("Hubo un error en la petición al servidor. Detalle: " + resultado.Error);
+                    throw new ErrorServidorException(result.Error);
                 }
                 else
                 {

@@ -26,14 +26,14 @@ namespace Grupo5_Hotel
             comboEstrellas.Items.Add("5");
 
         }
-
-        private List<string> ValidarDatos()
+        private string Errores
         {
-            List<string> errores = new List<string>();
-            errores.Add(Validacion.ValidarString(textNombre.Text, "Nombre"));
-            errores.Add(Validacion.ValidarString(textDireccion.Text, "Dirección"));
-            errores.Add(Validacion.ValidarNumero(comboEstrellas.Text, "Estrellas"));
-            return errores;
+            get
+            {
+                return (Validacion.ValidarString(textNombre.Text, "Nombre") +
+                        Validacion.ValidarString(textDireccion.Text, "Dirección") +
+                        Validacion.ValidarNumero(comboEstrellas.Text, "Estrellas"));       
+            }
         }
         private Hotel CrearHotel()
         {   
@@ -52,20 +52,21 @@ namespace Grupo5_Hotel
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            string mensaje = "";
-            List<string> errores = ValidarDatos();
-            if (errores.Any())
+            try
             {
-                foreach (string error in errores)
-                {
-                    mensaje += error + "\n";
-                }
-                MessageBox.Show(mensaje);
-            }
-            else if (mensaje == "")
-            {
+                if (!string.IsNullOrEmpty(this.Errores))
+                    throw new FormatException("Error en los campos: " + "\n" + this.Errores);
                 hotelServicio.InsertarHotel(CrearHotel());
-                MessageBox.Show("Se ha ingresado correctamente el cliente");
+                MessageBox.Show("Se ha ingresado correctamente el hotel");
+                BorrarCampos();
+            }
+            catch (FormatException fex)
+            {
+                MessageBox.Show(fex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

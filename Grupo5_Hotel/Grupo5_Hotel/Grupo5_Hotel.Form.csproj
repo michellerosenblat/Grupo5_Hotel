@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaHabitacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaHabitacionForm.Designer.cs">
+      <DependentUpon>AltaHabitacionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AltaHotelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HabitacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HabitacionForm.Designer.cs">
+      <DependentUpon>HabitacionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HotelesForm.cs">
       <SubType>Form</SubType>
@@ -86,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClienteForm.resx">
       <DependentUpon>ClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HabitacionForm.resx">
+      <DependentUpon>HabitacionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HotelesForm.resx">
       <DependentUpon>HotelesForm.cs</DependentUpon>
