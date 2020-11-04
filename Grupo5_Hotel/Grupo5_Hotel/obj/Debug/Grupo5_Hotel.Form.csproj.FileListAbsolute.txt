@@ -42,3 +42,5 @@ C:\Users\marco\Desktop\bender\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel\obj\Debug\G
 C:\Users\marco\Desktop\bender\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel\obj\Debug\Grupo5_Hotel.exe
 C:\Users\marco\Desktop\bender\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel\obj\Debug\Grupo5_Hotel.pdb
 C:\Users\marco\Desktop\bender\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel\obj\Debug\Grupo5_Hotel.AltaHotelForm.resources
+C:\Users\Michu\Documents\GitHub\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel\obj\Debug\Grupo5_Hotel.AltaHotelForm.resources
+C:\Users\Michu\Documents\GitHub\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel\obj\Debug\Grupo5_Hotel.HotelesForm.resources

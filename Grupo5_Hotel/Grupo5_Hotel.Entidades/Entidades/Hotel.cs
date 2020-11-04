@@ -20,9 +20,6 @@ namespace Grupo5_Hotel.Entidades.Entidades
         public int estrellas;
         [DataMember]
         public bool amenities;
-
-
-
         public Hotel() { }
         public Hotel(int id, string nombre, string direccion, int estrellas, bool amenities) 
         {
@@ -32,7 +29,6 @@ namespace Grupo5_Hotel.Entidades.Entidades
             this.estrellas = estrellas;
             this.amenities = amenities;
         }
-
         public int Id
         {
             get
@@ -66,7 +62,6 @@ namespace Grupo5_Hotel.Entidades.Entidades
                 this.direccion = value;
             }
         }
-
         public int Estrellas
         {
             get
@@ -89,12 +84,9 @@ namespace Grupo5_Hotel.Entidades.Entidades
                 this.amenities = value;
             }
         }
-
-
         public override string ToString()
         {
             return id + " "+ nombre + " Dirección:" + direccion + " Estrellas:" +estrellas + " " + amenities;
         }
-
     }
 }

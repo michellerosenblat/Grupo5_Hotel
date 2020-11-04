@@ -25,7 +25,6 @@ namespace Grupo5_Hotel.Entidades
             this.telefono = telefono;
             this.mail = mail;
         }
-
         public Persona() { }
         public string Nombre { 
             get 
