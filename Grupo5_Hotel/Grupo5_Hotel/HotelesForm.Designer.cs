@@ -30,46 +30,50 @@
         {
             this.ListHoteles = new System.Windows.Forms.ListBox();
             this.BotonListar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ListHoteles
             // 
             this.ListHoteles.FormattingEnabled = true;
-            this.ListHoteles.ItemHeight = 16;
-            this.ListHoteles.Location = new System.Drawing.Point(173, 113);
+            this.ListHoteles.ItemHeight = 20;
+            this.ListHoteles.Location = new System.Drawing.Point(195, 141);
+            this.ListHoteles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ListHoteles.Name = "ListHoteles";
-            this.ListHoteles.Size = new System.Drawing.Size(836, 196);
+            this.ListHoteles.Size = new System.Drawing.Size(940, 244);
             this.ListHoteles.TabIndex = 0;
             // 
             // BotonListar
             // 
-            this.BotonListar.Location = new System.Drawing.Point(22, 113);
+            this.BotonListar.Location = new System.Drawing.Point(25, 141);
+            this.BotonListar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BotonListar.Name = "BotonListar";
-            this.BotonListar.Size = new System.Drawing.Size(114, 46);
+            this.BotonListar.Size = new System.Drawing.Size(128, 58);
             this.BotonListar.TabIndex = 1;
             this.BotonListar.Text = "Listar Hoteles";
             this.BotonListar.UseVisualStyleBackColor = true;
             this.BotonListar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnAgregar
             // 
-            this.button2.Location = new System.Drawing.Point(22, 189);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 47);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Agregar Hotel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAgregar.Location = new System.Drawing.Point(25, 236);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(128, 59);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar Hotel";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.button2_Click);
             // 
             // HotelesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 450);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1235, 562);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.BotonListar);
             this.Controls.Add(this.ListHoteles);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HotelesForm";
             this.Text = "HotelesForm";
             this.Load += new System.EventHandler(this.HotelesForm_Load);
@@ -81,7 +85,7 @@
 
         private System.Windows.Forms.ListBox ListHoteles;
         private System.Windows.Forms.Button BotonListar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataHoteles;
     }
 }
