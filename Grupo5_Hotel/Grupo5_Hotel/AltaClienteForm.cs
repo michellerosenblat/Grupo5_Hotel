@@ -22,37 +22,36 @@ namespace Grupo5_Hotel
             clienteServicio = new ClienteServicio();
             
         }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string mensaje="";
-            List <string> errores = ValidarDatos();
-            if (errores.Any()) {
-                foreach (string error in errores)
-                {
-                    mensaje += error + "\n";
-                }
-            }
-            if (mensaje != "")
-             {
+            try {
+                if (!string.IsNullOrEmpty(this.Errores))
+                    throw new FormatException("Error en los campos: " + "\n"+this.Errores);
                 clienteServicio.InsertarCliente(CrearCliente());
                 MessageBox.Show("Se ha ingresado correctamente el cliente");
                 BorrarCampos();
             }
-            else
+            catch (FormatException fex)
             {
-                MessageBox.Show(mensaje);
+                MessageBox.Show(fex.Message);
             }
-        }
-        private List <string> ValidarDatos()
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            }
+        
+        private string Errores
         {
-            List<string> errores = new List<string>();
-            errores.Add(Validacion.ValidarString(txtNombre.Text, "Nombre"));
-            errores.Add (Validacion.ValidarString(txtApellido.Text, "Apellido"));
-            errores.Add (Validacion.ValidarString(txtDireccion.Text, "Dirección"));
-            errores.Add (Validacion.ValidarNumero(txtTelefono.Text, "Teléfono"));
-            errores.Add (Validacion.ValidarString(txtMail.Text, "Mail"));
-            return errores;
+            get
+            {
+                return (Validacion.ValidarString(txtNombre.Text, "Nombre") +
+                        Validacion.ValidarString(txtApellido.Text, "Apellido") +
+                        Validacion.ValidarString(txtDireccion.Text, "Dirección") +
+                        Validacion.ValidarNumero(txtTelefono.Text, "Teléfono") +
+                        Validacion.ValidarString(txtMail.Text, "Mail"));
+            }
         }
         private Cliente CrearCliente()
         {
@@ -85,3 +84,4 @@ namespace Grupo5_Hotel
         }
     }
 }
+

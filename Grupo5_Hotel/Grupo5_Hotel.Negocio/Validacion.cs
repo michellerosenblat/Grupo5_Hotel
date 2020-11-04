@@ -14,10 +14,10 @@ namespace Grupo5_Hotel.Negocio
             string error="";
             if (!int.TryParse(input, out nro))
             {
-                error = "El campo " + campoEsperado + " debe ser numérico" + "\n";
+                error = campoEsperado + " debe ser numérico" + "\n";
             }
             else if (nro < 0){
-                error = "El campo " + campoEsperado + " debe ser positivo" + "\n";
+                error = campoEsperado + " debe ser positivo" + "\n";
             }
             return error;
         }
@@ -26,7 +26,7 @@ namespace Grupo5_Hotel.Negocio
             string error = "";
             if (input == "")
             {
-                error = "El campo " + campoEsperado + " no puede ser vacío" + "\n";
+                error =campoEsperado + " no puede ser vacío" + "\n";
             }
             return error;
         }
