@@ -31,6 +31,7 @@
             this.ListHoteles = new System.Windows.Forms.ListBox();
             this.BotonListar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ListHoteles
@@ -65,11 +66,22 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(26, 468);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(127, 51);
+            this.btnAtras.TabIndex = 3;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // HotelesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 562);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.BotonListar);
             this.Controls.Add(this.ListHoteles);
@@ -87,5 +99,6 @@
         private System.Windows.Forms.Button BotonListar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataHoteles;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

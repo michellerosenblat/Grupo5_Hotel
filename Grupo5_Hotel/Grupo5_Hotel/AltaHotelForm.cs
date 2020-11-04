@@ -77,5 +77,11 @@ namespace Grupo5_Hotel
             comboEstrellas.SelectedIndex = -1;
             checkBox1.Checked = false;
         }
+
+        private void buttonVolver_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
     }
 }

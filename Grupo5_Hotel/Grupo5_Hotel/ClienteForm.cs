@@ -40,5 +40,11 @@ namespace Grupo5_Hotel
             altaForm.Show();
             this.Hide();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
     }
 }
