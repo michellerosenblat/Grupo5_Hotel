@@ -1,6 +1,0 @@
-C:\Users\Michu\Documents\GitHub\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel.Entidades\bin\Debug\Grupo5_Hotel.Entidades.dll
-C:\Users\Michu\Documents\GitHub\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel.Entidades\bin\Debug\Grupo5_Hotel.Entidades.pdb
-C:\Users\Michu\Documents\GitHub\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel.Entidades\obj\Debug\Grupo5_Hotel.Entidades.csproj.CoreCompileInputs.cache
-C:\Users\Michu\Documents\GitHub\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel.Entidades\obj\Debug\Grupo5_Hotel.Entidades.dll
-C:\Users\Michu\Documents\GitHub\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel.Entidades\obj\Debug\Grupo5_Hotel.Entidades.pdb
-C:\Users\Michu\Documents\GitHub\Grupo5_Hotel\Grupo5_Hotel\Grupo5_Hotel.Entidades\obj\Debug\Grupo5_Hotel.Entidades.csprojAssemblyReference.cache
