@@ -54,7 +54,7 @@
             // 
             this.btnAtras.Location = new System.Drawing.Point(78, 369);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(127, 51);
+            this.btnAtras.Size = new System.Drawing.Size(139, 57);
             this.btnAtras.TabIndex = 6;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             // 
             this.btnAlta.Location = new System.Drawing.Point(78, 187);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(127, 49);
+            this.btnAlta.Size = new System.Drawing.Size(139, 58);
             this.btnAlta.TabIndex = 5;
             this.btnAlta.Text = "Alta Habitaciones";
             this.btnAlta.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             // 
             this.btnListar.Location = new System.Drawing.Point(78, 23);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(127, 51);
+            this.btnListar.Size = new System.Drawing.Size(139, 58);
             this.btnListar.TabIndex = 4;
             this.btnListar.Text = "Listar Habitaciones";
             this.btnListar.UseVisualStyleBackColor = true;

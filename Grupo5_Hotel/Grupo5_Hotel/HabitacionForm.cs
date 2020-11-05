@@ -28,9 +28,14 @@ namespace Grupo5_Hotel
         }
         private void LlenarComboHoteles(List <Hotel> hoteles)
         {
+            string nombre;
             foreach (Hotel hotel in hoteles)
             {
-                cmbHoteles.Items.Add(hotel.Nombre);
+                nombre = hotel.Nombre;
+                if (nombre != null)
+                {
+                    cmbHoteles.Items.Add(nombre);
+                }
             }
         }
     }

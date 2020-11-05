@@ -33,11 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Amenities = new System.Windows.Forms.Label();
+            this.lblAmenities = new System.Windows.Forms.Label();
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.comboEstrellas = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rbSi = new System.Windows.Forms.RadioButton();
+            this.rbNo = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // textNombre
@@ -84,21 +86,21 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Estrellas";
             // 
-            // Amenities
+            // lblAmenities
             // 
-            this.Amenities.AutoSize = true;
-            this.Amenities.Location = new System.Drawing.Point(143, 254);
-            this.Amenities.Name = "Amenities";
-            this.Amenities.Size = new System.Drawing.Size(79, 20);
-            this.Amenities.TabIndex = 8;
-            this.Amenities.Text = "Amenities";
+            this.lblAmenities.AutoSize = true;
+            this.lblAmenities.Location = new System.Drawing.Point(143, 250);
+            this.lblAmenities.Name = "lblAmenities";
+            this.lblAmenities.Size = new System.Drawing.Size(79, 20);
+            this.lblAmenities.TabIndex = 8;
+            this.lblAmenities.Text = "Amenities";
             // 
             // buttonAgregar
             // 
-            this.buttonAgregar.Location = new System.Drawing.Point(146, 319);
+            this.buttonAgregar.Location = new System.Drawing.Point(90, 341);
             this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(101, 29);
+            this.buttonAgregar.Size = new System.Drawing.Size(107, 42);
             this.buttonAgregar.TabIndex = 9;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = true;
@@ -106,10 +108,10 @@
             // 
             // buttonVolver
             // 
-            this.buttonVolver.Location = new System.Drawing.Point(287, 318);
+            this.buttonVolver.Location = new System.Drawing.Point(504, 340);
             this.buttonVolver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonVolver.Name = "buttonVolver";
-            this.buttonVolver.Size = new System.Drawing.Size(97, 30);
+            this.buttonVolver.Size = new System.Drawing.Size(101, 43);
             this.buttonVolver.TabIndex = 10;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.UseVisualStyleBackColor = true;
@@ -127,23 +129,47 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(231, 254);
+            this.checkBox1.Location = new System.Drawing.Point(231, 249);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(22, 21);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // rbSi
+            // 
+            this.rbSi.AutoSize = true;
+            this.rbSi.Location = new System.Drawing.Point(678, 140);
+            this.rbSi.Name = "rbSi";
+            this.rbSi.Size = new System.Drawing.Size(48, 24);
+            this.rbSi.TabIndex = 0;
+            this.rbSi.TabStop = true;
+            this.rbSi.Text = "Si";
+            this.rbSi.UseVisualStyleBackColor = true;
+            // 
+            // rbNo
+            // 
+            this.rbNo.AutoSize = true;
+            this.rbNo.Location = new System.Drawing.Point(678, 171);
+            this.rbNo.Name = "rbNo";
+            this.rbNo.Size = new System.Drawing.Size(54, 24);
+            this.rbNo.TabIndex = 1;
+            this.rbNo.TabStop = true;
+            this.rbNo.Text = "No";
+            this.rbNo.UseVisualStyleBackColor = true;
+            // 
             // AltaHotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 438);
+            this.ClientSize = new System.Drawing.Size(866, 439);
+            this.Controls.Add(this.rbNo);
+            this.Controls.Add(this.rbSi);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.comboEstrellas);
             this.Controls.Add(this.buttonVolver);
             this.Controls.Add(this.buttonAgregar);
-            this.Controls.Add(this.Amenities);
+            this.Controls.Add(this.lblAmenities);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -165,10 +191,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label Amenities;
+        private System.Windows.Forms.Label lblAmenities;
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Button buttonVolver;
         private System.Windows.Forms.ComboBox comboEstrellas;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton rbSi;
+        private System.Windows.Forms.RadioButton rbNo;
     }
 }

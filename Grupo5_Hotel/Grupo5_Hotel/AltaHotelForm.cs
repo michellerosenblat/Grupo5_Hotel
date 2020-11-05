@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,7 +25,6 @@ namespace Grupo5_Hotel
             comboEstrellas.Items.Add("3");
             comboEstrellas.Items.Add("4");
             comboEstrellas.Items.Add("5");
-
         }
         private string Errores
         {
@@ -36,8 +36,10 @@ namespace Grupo5_Hotel
             }
         }
         private Hotel CrearHotel()
-        {   
-            return new Hotel(hotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex , checkBox1.Checked);
+        {
+            //return new Hotel(hotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex , checkBox1.Checked);
+            return new Hotel(hotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex, rbSi.Checked);
+           
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -47,18 +49,25 @@ namespace Grupo5_Hotel
 
         private void AltaHotelForm_Load(object sender, EventArgs e)
         {
-
+            rbSi.AutoCheck = false;
+            rbNo.AutoCheck = false;
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (!rbSi.Checked && !rbNo.Checked)
+                {
+                    lblAmenities.ForeColor = System.Drawing.Color.Red;
+                }
+                else {
                 if (!string.IsNullOrEmpty(this.Errores))
                     throw new FormatException("Error en los campos: " + "\n" + this.Errores);
                 hotelServicio.InsertarHotel(CrearHotel());
                 MessageBox.Show("Se ha ingresado correctamente el hotel");
                 BorrarCampos();
+            }
             }
             catch (FormatException fex)
             {
