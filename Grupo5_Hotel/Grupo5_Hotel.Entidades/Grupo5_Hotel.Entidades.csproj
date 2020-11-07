@@ -46,9 +46,11 @@
     <Compile Include="Entidades\Habitacion.cs" />
     <Compile Include="Entidades\Hotel.cs" />
     <Compile Include="Entidades\Persona.cs" />
+    <Compile Include="Entidades\Reserva.cs" />
     <Compile Include="Entidades\TransactionResult.cs" />
     <Compile Include="Excepciones\ClienteExistenteException.cs" />
     <Compile Include="Excepciones\ErrorServidorException.cs" />
+    <Compile Include="Excepciones\ReservaExistenteException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

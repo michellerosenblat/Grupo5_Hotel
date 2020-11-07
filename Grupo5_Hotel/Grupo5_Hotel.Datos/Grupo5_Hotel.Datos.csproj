@@ -49,6 +49,7 @@
     <Compile Include="HabitacionMapper.cs" />
     <Compile Include="HotelMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaMapper.cs" />
     <Compile Include="WebHelper.cs" />
   </ItemGroup>
   <ItemGroup>
