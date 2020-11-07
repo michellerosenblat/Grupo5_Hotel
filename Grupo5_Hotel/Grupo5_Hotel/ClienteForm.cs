@@ -46,5 +46,10 @@ namespace Grupo5_Hotel
             this.Owner.Show();
             this.Close();
         }
+
+        private void dataClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
