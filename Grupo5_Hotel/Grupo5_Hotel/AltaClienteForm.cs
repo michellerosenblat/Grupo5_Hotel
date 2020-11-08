@@ -60,7 +60,7 @@ namespace Grupo5_Hotel
 
         private void AltaClienteForm_Load(object sender, EventArgs e)
         {
-            clienteForm = new ClienteForm();
+            //clienteForm = new ClienteForm();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace Grupo5_Hotel
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            clienteForm.Show();
+            this.Owner.Show();
             this.Close();
         }
     }

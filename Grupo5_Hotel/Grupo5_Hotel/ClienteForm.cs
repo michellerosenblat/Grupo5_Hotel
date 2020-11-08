@@ -15,7 +15,6 @@ namespace Grupo5_Hotel
     public partial class ClienteForm : Form
     {
         ClienteServicio clienteServicio;
-        AltaClienteForm altaForm;
         public ClienteForm()
         {
             InitializeComponent();
@@ -26,16 +25,21 @@ namespace Grupo5_Hotel
         private void ClienteForm_Load(object sender, EventArgs e)
         {
             clienteServicio = new ClienteServicio();
-            altaForm = new AltaClienteForm();
         }
 
         private void btnListar_Click(object sender, EventArgs e)
+        {
+            ListarClientes();
+        }
+
+        private void ListarClientes()
         {
             dataClientes.DataSource = clienteServicio.TraerClientes();
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
+            AltaClienteForm altaForm = new AltaClienteForm();
             altaForm.Owner = this;
             altaForm.Show();
             this.Hide();
@@ -47,9 +51,17 @@ namespace Grupo5_Hotel
             this.Close();
         }
 
-        private void dataClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataClientes_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            this.dataClientes.Columns["id"].Visible = false;
+        }
 
+        private void ClienteForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                ListarClientes();
+            }
         }
     }
 }

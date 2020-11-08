@@ -32,7 +32,7 @@ namespace Grupo5_Hotel.Datos
             n.Add("Apellido", cliente.Apellido);
             n.Add("Direccion", cliente.Direccion);
             n.Add("Usuario", ConfigurationManager.AppSettings["Legajo"]);
-            n.Add("Email", cliente.Mail); // STRING
+            n.Add("Email", cliente.Email); // STRING
             n.Add("Telefono", cliente.Telefono); // INT
             n.Add("Activo", cliente.Activo.ToString()); // bool
             return n;

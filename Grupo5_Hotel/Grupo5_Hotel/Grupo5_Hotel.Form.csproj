@@ -102,6 +102,9 @@
     <Compile Include="ReservaForm.Designer.cs">
       <DependentUpon>ReservaForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AltaHabitacionForm.resx">
+      <DependentUpon>AltaHabitacionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltaHotelForm.resx">
       <DependentUpon>AltaHotelForm.cs</DependentUpon>
     </EmbeddedResource>

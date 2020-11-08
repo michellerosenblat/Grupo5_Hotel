@@ -1,18 +1,15 @@
 ﻿using Grupo5_Hotel.Datos;
 using Grupo5_Hotel.Entidades.Entidades;
 using Grupo5_Hotel.Entidades.Excepciones;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Grupo5_Hotel.Negocio
 {
     public class ClienteServicio
     {
         ClienteMapper mapper;
-        List<Cliente> cacheClientes;
+        static List<Cliente> cacheClientes;
         public ClienteServicio()
         {
             mapper = new ClienteMapper();

@@ -37,10 +37,9 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(27, 58);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListar.Location = new System.Drawing.Point(40, 89);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(85, 33);
+            this.btnListar.Size = new System.Drawing.Size(128, 51);
             this.btnListar.TabIndex = 0;
             this.btnListar.Text = "Listar Clientes";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -48,10 +47,9 @@
             // 
             // btnAlta
             // 
-            this.btnAlta.Location = new System.Drawing.Point(27, 120);
-            this.btnAlta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAlta.Location = new System.Drawing.Point(40, 185);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(85, 32);
+            this.btnAlta.Size = new System.Drawing.Size(128, 49);
             this.btnAlta.TabIndex = 1;
             this.btnAlta.Text = "Alta Clientes";
             this.btnAlta.UseVisualStyleBackColor = true;
@@ -59,10 +57,9 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(27, 238);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAtras.Location = new System.Drawing.Point(40, 366);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(85, 33);
+            this.btnAtras.Size = new System.Drawing.Size(128, 51);
             this.btnAtras.TabIndex = 2;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
@@ -74,29 +71,29 @@
             this.dataClientes.AllowUserToDeleteRows = false;
             this.dataClientes.AllowUserToOrderColumns = true;
             this.dataClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataClientes.Location = new System.Drawing.Point(150, 53);
-            this.dataClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataClientes.Location = new System.Drawing.Point(225, 82);
             this.dataClientes.Name = "dataClientes";
             this.dataClientes.ReadOnly = true;
+            this.dataClientes.RowHeadersVisible = false;
             this.dataClientes.RowHeadersWidth = 62;
             this.dataClientes.RowTemplate.Height = 28;
-            this.dataClientes.Size = new System.Drawing.Size(601, 252);
+            this.dataClientes.Size = new System.Drawing.Size(902, 388);
             this.dataClientes.TabIndex = 3;
-            this.dataClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataClientes_CellContentClick);
+            this.dataClientes.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataClientes_DataBindingComplete);
             // 
             // ClienteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 328);
+            this.ClientSize = new System.Drawing.Size(1172, 505);
             this.Controls.Add(this.dataClientes);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.btnListar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ClienteForm";
             this.Text = "ClienteForm";
             this.Load += new System.EventHandler(this.ClienteForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.ClienteForm_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).EndInit();
             this.ResumeLayout(false);
 

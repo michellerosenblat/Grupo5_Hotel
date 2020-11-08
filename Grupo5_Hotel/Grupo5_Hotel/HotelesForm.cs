@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Grupo5_Hotel
 {
-    public partial class HotelesForm : Form
+    public partial class HotelForm : Form
     {
         HotelServicio hotelServicio;
-        AltaHotelForm altaHotel;
-        public HotelesForm()
+        //private AltaHotelForm altaHotel;
+        public HotelForm()
         {
             InitializeComponent();
-            altaHotel = new AltaHotelForm();
+            //altaHotel = new AltaHotelForm();
 
         }
 
@@ -35,6 +35,7 @@ namespace Grupo5_Hotel
 
         private void button2_Click(object sender, EventArgs e)
         {
+            AltaHotelForm altaHotel = new AltaHotelForm();
             altaHotel.Owner = this;
             altaHotel.Show();
             this.Hide();

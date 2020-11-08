@@ -38,5 +38,19 @@ namespace Grupo5_Hotel
                 }
             }
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            AltaHabitacionForm altaHabitaciones = new AltaHabitacionForm();
+            altaHabitaciones.Owner = this;
+            altaHabitaciones.Show();
+            this.Hide();
+        }
     }
 }

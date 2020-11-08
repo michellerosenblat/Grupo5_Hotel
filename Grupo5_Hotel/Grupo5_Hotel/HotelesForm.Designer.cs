@@ -1,6 +1,6 @@
 ﻿namespace Grupo5_Hotel
 {
-    partial class HotelesForm
+    partial class HotelForm
     {
         /// <summary>
         /// Required designer variable.

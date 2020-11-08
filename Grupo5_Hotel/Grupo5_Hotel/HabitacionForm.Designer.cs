@@ -58,6 +58,7 @@
             this.btnAtras.TabIndex = 6;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnAlta
             // 
@@ -67,6 +68,7 @@
             this.btnAlta.TabIndex = 5;
             this.btnAlta.Text = "Alta Habitaciones";
             this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // btnListar
             // 

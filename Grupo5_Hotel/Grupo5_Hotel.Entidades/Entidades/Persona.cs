@@ -14,7 +14,7 @@ namespace Grupo5_Hotel.Entidades
         protected string apellido;
         protected string direccion;
         protected string telefono;
-        protected string mail;
+        protected string email;
 
         public Persona(int id, string nombre, string apellido, string direccion, string telefono, string mail)
         {
@@ -23,7 +23,7 @@ namespace Grupo5_Hotel.Entidades
             this.apellido = apellido;
             this.direccion = direccion;
             this.telefono = telefono;
-            this.mail = mail;
+            this.email = mail;
         }
         public Persona() { }
         public string Nombre { 
@@ -58,15 +58,15 @@ namespace Grupo5_Hotel.Entidades
                 this.direccion = value;
             }
         }
-        public string Mail
+        public string Email
         {
             get
             {
-                return this.mail;
+                return this.email;
             }
             set
             {
-                this.mail = value;
+                this.email = value;
             }
         }
         public string Telefono
