@@ -41,41 +41,38 @@ namespace Grupo5_Hotel
             return new Hotel(hotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex, rbSi.Checked);
            
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void AltaHotelForm_Load(object sender, EventArgs e)
         {
-            rbSi.AutoCheck = false;
-            rbNo.AutoCheck = false;
+
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!rbSi.Checked && !rbNo.Checked)
+                if (!rbSi.Checked && !rbNo.Checked && !string.IsNullOrEmpty(this.Errores))
+                {
+                    throw new FormatException("Error en los campos: " + "\n" + this.Errores + "Debe seleccionar si posee o no Amenities");
+                }
+                    if (!rbSi.Checked && !rbNo.Checked)
                 {
                     lblAmenities.ForeColor = System.Drawing.Color.Red;
                 }
-                else {
-                if (!string.IsNullOrEmpty(this.Errores))
-                    throw new FormatException("Error en los campos: " + "\n" + this.Errores);
-                hotelServicio.InsertarHotel(CrearHotel());
-                MessageBox.Show("Se ha ingresado correctamente el hotel");
-                BorrarCampos();
-            }
+                else
+                {
+                    if (!string.IsNullOrEmpty(this.Errores))
+                        throw new FormatException("Error en los campos: " + "\n" + this.Errores);
+                    hotelServicio.InsertarHotel(CrearHotel());
+                    MessageBox.Show("Se ha ingresado correctamente el hotel");
+                    lblAmenities.ForeColor = System.Drawing.Color.Black;
+                    BorrarCampos();
+                }
             }
             catch (FormatException fex)
             {
                 MessageBox.Show(fex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -84,13 +81,20 @@ namespace Grupo5_Hotel
             textNombre.Clear();
             textDireccion.Clear();
             comboEstrellas.SelectedIndex = -1;
-            checkBox1.Checked = false;
+            rbSi.Checked = false;
+            rbNo.Checked = false;
         }
 
         private void buttonVolver_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
             this.Close();
+        }
+
+        private void panelAmenities_Paint(object sender, PaintEventArgs e)
+        {
+            rbSi.Checked = false;
+            rbNo.Checked = false;
         }
     }
 }

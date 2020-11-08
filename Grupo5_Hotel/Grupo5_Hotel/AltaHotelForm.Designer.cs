@@ -37,70 +37,67 @@
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.comboEstrellas = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
+            this.panelAmenities = new System.Windows.Forms.Panel();
+            this.panelAmenities.SuspendLayout();
             this.SuspendLayout();
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(231, 92);
-            this.textNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textNombre.Location = new System.Drawing.Point(180, 74);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(202, 26);
+            this.textNombre.Size = new System.Drawing.Size(180, 22);
             this.textNombre.TabIndex = 0;
             // 
             // textDireccion
             // 
-            this.textDireccion.Location = new System.Drawing.Point(231, 144);
-            this.textDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textDireccion.Location = new System.Drawing.Point(180, 112);
             this.textDireccion.Name = "textDireccion";
-            this.textDireccion.Size = new System.Drawing.Size(202, 26);
+            this.textDireccion.Size = new System.Drawing.Size(180, 22);
             this.textDireccion.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 92);
+            this.label1.Location = new System.Drawing.Point(85, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 144);
+            this.label2.Location = new System.Drawing.Point(85, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
+            this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Direccion";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(143, 196);
+            this.label3.Location = new System.Drawing.Point(85, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Estrellas";
             // 
             // lblAmenities
             // 
             this.lblAmenities.AutoSize = true;
-            this.lblAmenities.Location = new System.Drawing.Point(143, 250);
+            this.lblAmenities.Location = new System.Drawing.Point(85, 200);
             this.lblAmenities.Name = "lblAmenities";
-            this.lblAmenities.Size = new System.Drawing.Size(79, 20);
+            this.lblAmenities.Size = new System.Drawing.Size(69, 17);
             this.lblAmenities.TabIndex = 8;
             this.lblAmenities.Text = "Amenities";
             // 
             // buttonAgregar
             // 
-            this.buttonAgregar.Location = new System.Drawing.Point(90, 341);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAgregar.Location = new System.Drawing.Point(88, 258);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(107, 42);
+            this.buttonAgregar.Size = new System.Drawing.Size(95, 34);
             this.buttonAgregar.TabIndex = 9;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = true;
@@ -108,10 +105,9 @@
             // 
             // buttonVolver
             // 
-            this.buttonVolver.Location = new System.Drawing.Point(504, 340);
-            this.buttonVolver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonVolver.Location = new System.Drawing.Point(270, 258);
             this.buttonVolver.Name = "buttonVolver";
-            this.buttonVolver.Size = new System.Drawing.Size(101, 43);
+            this.buttonVolver.Size = new System.Drawing.Size(90, 34);
             this.buttonVolver.TabIndex = 10;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.UseVisualStyleBackColor = true;
@@ -120,28 +116,18 @@
             // comboEstrellas
             // 
             this.comboEstrellas.FormattingEnabled = true;
-            this.comboEstrellas.Location = new System.Drawing.Point(231, 192);
-            this.comboEstrellas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboEstrellas.Location = new System.Drawing.Point(180, 154);
             this.comboEstrellas.Name = "comboEstrellas";
-            this.comboEstrellas.Size = new System.Drawing.Size(202, 28);
+            this.comboEstrellas.Size = new System.Drawing.Size(180, 24);
             this.comboEstrellas.TabIndex = 11;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(231, 249);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(22, 21);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // rbSi
             // 
             this.rbSi.AutoSize = true;
-            this.rbSi.Location = new System.Drawing.Point(678, 140);
+            this.rbSi.Location = new System.Drawing.Point(0, 14);
+            this.rbSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbSi.Name = "rbSi";
-            this.rbSi.Size = new System.Drawing.Size(48, 24);
+            this.rbSi.Size = new System.Drawing.Size(41, 21);
             this.rbSi.TabIndex = 0;
             this.rbSi.TabStop = true;
             this.rbSi.Text = "Si";
@@ -150,22 +136,30 @@
             // rbNo
             // 
             this.rbNo.AutoSize = true;
-            this.rbNo.Location = new System.Drawing.Point(678, 171);
+            this.rbNo.Location = new System.Drawing.Point(133, 14);
+            this.rbNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(54, 24);
+            this.rbNo.Size = new System.Drawing.Size(47, 21);
             this.rbNo.TabIndex = 1;
             this.rbNo.TabStop = true;
             this.rbNo.Text = "No";
             this.rbNo.UseVisualStyleBackColor = true;
             // 
+            // panelAmenities
+            // 
+            this.panelAmenities.Controls.Add(this.rbSi);
+            this.panelAmenities.Controls.Add(this.rbNo);
+            this.panelAmenities.Location = new System.Drawing.Point(180, 184);
+            this.panelAmenities.Name = "panelAmenities";
+            this.panelAmenities.Size = new System.Drawing.Size(180, 48);
+            this.panelAmenities.TabIndex = 13;
+            this.panelAmenities.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAmenities_Paint);
+            // 
             // AltaHotelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 439);
-            this.Controls.Add(this.rbNo);
-            this.Controls.Add(this.rbSi);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(486, 351);
             this.Controls.Add(this.comboEstrellas);
             this.Controls.Add(this.buttonVolver);
             this.Controls.Add(this.buttonAgregar);
@@ -175,10 +169,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textDireccion);
             this.Controls.Add(this.textNombre);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Controls.Add(this.panelAmenities);
             this.Name = "AltaHotelForm";
             this.Text = "AgregarHotel";
             this.Load += new System.EventHandler(this.AltaHotelForm_Load);
+            this.panelAmenities.ResumeLayout(false);
+            this.panelAmenities.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,8 +191,8 @@
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Button buttonVolver;
         private System.Windows.Forms.ComboBox comboEstrellas;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.RadioButton rbNo;
+        private System.Windows.Forms.Panel panelAmenities;
     }
 }
