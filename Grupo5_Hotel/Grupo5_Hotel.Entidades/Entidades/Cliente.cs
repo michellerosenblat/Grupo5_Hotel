@@ -42,5 +42,9 @@ namespace Grupo5_Hotel.Entidades.Entidades
         {
             return (obj != null && obj is Cliente && this.id == ((Cliente)obj).Id);
         }
+        public override string ToString()
+        {
+            return  id + " " + nombre + "  " + apellido;
+        }
     }
 }

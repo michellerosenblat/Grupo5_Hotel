@@ -16,11 +16,13 @@ namespace Grupo5_Hotel
     public partial class AltaReservaForm : Form
     {
         ReservaServicio reservaServicio;
+        ClienteServicio clienteServicio;
         ReservaForm reservaForm;
         public AltaReservaForm()
         {
             InitializeComponent();
             reservaServicio = new ReservaServicio();
+            clienteServicio = new ClienteServicio();
         }
         private void AltaReservaForm_Load(object sender, EventArgs e)
         {
@@ -79,7 +81,38 @@ namespace Grupo5_Hotel
             txtboxCliente.Clear();
             txtboxHabitacion.Clear();
             txtboxHuespedes.Clear();
+            comboClientes.SelectedIndex = -1;
 
+        }
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            ListarClientes();
+        }
+
+        private void ListarClientes()
+        {
+            comboClientes.DataSource = clienteServicio.TraerClientes();
+        }
+
+
+
+        private void ClienteForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                ListarClientes();
+            }
+        }
+
+
+        private void comboClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboClientes_Click(object sender, EventArgs e)
+        {
+            ListarClientes();
         }
     }
 }

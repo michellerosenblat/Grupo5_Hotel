@@ -51,9 +51,9 @@ namespace Grupo5_Hotel
             this.Close();
         }
 
-        private void dataClientes_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+       private void dataClientes_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            this.dataClientes.Columns["id"].Visible = false;
+            this.dataClientes.Columns["id"].Visible = true;
         }
 
         private void ClienteForm_VisibleChanged(object sender, EventArgs e)

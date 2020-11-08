@@ -14,7 +14,7 @@ namespace Grupo5_Hotel.Datos
     {
         public List<Reserva> TraerReservas()
         {
-            string json = WebHelper.Get("./Reservas/");
+            string json = WebHelper.Get("./Hotel/Reservas");
             return MapList(json);
         }
         public List<Reserva> MapList(string json)
