@@ -47,6 +47,10 @@ namespace Grupo5_Hotel
                     throw new FormatException("Error en los campos: " + "\n" + this.Errores);
                 reservaServicio.InsertarReserva(CrearReserva());
                 MessageBox.Show("Se ha ingresado correctamente la reserva");
+                if (comboClientes.SelectedIndex.Equals(comboClientes))
+                {
+                    
+                }
                 BorrarCampos();
             }
             catch (FormatException fex)
@@ -64,7 +68,7 @@ namespace Grupo5_Hotel
         {
             get
             {
-                return (Validacion.ValidarNumero(lblCliente.Text, "IdCliente") +
+                return (Validacion.ValidarNumero(comboClientes.Text, "IdCliente") +
                         Validacion.ValidarNumero(lblHabitacion.Text, "IdHabitación") +
                         Validacion.ValidarNumero(lblCantindadHuespedes.Text, "CantidadHuespedes"));
             }
@@ -72,7 +76,7 @@ namespace Grupo5_Hotel
 
         private Reserva CrearReserva()
         {
-            return new Reserva(reservaServicio.ProximoId(), int.Parse(lblCliente.Text), int.Parse(lblHabitacion.Text), int.Parse(lblCantindadHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
+            return new Reserva(reservaServicio.ProximoId(), comboClientes.SelectedIndex, int.Parse(lblHabitacion.Text), int.Parse(lblCantindadHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
                                 
         }
 
@@ -82,6 +86,7 @@ namespace Grupo5_Hotel
             txtboxHabitacion.Clear();
             txtboxHuespedes.Clear();
             comboClientes.SelectedIndex = -1;
+            
 
         }
         private void btnListar_Click(object sender, EventArgs e)
@@ -92,6 +97,7 @@ namespace Grupo5_Hotel
         private void ListarClientes()
         {
             comboClientes.DataSource = clienteServicio.TraerClientes();
+
         }
 
 

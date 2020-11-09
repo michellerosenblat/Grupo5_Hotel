@@ -9,7 +9,6 @@ namespace Grupo5_Hotel.Entidades.Entidades
 {
     public class Cliente : Persona 
     {
-        private int id;
         private DateTime fechaAlta;
         private bool activo;
 

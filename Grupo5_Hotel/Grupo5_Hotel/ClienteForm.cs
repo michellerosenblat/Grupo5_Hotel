@@ -17,9 +17,7 @@ namespace Grupo5_Hotel
         ClienteServicio clienteServicio;
         public ClienteForm()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();                        
         }
 
         private void ClienteForm_Load(object sender, EventArgs e)
