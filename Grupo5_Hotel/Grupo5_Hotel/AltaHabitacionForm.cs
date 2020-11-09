@@ -16,5 +16,10 @@ namespace Grupo5_Hotel
         {
             InitializeComponent();
         }
+
+        private void AltaHabitacionForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

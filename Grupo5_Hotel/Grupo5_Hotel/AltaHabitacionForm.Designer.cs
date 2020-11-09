@@ -179,6 +179,7 @@
             this.Controls.Add(this.cmbHotel);
             this.Name = "AltaHabitacionForm";
             this.Text = "AltaHabitacionForm";
+            this.Load += new System.EventHandler(this.AltaHabitacionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

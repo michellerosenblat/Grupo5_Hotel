@@ -86,7 +86,7 @@ namespace Grupo5_Hotel.Entidades.Entidades
         }
         public override string ToString()
         {
-            return id + " "+ nombre + " Dirección:" + direccion + " Estrellas:" +estrellas + " " + amenities;
+            return nombre;
         }
     }
 }

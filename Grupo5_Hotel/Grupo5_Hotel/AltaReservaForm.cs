@@ -17,16 +17,21 @@ namespace Grupo5_Hotel
     {
         ReservaServicio reservaServicio;
         ClienteServicio clienteServicio;
+        HabitacionServicio habitacionServicio;
+        HotelServicio hotelServicio;
         ReservaForm reservaForm;
         public AltaReservaForm()
         {
             InitializeComponent();
             reservaServicio = new ReservaServicio();
             clienteServicio = new ClienteServicio();
+            habitacionServicio = new HabitacionServicio();
+            hotelServicio = new HotelServicio();
         }
         private void AltaReservaForm_Load(object sender, EventArgs e)
         {
             reservaForm = new ReservaForm();
+            cmbHabitacion.Enabled = false;
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
@@ -76,14 +81,11 @@ namespace Grupo5_Hotel
 
         private Reserva CrearReserva()
         {
-            return new Reserva(reservaServicio.ProximoId(), comboClientes.SelectedIndex, int.Parse(lblHabitacion.Text), int.Parse(lblCantindadHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
-                                
+            return new Reserva(reservaServicio.ProximoId(), ((Cliente)comboClientes.SelectedItem).Id, ((Habitacion)cmbHabitacion.SelectedItem).Id, int.Parse(lblCantindadHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
         }
 
         private void BorrarCampos()
         {
-            txtboxCliente.Clear();
-            txtboxHabitacion.Clear();
             txtboxHuespedes.Clear();
             comboClientes.SelectedIndex = -1;
             
@@ -97,7 +99,6 @@ namespace Grupo5_Hotel
         private void ListarClientes()
         {
             comboClientes.DataSource = clienteServicio.TraerClientes();
-
         }
 
 
@@ -109,16 +110,19 @@ namespace Grupo5_Hotel
                 ListarClientes();
             }
         }
-
-
-        private void comboClientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboClientes_Click(object sender, EventArgs e)
         {
             ListarClientes();
+        }
+        private void cmbHabitacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbHabitacion.Enabled = true;
+            Hotel hotel = (Hotel)cmbHotel.SelectedItem;
+            cmbHabitacion.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.id);
+        }
+        private void cmbHotel_Click(object sender, EventArgs e)
+        {
+            cmbHotel.DataSource = hotelServicio.TraerHoteles();
         }
     }
 }
