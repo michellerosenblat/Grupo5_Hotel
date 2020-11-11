@@ -44,7 +44,15 @@ namespace Grupo5_Hotel
             CargarPlazas();
             CargarCategorias();
         }
-
+        private void BorrarCampos()
+        {
+            cmbHotel.SelectedIndex = -1;
+            cmbPlazas.SelectedIndex = -1;
+            cmbCategoria.SelectedIndex = -1;
+            txtPrecio.Clear();
+            rbSi.Checked = false;
+            rbNo.Checked = false;
+        }
         private void cmbHotel_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -134,6 +142,11 @@ namespace Grupo5_Hotel
         {
             this.Owner.Show();
             this.Close();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            BorrarCampos();
         }
     }
 }

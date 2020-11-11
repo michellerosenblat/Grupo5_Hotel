@@ -21,15 +21,19 @@ namespace Grupo5_Hotel
             InitializeComponent();
             habitacionServicio = new HabitacionServicio();
             hotelServicio = new HotelServicio();
+            //cmbHotel.SelectedIndex = -1;
         }
 
         private void HabitacionForm_Load(object sender, EventArgs e)
         {
             LlenarComboHoteles();
+            
         }
         private void LlenarComboHoteles()
         {
             cmbHotel.DataSource = hotelServicio.TraerHoteles();
+            cmbHotel.SelectedIndex = -1;
+            dataClientes.DataSource = null;
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

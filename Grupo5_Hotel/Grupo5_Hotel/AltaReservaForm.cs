@@ -130,5 +130,10 @@ namespace Grupo5_Hotel
         {
 
         }
+
+        private void comboClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

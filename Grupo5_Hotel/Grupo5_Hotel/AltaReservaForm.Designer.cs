@@ -160,6 +160,7 @@
             this.comboClientes.Name = "comboClientes";
             this.comboClientes.Size = new System.Drawing.Size(240, 28);
             this.comboClientes.TabIndex = 18;
+            this.comboClientes.SelectedIndexChanged += new System.EventHandler(this.comboClientes_SelectedIndexChanged);
             this.comboClientes.Click += new System.EventHandler(this.comboClientes_Click);
             // 
             // cmbHabitacion

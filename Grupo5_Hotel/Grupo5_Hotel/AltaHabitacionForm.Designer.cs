@@ -42,6 +42,7 @@
             this.panelCancelable = new System.Windows.Forms.Panel();
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.panelCancelable.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,11 +183,22 @@
             this.rbNo.Text = "No";
             this.rbNo.UseVisualStyleBackColor = true;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(756, 486);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(156, 38);
+            this.btnLimpiar.TabIndex = 15;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // AltaHabitacionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 536);
+            this.ClientSize = new System.Drawing.Size(1007, 536);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.panelCancelable);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
@@ -225,5 +237,6 @@
         private System.Windows.Forms.Panel panelCancelable;
         private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.RadioButton rbNo;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
