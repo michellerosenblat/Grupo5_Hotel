@@ -31,7 +31,8 @@ namespace Grupo5_Hotel
         private void AltaReservaForm_Load(object sender, EventArgs e)
         {
             reservaForm = new ReservaForm();
-            cmbHabitacion.Enabled = false;
+            cmbHabitacion.Enabled = false; 
+            ListarClientes();
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
@@ -112,7 +113,7 @@ namespace Grupo5_Hotel
         }
         private void comboClientes_Click(object sender, EventArgs e)
         {
-            ListarClientes();
+            
         }
         private void cmbHabitacion_SelectedIndexChanged(object sender, EventArgs e)
         {

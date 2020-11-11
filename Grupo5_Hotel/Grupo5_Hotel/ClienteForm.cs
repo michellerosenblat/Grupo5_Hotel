@@ -61,5 +61,10 @@ namespace Grupo5_Hotel
                 ListarClientes();
             }
         }
+
+        private void dataClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

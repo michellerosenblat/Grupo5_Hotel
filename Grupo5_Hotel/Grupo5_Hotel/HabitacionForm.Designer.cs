@@ -31,7 +31,6 @@
             this.dataClientes = new System.Windows.Forms.DataGridView();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
-            this.btnListar = new System.Windows.Forms.Button();
             this.cmbHotel = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
@@ -46,6 +45,7 @@
             this.dataClientes.Location = new System.Drawing.Point(262, 84);
             this.dataClientes.Name = "dataClientes";
             this.dataClientes.ReadOnly = true;
+            this.dataClientes.RowHeadersVisible = false;
             this.dataClientes.RowHeadersWidth = 62;
             this.dataClientes.RowTemplate.Height = 28;
             this.dataClientes.Size = new System.Drawing.Size(901, 387);
@@ -70,16 +70,6 @@
             this.btnAlta.Text = "Alta Habitaciones";
             this.btnAlta.UseVisualStyleBackColor = true;
             this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
-            // 
-            // btnListar
-            // 
-            this.btnListar.Location = new System.Drawing.Point(78, 23);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(139, 58);
-            this.btnListar.TabIndex = 4;
-            this.btnListar.Text = "Listar Habitaciones";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // cmbHotel
             // 
@@ -110,10 +100,10 @@
             this.Controls.Add(this.dataClientes);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAlta);
-            this.Controls.Add(this.btnListar);
             this.Name = "HabitacionForm";
             this.Text = "HabitacionForm";
             this.Load += new System.EventHandler(this.HabitacionForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.HabitacionForm_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,7 +115,6 @@
         private System.Windows.Forms.DataGridView dataClientes;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnAlta;
-        private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.ComboBox cmbHotel;
         private System.Windows.Forms.Label label1;
     }

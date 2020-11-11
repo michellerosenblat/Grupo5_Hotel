@@ -18,11 +18,13 @@ namespace Grupo5_Hotel
         // crear un servicio nuevo?
         private HotelServicio hotelServicio;
         private HabitacionServicio habitacionServicio;
-        public AltaHabitacionForm()
+        private int hotelSeleccionado;
+        public AltaHabitacionForm(int hotelSeleccionado)
         {
             InitializeComponent();
             hotelServicio = new HotelServicio();
             habitacionServicio = new HabitacionServicio();
+            this.hotelSeleccionado = hotelSeleccionado;
         }
 
         private void CargarPlazas()
@@ -36,7 +38,11 @@ namespace Grupo5_Hotel
 
         private void AltaHabitacionForm_Load(object sender, EventArgs e)
         {
-
+            cmbHotel.DataSource = hotelServicio.TraerHoteles();
+            //cmbHotel.SelectedItem = cmbHotel.Items.Equals(hotelSeleccionado);
+            cmbHotel.SelectedIndex = hotelSeleccionado;
+            CargarPlazas();
+            CargarCategorias();
         }
 
         private void cmbHotel_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,7 +52,7 @@ namespace Grupo5_Hotel
 
         private void cmbHotel_Click(object sender, EventArgs e)
         {
-            cmbHotel.DataSource = hotelServicio.TraerHoteles();
+            
         }
 
         private void cmbPlazas_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,12 +62,12 @@ namespace Grupo5_Hotel
 
         private void cmbPlazas_Click(object sender, EventArgs e)
         {
-            CargarPlazas();
+            
         }
 
         private void cmbCategoria_Click(object sender, EventArgs e)
         {
-            CargarCategorias();
+           
         }
         private void CargarCategorias()
         {
@@ -94,6 +100,7 @@ namespace Grupo5_Hotel
                     habitacionServicio.InsertarHabitacion(CrearHabitacion());
                     MessageBox.Show("Se ha ingresado correctamente la habitacion");
                     lblCancelable.ForeColor = System.Drawing.Color.Black;
+                    ((HabitacionForm)this.Owner).ChangeHotelTo(cmbHotel.SelectedIndex);
                     //BorrarCampos();
                 }
             }
@@ -121,6 +128,12 @@ namespace Grupo5_Hotel
         private Habitacion CrearHabitacion()
         {
            return new Habitacion(((Hotel)cmbHotel.SelectedItem).id, int.Parse(cmbPlazas.SelectedItem.ToString()), cmbCategoria.SelectedItem.ToString(), int.Parse(txtPrecio.Text), rbSi.Checked);
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
         }
     }
 }

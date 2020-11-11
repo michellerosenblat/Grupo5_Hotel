@@ -79,6 +79,7 @@
             this.dataClientes.RowTemplate.Height = 28;
             this.dataClientes.Size = new System.Drawing.Size(902, 388);
             this.dataClientes.TabIndex = 3;
+            this.dataClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataClientes_CellContentClick);
             this.dataClientes.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataClientes_DataBindingComplete);
             // 
             // ClienteForm

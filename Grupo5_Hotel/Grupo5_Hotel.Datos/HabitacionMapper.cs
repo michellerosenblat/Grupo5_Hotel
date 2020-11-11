@@ -13,7 +13,7 @@ namespace Grupo5_Hotel.Datos
     {
         public List <Habitacion> TraerHabitacionesPorId(int idHotel)
         {
-            string json = WebHelper.Get("./Habitaciones/" + idHotel);
+            string json = WebHelper.Get("/Hotel/Habitaciones/" + idHotel);
             return MapList(json);
         }
         public List <Habitacion> MapList (string json)
@@ -27,17 +27,18 @@ namespace Grupo5_Hotel.Datos
         public NameValueCollection ReverseMap (Habitacion habitacion)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("IdHotel", habitacion.IdHotel.ToString());
+            n.Add("idHotel", habitacion.IdHotel.ToString());
             n.Add("CantidadPlazas", habitacion.CantidadPlazas.ToString());
             n.Add("Categoria", habitacion.Categoria);
             n.Add("Precio", habitacion.Precio.ToString());
-            n.Add("Cancelacion", habitacion.Cancelacion.ToString());
+            n.Add("Cancelable", habitacion.Cancelacion.ToString());
+            //n.Add("id", habitacion.Id.ToString());
             return n;
         }
         public TransactionResult Insert (Habitacion habitacion)
         {
             NameValueCollection n = ReverseMap(habitacion);
-            string result = WebHelper.Post("./Habitaciones/" + habitacion.IdHotel, n);
+            string result = WebHelper.Post("Hotel/Habitaciones/", n);
             return Resultado(result);
         }
     }

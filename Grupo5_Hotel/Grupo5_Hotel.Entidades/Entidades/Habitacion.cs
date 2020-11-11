@@ -90,5 +90,9 @@ namespace Grupo5_Hotel.Entidades.Entidades
                 this.precio = value;
             }
         }
+        public override bool Equals(object obj)
+        {
+            return obj is Habitacion && obj != null && this.id == ((Habitacion)obj).Id;
+        }
     }
 }
