@@ -17,6 +17,8 @@ namespace Grupo5_Hotel
     public partial class ReservaForm : Form
     {
         ReservaServicio reservaServicio;
+        ClienteServicio clienteServicio;
+        HabitacionServicio habitacionServicio;
         AltaReservaForm altaform;
 
         public ReservaForm()
@@ -27,17 +29,9 @@ namespace Grupo5_Hotel
         private void ReservaForm_Load(object sender, EventArgs e)
         {
             reservaServicio = new ReservaServicio();
+            clienteServicio = new ClienteServicio();
+            habitacionServicio = new HabitacionServicio();
             altaform = new AltaReservaForm();
-        }
-
-        private void btmAltaReserva_Click(object sender, EventArgs e)
-        {
-            List<Reserva> reservas = reservaServicio.TraerReservas();
-            foreach (Reserva res in reservas)
-            {
-                listBox1.Items.Add(res);
-
-            }
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
@@ -48,8 +42,28 @@ namespace Grupo5_Hotel
 
         private void btmAltaReserva_Click_1(object sender, EventArgs e)
         {
+            altaform.Owner = this;
             altaform.Show();
-            this.Close();
+            this.Hide();
         }
+
+         private void btnListarReserva_Click(object sender, EventArgs e)
+        {
+            List <Reserva> reservas = reservaServicio.TraerReservas();
+            List<Cliente> clientes = clienteServicio.TraerClientes();
+        
+            foreach (Reserva r in reservas)
+            {
+                r.Cliente = clientes.Find(c => c.Id == r.IdCliente);
+                //se podria hacer lo mismo con habitacion, pro no tengo el id de hotel en reserva
+                //para consultar en la api
+              
+            }
+            dataReserva.DataSource = reservas;
+            dataReserva.Columns["idCliente"].Visible = false;
+            dataReserva.Columns["id"].Visible = false;
+        }
+
+  
     }
 }
