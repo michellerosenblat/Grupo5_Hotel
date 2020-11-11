@@ -47,10 +47,10 @@
             // 
             // btmAtras
             // 
-            this.btmAtras.Location = new System.Drawing.Point(32, 540);
-            this.btmAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btmAtras.Location = new System.Drawing.Point(28, 432);
+            this.btmAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btmAtras.Name = "btmAtras";
-            this.btmAtras.Size = new System.Drawing.Size(112, 35);
+            this.btmAtras.Size = new System.Drawing.Size(100, 28);
             this.btmAtras.TabIndex = 0;
             this.btmAtras.Text = "Atrás";
             this.btmAtras.UseVisualStyleBackColor = true;
@@ -58,10 +58,10 @@
             // 
             // btmAgregar
             // 
-            this.btmAgregar.Location = new System.Drawing.Point(426, 540);
-            this.btmAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btmAgregar.Location = new System.Drawing.Point(379, 432);
+            this.btmAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btmAgregar.Name = "btmAgregar";
-            this.btmAgregar.Size = new System.Drawing.Size(112, 35);
+            this.btmAgregar.Size = new System.Drawing.Size(100, 28);
             this.btmAgregar.TabIndex = 1;
             this.btmAgregar.Text = "Agregar";
             this.btmAgregar.UseVisualStyleBackColor = true;
@@ -69,10 +69,10 @@
             // 
             // btmLimpiar
             // 
-            this.btmLimpiar.Location = new System.Drawing.Point(812, 540);
-            this.btmLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btmLimpiar.Location = new System.Drawing.Point(722, 432);
+            this.btmLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btmLimpiar.Name = "btmLimpiar";
-            this.btmLimpiar.Size = new System.Drawing.Size(112, 35);
+            this.btmLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btmLimpiar.TabIndex = 2;
             this.btmLimpiar.Text = "Limpiar campos";
             this.btmLimpiar.UseVisualStyleBackColor = true;
@@ -80,85 +80,84 @@
             // 
             // txtboxHuespedes
             // 
-            this.txtboxHuespedes.Location = new System.Drawing.Point(300, 340);
-            this.txtboxHuespedes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtboxHuespedes.Location = new System.Drawing.Point(267, 272);
+            this.txtboxHuespedes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtboxHuespedes.Name = "txtboxHuespedes";
-            this.txtboxHuespedes.Size = new System.Drawing.Size(278, 26);
+            this.txtboxHuespedes.Size = new System.Drawing.Size(248, 22);
             this.txtboxHuespedes.TabIndex = 5;
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(408, 31);
+            this.lblCliente.Location = new System.Drawing.Point(363, 25);
             this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(58, 20);
+            this.lblCliente.Size = new System.Drawing.Size(51, 17);
             this.lblCliente.TabIndex = 9;
             this.lblCliente.Text = "Cliente";
             // 
             // lblHabitacion
             // 
             this.lblHabitacion.AutoSize = true;
-            this.lblHabitacion.Location = new System.Drawing.Point(405, 196);
+            this.lblHabitacion.Location = new System.Drawing.Point(360, 157);
             this.lblHabitacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHabitacion.Name = "lblHabitacion";
-            this.lblHabitacion.Size = new System.Drawing.Size(85, 20);
+            this.lblHabitacion.Size = new System.Drawing.Size(75, 17);
             this.lblHabitacion.TabIndex = 10;
             this.lblHabitacion.Text = "Habitación";
             // 
             // lblCantindadHuespedes
             // 
             this.lblCantindadHuespedes.AutoSize = true;
-            this.lblCantindadHuespedes.Location = new System.Drawing.Point(357, 297);
+            this.lblCantindadHuespedes.Location = new System.Drawing.Point(317, 238);
             this.lblCantindadHuespedes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantindadHuespedes.Name = "lblCantindadHuespedes";
-            this.lblCantindadHuespedes.Size = new System.Drawing.Size(181, 20);
+            this.lblCantindadHuespedes.Size = new System.Drawing.Size(160, 17);
             this.lblCantindadHuespedes.TabIndex = 11;
             this.lblCantindadHuespedes.Text = "Cantidad de Huespedes";
             // 
             // lblIngreso
             // 
             this.lblIngreso.AutoSize = true;
-            this.lblIngreso.Location = new System.Drawing.Point(198, 416);
+            this.lblIngreso.Location = new System.Drawing.Point(176, 333);
             this.lblIngreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngreso.Name = "lblIngreso";
-            this.lblIngreso.Size = new System.Drawing.Size(134, 20);
+            this.lblIngreso.Size = new System.Drawing.Size(118, 17);
             this.lblIngreso.TabIndex = 12;
             this.lblIngreso.Text = "Fecha de Ingreso";
             // 
             // lblEgreso
             // 
             this.lblEgreso.AutoSize = true;
-            this.lblEgreso.Location = new System.Drawing.Point(538, 416);
+            this.lblEgreso.Location = new System.Drawing.Point(478, 333);
             this.lblEgreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEgreso.Name = "lblEgreso";
-            this.lblEgreso.Size = new System.Drawing.Size(131, 20);
+            this.lblEgreso.Size = new System.Drawing.Size(116, 17);
             this.lblEgreso.TabIndex = 13;
             this.lblEgreso.Text = "Fecha de Egreso";
             // 
             // dtpIngreso
             // 
-            this.dtpIngreso.Location = new System.Drawing.Point(112, 460);
-            this.dtpIngreso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpIngreso.Location = new System.Drawing.Point(100, 368);
+            this.dtpIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpIngreso.Name = "dtpIngreso";
-            this.dtpIngreso.Size = new System.Drawing.Size(298, 26);
+            this.dtpIngreso.Size = new System.Drawing.Size(265, 22);
             this.dtpIngreso.TabIndex = 16;
             // 
             // dtpEgreso
             // 
-            this.dtpEgreso.Location = new System.Drawing.Point(462, 460);
-            this.dtpEgreso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpEgreso.Location = new System.Drawing.Point(411, 368);
+            this.dtpEgreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpEgreso.Name = "dtpEgreso";
-            this.dtpEgreso.Size = new System.Drawing.Size(298, 26);
+            this.dtpEgreso.Size = new System.Drawing.Size(265, 22);
             this.dtpEgreso.TabIndex = 17;
             // 
             // comboClientes
             // 
             this.comboClientes.FormattingEnabled = true;
-            this.comboClientes.Location = new System.Drawing.Point(324, 65);
-            this.comboClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboClientes.Location = new System.Drawing.Point(288, 52);
             this.comboClientes.Name = "comboClientes";
-            this.comboClientes.Size = new System.Drawing.Size(240, 28);
+            this.comboClientes.Size = new System.Drawing.Size(214, 24);
             this.comboClientes.TabIndex = 18;
             this.comboClientes.SelectedIndexChanged += new System.EventHandler(this.comboClientes_SelectedIndexChanged);
             this.comboClientes.Click += new System.EventHandler(this.comboClientes_Click);
@@ -166,39 +165,38 @@
             // cmbHabitacion
             // 
             this.cmbHabitacion.FormattingEnabled = true;
-            this.cmbHabitacion.Location = new System.Drawing.Point(324, 240);
-            this.cmbHabitacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbHabitacion.Location = new System.Drawing.Point(288, 192);
             this.cmbHabitacion.Name = "cmbHabitacion";
-            this.cmbHabitacion.Size = new System.Drawing.Size(240, 28);
+            this.cmbHabitacion.Size = new System.Drawing.Size(214, 24);
             this.cmbHabitacion.TabIndex = 19;
             this.cmbHabitacion.SelectedIndexChanged += new System.EventHandler(this.cmbHabitacion_SelectedIndexChanged);
+            this.cmbHabitacion.Click += new System.EventHandler(this.cmbHabitacion_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(419, 124);
+            this.label1.Location = new System.Drawing.Point(372, 99);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.Size = new System.Drawing.Size(41, 17);
             this.label1.TabIndex = 20;
             this.label1.Text = "Hotel";
             // 
             // cmbHotel
             // 
             this.cmbHotel.FormattingEnabled = true;
-            this.cmbHotel.Location = new System.Drawing.Point(324, 156);
-            this.cmbHotel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbHotel.Location = new System.Drawing.Point(288, 125);
             this.cmbHotel.Name = "cmbHotel";
-            this.cmbHotel.Size = new System.Drawing.Size(240, 28);
+            this.cmbHotel.Size = new System.Drawing.Size(214, 24);
             this.cmbHotel.TabIndex = 21;
             this.cmbHotel.SelectedIndexChanged += new System.EventHandler(this.cmbHotel_SelectedIndexChanged);
             this.cmbHotel.Click += new System.EventHandler(this.cmbHotel_Click);
             // 
             // AltaReservaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 597);
+            this.ClientSize = new System.Drawing.Size(825, 478);
             this.Controls.Add(this.cmbHotel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbHabitacion);
@@ -214,7 +212,7 @@
             this.Controls.Add(this.btmLimpiar);
             this.Controls.Add(this.btmAgregar);
             this.Controls.Add(this.btmAtras);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AltaReservaForm";
             this.Text = "AltaReservaForm";
             this.Load += new System.EventHandler(this.AltaReservaForm_Load);

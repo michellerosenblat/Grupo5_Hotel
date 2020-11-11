@@ -94,5 +94,10 @@ namespace Grupo5_Hotel.Entidades.Entidades
         {
             return obj is Habitacion && obj != null && this.id == ((Habitacion)obj).Id;
         }
+
+        public override string ToString()
+        {
+            return categoria + " " +cantidadPlazas +  " personas";
+        }
     }
 }
