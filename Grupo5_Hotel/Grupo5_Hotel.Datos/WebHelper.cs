@@ -14,21 +14,21 @@ namespace Grupo5_Hotel.Datos
     {
         static WebClient client;
         static string rutaBase;
-
+        static string usuario;
         static WebHelper()
         {
             client = new WebClient();
             client.Encoding = Encoding.UTF8;
             //rutaBase = "https://cai-api.azurewebsites.net/api/v1";
             rutaBase = ConfigurationManager.AppSettings["URL_API"];
-
+            usuario = ConfigurationManager.AppSettings["Legajo"];
             client.Headers.Add("ContentType", "application/json");
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }
 
         public static string Get(string url)
         {
-            var uri = rutaBase + url;
+            var uri = rutaBase + url +usuario;
 
             var responseString = client.DownloadString(uri);
 

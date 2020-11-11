@@ -30,5 +30,14 @@ namespace Grupo5_Hotel.Negocio
             }
             return error;
         }
+        public static string ValidarComboBox (int num, string campoEsperado)
+        {
+            string error = "";
+            if (num == -1)
+            {
+                error = "Seleccione un " + campoEsperado + "\n";
+            }
+            return error;
+        }
     }
 }

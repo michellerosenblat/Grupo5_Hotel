@@ -14,7 +14,7 @@ namespace Grupo5_Hotel.Datos
     {
         public List <Cliente> TraerClientes()
         {
-            string json = WebHelper.Get("./cliente/888593");
+            string json = WebHelper.Get("./cliente");
             return MapList(json);
         }
         public List <Cliente> MapList(string json)

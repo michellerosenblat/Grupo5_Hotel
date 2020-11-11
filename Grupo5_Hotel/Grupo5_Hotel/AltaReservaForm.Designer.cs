@@ -190,6 +190,7 @@
             this.cmbHotel.Name = "cmbHotel";
             this.cmbHotel.Size = new System.Drawing.Size(240, 28);
             this.cmbHotel.TabIndex = 21;
+            this.cmbHotel.SelectedIndexChanged += new System.EventHandler(this.cmbHotel_SelectedIndexChanged);
             this.cmbHotel.Click += new System.EventHandler(this.cmbHotel_Click);
             // 
             // AltaReservaForm

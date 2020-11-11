@@ -32,7 +32,8 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
-            this.cmbHoteles = new System.Windows.Forms.ComboBox();
+            this.cmbHotel = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,21 +79,34 @@
             this.btnListar.TabIndex = 4;
             this.btnListar.Text = "Listar Habitaciones";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // cmbHoteles
+            // cmbHotel
             // 
-            this.cmbHoteles.FormattingEnabled = true;
-            this.cmbHoteles.Location = new System.Drawing.Point(48, 100);
-            this.cmbHoteles.Name = "cmbHoteles";
-            this.cmbHoteles.Size = new System.Drawing.Size(182, 28);
-            this.cmbHoteles.TabIndex = 8;
+            this.cmbHotel.FormattingEnabled = true;
+            this.cmbHotel.Location = new System.Drawing.Point(50, 121);
+            this.cmbHotel.Name = "cmbHotel";
+            this.cmbHotel.Size = new System.Drawing.Size(182, 28);
+            this.cmbHotel.TabIndex = 8;
+            this.cmbHotel.SelectedIndexChanged += new System.EventHandler(this.cmbHoteles_SelectedIndexChanged);
+            this.cmbHotel.Click += new System.EventHandler(this.cmbHotel_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(119, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Hotel";
             // 
             // HabitacionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 554);
-            this.Controls.Add(this.cmbHoteles);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbHotel);
             this.Controls.Add(this.dataClientes);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAlta);
@@ -102,6 +116,7 @@
             this.Load += new System.EventHandler(this.HabitacionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -111,6 +126,7 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.ComboBox cmbHoteles;
+        private System.Windows.Forms.ComboBox cmbHotel;
+        private System.Windows.Forms.Label label1;
     }
 }

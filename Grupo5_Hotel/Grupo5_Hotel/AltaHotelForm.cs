@@ -96,5 +96,10 @@ namespace Grupo5_Hotel
             rbSi.Checked = false;
             rbNo.Checked = false;
         }
+
+        private void comboEstrellas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

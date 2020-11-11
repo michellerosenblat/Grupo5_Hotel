@@ -124,5 +124,10 @@ namespace Grupo5_Hotel
         {
             cmbHotel.DataSource = hotelServicio.TraerHoteles();
         }
+
+        private void cmbHotel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
