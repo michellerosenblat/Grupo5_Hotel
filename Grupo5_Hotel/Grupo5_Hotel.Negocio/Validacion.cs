@@ -39,5 +39,17 @@ namespace Grupo5_Hotel.Negocio
             }
             return error;
         }
+        public static string ValidarPlaza (string cantHuespedes, int plaza, string campoEsperado)
+        {
+            string error = ValidarNumero(cantHuespedes, campoEsperado);
+            if (error == "")
+            {
+                if (!(int.Parse(cantHuespedes) <= plaza))
+                {
+                    error += "La cantidad de huespedes no puede ser mayor a la plaza";
+                }
+            }
+            return error;
+        }
     }
 }

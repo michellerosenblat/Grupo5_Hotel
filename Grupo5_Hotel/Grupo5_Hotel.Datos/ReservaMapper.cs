@@ -14,7 +14,7 @@ namespace Grupo5_Hotel.Datos
     {
         public List<Reserva> TraerReservas()
         {
-            string json = WebHelper.Get("./Hotel/Reservas" + ConfigurationManager.AppSettings["Legajo"]);
+            string json = WebHelper.Get("./Hotel/Reservas/" + ConfigurationManager.AppSettings["Legajo"]);
             return MapList(json);
         }
         public List<Reserva> MapList(string json)
@@ -33,13 +33,14 @@ namespace Grupo5_Hotel.Datos
             n.Add("CantidadHuespedes", reserva.CantidadHuespedes.ToString());
             n.Add("FechaIngreso", reserva.FechaIngreso.ToString());
             n.Add("FechaEgreso", reserva.FechaEgreso.ToString());
+            n.Add("Usuario", ConfigurationManager.AppSettings["Legajo"]);
             n.Add("id", reserva.Id.ToString());
             return n;
         }
         public TransactionResult Insert(Reserva reserva)
         {
             NameValueCollection n = ReverseMap(reserva);
-            string result = WebHelper.Post("./Reservas/", n);
+            string result = WebHelper.Post("./Hotel/Reservas/", n);
             return Resultado(result);
         }
     }

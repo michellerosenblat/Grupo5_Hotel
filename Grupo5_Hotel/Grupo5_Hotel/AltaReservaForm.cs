@@ -27,11 +27,12 @@ namespace Grupo5_Hotel
             clienteServicio = new ClienteServicio();
             habitacionServicio = new HabitacionServicio();
             hotelServicio = new HotelServicio();
+            reservaForm = new ReservaForm();
         }
         private void AltaReservaForm_Load(object sender, EventArgs e)
         {
-            reservaForm = new ReservaForm();
             ListarClientes();
+            ListarHoteles();
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
@@ -73,22 +74,25 @@ namespace Grupo5_Hotel
         {
             get
             {
-                return (Validacion.ValidarNumero("IdCliente", comboClientes.SelectedIndex.ToString()) +
-                        Validacion.ValidarNumero("IdHotel", cmbHotel.SelectedIndex.ToString()) +
-                        Validacion.ValidarNumero("IdHabitación", cmbHabitacion.SelectedIndex.ToString()));
+                return (Validacion.ValidarComboBox(comboClientes.SelectedIndex, "Cliente") +
+                    Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
+                    Validacion.ValidarComboBox(cmbHabitacion.SelectedIndex, "Habitación"));
+                    //me falta validar la plaza Validacion.ValidarPlaza (txtCantHuespedes, 
             }
         }
 
         private Reserva CrearReserva()
         {
-            return new Reserva(reservaServicio.ProximoId(), ((Cliente)comboClientes.SelectedItem).Id, ((Habitacion)cmbHabitacion.SelectedItem).Id, int.Parse(lblCantindadHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
+            return new Reserva(reservaServicio.ProximoId(), ((Cliente)comboClientes.SelectedItem).Id, ((Habitacion)cmbHabitacion.SelectedItem).Id, int.Parse(txtCantHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
         }
 
         private void BorrarCampos()
         {
-            txtboxHuespedes.Clear();
+            txtCantHuespedes.Clear();
             comboClientes.SelectedIndex = -1;
-            
+            cmbHotel.SelectedIndex = -1;
+            cmbHabitacion.SelectedIndex = -1;
+            cmbHabitacion.Enabled = false;
 
         }
         private void btnListar_Click(object sender, EventArgs e)
@@ -100,37 +104,36 @@ namespace Grupo5_Hotel
         {
             comboClientes.DataSource = clienteServicio.TraerClientes();
         }
-        private void ClienteForm_VisibleChanged(object sender, EventArgs e)
-        {
-            if (this.Visible)
-            {
-                ListarClientes();
-            }
-        }
-        private void comboClientes_Click(object sender, EventArgs e)
-        {           
-        }
-        private void cmbHabitacion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbHabitacion.Enabled = true;
-        }
-        private void cmbHotel_Click(object sender, EventArgs e)
+
+        private void ListarHoteles()
         {
             cmbHotel.DataSource = hotelServicio.TraerHoteles();
         }
 
         private void cmbHotel_SelectedIndexChanged(object sender, EventArgs e)
         {
-        }
-
-        private void comboClientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            Hotel hotel = (Hotel)cmbHotel.SelectedItem;
+            if (!(hotel is null)) {
+                cmbHabitacion.Enabled = true;
+                cmbHabitacion.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.id);
+            }
+           
         }
 
         private void cmbHabitacion_Click(object sender, EventArgs e)
         {
-            Hotel hotel = (Hotel)cmbHotel.SelectedItem;
-            cmbHabitacion.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.id);
+           
+        }
+
+        private void AltaReservaForm_VisibleChanged(object sender, EventArgs e)
+        {
+            BorrarCampos();
+        }
+
+
+        private void cmbHotel_DisplayMemberChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
