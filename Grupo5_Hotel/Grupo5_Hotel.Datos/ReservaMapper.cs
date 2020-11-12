@@ -33,7 +33,7 @@ namespace Grupo5_Hotel.Datos
             n.Add("CantidadHuespedes", reserva.CantidadHuespedes.ToString());
             n.Add("FechaIngreso", reserva.FechaIngreso.ToString());
             n.Add("FechaEgreso", reserva.FechaEgreso.ToString());
-            n.Add("Usuario", ConfigurationManager.AppSettings["Legajo"]);
+            //n.Add("Usuario", ConfigurationManager.AppSettings["Legajo"]);
             n.Add("id", reserva.Id.ToString());
             return n;
         }
