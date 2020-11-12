@@ -26,6 +26,7 @@ namespace Grupo5_Hotel.Entidades.Entidades
             this.cantidadHuespedes = CantHues;
             this.fechaIngreso = FI;
             this.fechaEgreso = FE;
+            this.habitacion = new Habitacion();
         }
         public Reserva(int ID, Cliente cliente, int IDHabitacion, int CantHues, DateTime FI, DateTime FE)
         {
@@ -36,6 +37,7 @@ namespace Grupo5_Hotel.Entidades.Entidades
             this.cantidadHuespedes = CantHues;
             this.fechaIngreso = FI;
             this.fechaEgreso = FE;
+            this.habitacion = new Habitacion();
         }
 
         public int Id

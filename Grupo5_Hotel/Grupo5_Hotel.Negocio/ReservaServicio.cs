@@ -12,17 +12,31 @@ namespace Grupo5_Hotel.Negocio
 {
     public class ReservaServicio
     {
-        ReservaMapper mapper;
+        ReservaMapper reservaMapper;
+        HotelMapper hotelMapper;
+        HabitacionMapper habitacionMapper;
         List<Reserva> cacheReservas;
         public ReservaServicio()
         {
-            mapper = new ReservaMapper();
+            reservaMapper = new ReservaMapper();
+            hotelMapper = new HotelMapper ();
+            habitacionMapper = new HabitacionMapper();
             RefrescarCache();
         }
 
         private void RefrescarCache()
         {
-            cacheReservas = mapper.TraerReservas();
+            cacheReservas = reservaMapper.TraerReservas();
+            List<Hotel> cacheHotel = hotelMapper.TraerHoteles();
+            List<Habitacion> cacheHabitaciones = new List<Habitacion>();
+            foreach (Hotel h in cacheHotel)
+            {
+                cacheHabitaciones.AddRange(habitacionMapper.TraerHabitacionesPorId(h.Id));
+            }
+            foreach (Reserva r in cacheReservas)
+            {
+                r.Habitacion = cacheHabitaciones.Find(hab => hab.Id == r.IdHabitacion);
+            }
         }
 
         public List<Reserva> TraerReservas()
@@ -37,7 +51,7 @@ namespace Grupo5_Hotel.Negocio
             }
             else
             {
-                TransactionResult result = mapper.Insert(reserva);
+                TransactionResult result = reservaMapper.Insert(reserva);
                 if (!result.IsOk)
                 {
                     throw new ErrorServidorException(result.Error);

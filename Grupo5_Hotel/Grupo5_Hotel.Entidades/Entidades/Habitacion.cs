@@ -14,6 +14,7 @@ namespace Grupo5_Hotel.Entidades.Entidades
         private int cantidadPlazas;
         private bool cancelacion;
         private double precio;
+        private Hotel hotel;
 
         public Habitacion (int idHotel, int cantidadPlazas, string categoria, int precio, bool cancelacion){
         
@@ -22,8 +23,10 @@ namespace Grupo5_Hotel.Entidades.Entidades
             this.categoria = categoria;
             this.precio = precio;
             this.cancelacion = cancelacion;
+            this.hotel = new Hotel();
 
         }
+        public Habitacion() { }
         public int Id
         {
             get
@@ -33,6 +36,17 @@ namespace Grupo5_Hotel.Entidades.Entidades
             set
             {
                 this.id = value;
+            }
+        }
+        public Hotel Hotel
+        {
+            get
+            {
+                return this.hotel;
+            }
+            set
+            {
+                this.hotel = value;
             }
         }
         public int IdHotel

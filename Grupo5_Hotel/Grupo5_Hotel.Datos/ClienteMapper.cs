@@ -14,7 +14,8 @@ namespace Grupo5_Hotel.Datos
     {
         public List <Cliente> TraerClientes()
         {
-            string json = WebHelper.Get("./cliente");
+            string json = WebHelper.Get("./cliente/");
+            // si se quiere filtrar por nro de legajo agregar esto +ConfigurationManager.AppSettings["Legajo"]
             return MapList(json);
         }
         public List <Cliente> MapList(string json)
