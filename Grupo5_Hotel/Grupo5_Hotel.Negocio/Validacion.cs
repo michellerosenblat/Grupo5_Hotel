@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grupo5_Hotel.Entidades.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,15 +40,16 @@ namespace Grupo5_Hotel.Negocio
             }
             return error;
         }
-        public static string ValidarPlaza (string cantHuespedes, int plaza, string campoEsperado)
+        public static string ValidacionDeReserva(Reserva r)
         {
-            string error = ValidarNumero(cantHuespedes, campoEsperado);
-            if (error == "")
+            string error="";
+            if (r.FechaEgreso <= r.FechaIngreso)
             {
-                if (!(int.Parse(cantHuespedes) <= plaza))
-                {
-                    error += "La cantidad de huespedes no puede ser mayor a la plaza";
-                }
+                error += "La fecha de ingreso no puede ser posterior a la de egreso" + "\n";
+            }
+            if (r.CantidadHuespedes > r.Habitacion.CantidadPlazas)
+            {
+                error += "La cantidad de huespedes no puede ser mayor a la plaza";
             }
             return error;
         }

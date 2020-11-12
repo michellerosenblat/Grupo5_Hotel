@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Grupo5_Hotel.Entidades;
 using Grupo5_Hotel.Entidades.Entidades;
 using Grupo5_Hotel.Entidades.Excepciones;
+using System.Net.Http.Headers;
 
 namespace Grupo5_Hotel.Negocio
 {
@@ -51,6 +52,7 @@ namespace Grupo5_Hotel.Negocio
             }
             else
             {
+                ValidacionDeReserva(reserva);
                 TransactionResult result = reservaMapper.Insert(reserva);
                 if (!result.IsOk)
                 {
@@ -73,6 +75,18 @@ namespace Grupo5_Hotel.Negocio
         public int ProximoId()
         {
             return cacheReservas.Max(reserva => reserva.Id) + 1;
+        }
+        public void ValidacionDeReserva(Reserva r)
+        {
+            string error = "";
+            if (r.FechaEgreso <= r.FechaIngreso)
+            {
+                throw new FechaIncorrectaException ();
+            }
+            if (r.CantidadHuespedes > r.Habitacion.CantidadPlazas)
+            {
+               throw new CantHuespedesException();
+            }
         }
     }
 }

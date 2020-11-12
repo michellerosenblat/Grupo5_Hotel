@@ -76,6 +76,7 @@
     <Compile Include="ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GrillaReservaWrapper.cs" />
     <Compile Include="HabitacionForm.cs">
       <SubType>Form</SubType>
     </Compile>

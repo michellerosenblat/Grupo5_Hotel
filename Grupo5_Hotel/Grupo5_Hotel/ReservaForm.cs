@@ -34,6 +34,7 @@ namespace Grupo5_Hotel
             habitacionServicio = new HabitacionServicio();
             altaform = new AltaReservaForm();
             menu = new Menu();
+            
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
@@ -56,6 +57,8 @@ namespace Grupo5_Hotel
         
             foreach (Reserva r in reservas)
             {
+                //dataReserva.DefaultCellStyle.WrapMode = GrillaReservaWrapper(r);
+                // no entendi como asociar el wrapper
                 r.Cliente = clientes.Find(c => c.Id == r.IdCliente);
                 //se podria hacer lo mismo con habitacion, pro no tengo el id de hotel en reserva
                 //para consultar en la api

@@ -77,13 +77,13 @@ namespace Grupo5_Hotel
                 return (Validacion.ValidarComboBox(comboClientes.SelectedIndex, "Cliente") +
                     Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
                     Validacion.ValidarComboBox(cmbHabitacion.SelectedIndex, "Habitación"));
-                    //me falta validar la plaza Validacion.ValidarPlaza (txtCantHuespedes, 
+                   
             }
         }
-
         private Reserva CrearReserva()
         {
-            return new Reserva(reservaServicio.ProximoId(), ((Cliente)comboClientes.SelectedItem).Id, ((Habitacion)cmbHabitacion.SelectedItem).Id, int.Parse(txtCantHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
+            //return new Reserva(reservaServicio.ProximoId(), ((Cliente)comboClientes.SelectedItem).Id, ((Habitacion)cmbHabitacion.SelectedItem).Id, int.Parse(txtCantHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
+            return new Reserva((Cliente) comboClientes.SelectedItem, (Habitacion)cmbHabitacion.SelectedItem, int.Parse(txtCantHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
         }
 
         private void BorrarCampos()
