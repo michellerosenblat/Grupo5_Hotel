@@ -15,6 +15,7 @@ namespace Grupo5_Hotel
     public partial class ClienteForm : Form
     {
         ClienteServicio clienteServicio;
+        private Menu menu;
         public ClienteForm()
         {
             InitializeComponent();                        
@@ -23,6 +24,7 @@ namespace Grupo5_Hotel
         private void ClienteForm_Load(object sender, EventArgs e)
         {
             clienteServicio = new ClienteServicio();
+            menu = new Menu();
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace Grupo5_Hotel
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            menu.Show();
             this.Close();
         }
 

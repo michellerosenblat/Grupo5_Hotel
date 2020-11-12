@@ -28,7 +28,7 @@ namespace Grupo5_Hotel.Datos
 
         public static string Get(string url)
         {
-            var uri = rutaBase + url; //+usuario;
+            var uri = rutaBase + url; ;
 
             var responseString = client.DownloadString(uri);
 

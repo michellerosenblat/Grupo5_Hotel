@@ -20,6 +20,7 @@ namespace Grupo5_Hotel
         ClienteServicio clienteServicio;
         HabitacionServicio habitacionServicio;
         AltaReservaForm altaform;
+        Menu menu;
 
         public ReservaForm()
         {
@@ -32,11 +33,12 @@ namespace Grupo5_Hotel
             clienteServicio = new ClienteServicio();
             habitacionServicio = new HabitacionServicio();
             altaform = new AltaReservaForm();
+            menu = new Menu();
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            menu.Show();
             this.Close();
         }
 

@@ -16,11 +16,12 @@ namespace Grupo5_Hotel
     {
         HotelServicio hotelServicio;
         //private AltaHotelForm altaHotel;
+        private Menu menu;
         public HotelForm()
         {
             InitializeComponent();
             //altaHotel = new AltaHotelForm();
-
+            menu = new Menu();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace Grupo5_Hotel
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            menu.Show();
             this.Close();
         }
     }

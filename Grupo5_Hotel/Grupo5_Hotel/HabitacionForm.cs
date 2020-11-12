@@ -16,12 +16,14 @@ namespace Grupo5_Hotel
     {
         private HotelServicio hotelServicio;
         private HabitacionServicio habitacionServicio;
+        private Menu menu;
         public HabitacionForm()
         {
             InitializeComponent();
             habitacionServicio = new HabitacionServicio();
             hotelServicio = new HotelServicio();
             //cmbHotel.SelectedIndex = -1;
+            menu = new Menu();
         }
 
         private void HabitacionForm_Load(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace Grupo5_Hotel
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            menu.Show();
             this.Close();
         }
 

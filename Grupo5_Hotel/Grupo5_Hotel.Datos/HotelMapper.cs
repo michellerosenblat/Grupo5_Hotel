@@ -15,7 +15,7 @@ namespace Grupo5_Hotel.Datos
 
         public List<Hotel> TraerHoteles()
         {
-            string json = WebHelper.Get("./Hotel/Hoteles");
+            string json = WebHelper.Get("./Hotel/Hoteles" + ConfigurationManager.AppSettings["Legajo"]);
             return MapList(json);
         }
         public List<Hotel> MapList(string json)

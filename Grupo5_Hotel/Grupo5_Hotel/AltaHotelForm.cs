@@ -16,6 +16,7 @@ namespace Grupo5_Hotel
     public partial class AltaHotelForm : Form
     {
         HotelServicio hotelServicio;
+        HotelForm hotelForm;
         public AltaHotelForm()
         {
             InitializeComponent();
@@ -45,7 +46,7 @@ namespace Grupo5_Hotel
 
         private void AltaHotelForm_Load(object sender, EventArgs e)
         {
-
+            hotelForm = new HotelForm();
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
@@ -87,7 +88,7 @@ namespace Grupo5_Hotel
 
         private void buttonVolver_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            hotelForm.Show();
             this.Close();
         }
 
