@@ -60,5 +60,13 @@ namespace Grupo5_Hotel
             reservaForm.Show();
             this.Hide();
         }
+
+        private void btmReporteReserva_Click(object sender, EventArgs e)
+        {
+            ReporteReservasForm reporteReservaform = new ReporteReservasForm();
+            reporteReservaform.Owner = this;
+            reporteReservaform.Show();
+            this.Hide();
+        }
     }
 }
