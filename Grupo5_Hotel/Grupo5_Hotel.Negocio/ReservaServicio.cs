@@ -80,6 +80,15 @@ namespace Grupo5_Hotel.Negocio
                     reservasporcliente.Add(r);
             return reservasporcliente;
         }
+        public List<Reserva> TraerReservasPorHotel(Hotel hotel)
+        {
+            List<Reserva> reservasporhotel = new List<Reserva>();
+            foreach (Reserva r in cacheReservas)
+                if(r.Habitacion != null) //necesario por haber datos mal cargado en pruebas pasadas
+                    if (r.Habitacion.IdHotel == hotel.Id)
+                        reservasporhotel.Add(r);
+            return reservasporhotel;
+        }
         public int ProximoId()
         {
             return cacheReservas.Max(reserva => reserva.Id) + 1;

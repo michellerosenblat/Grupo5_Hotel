@@ -68,5 +68,18 @@ namespace Grupo5_Hotel
             reporteReservaform.Show();
             this.Hide();
         }
+
+        private void btmReporteHabitaciones_Click(object sender, EventArgs e)
+        {
+            ReporteHabitacionesXHotelForm reportehabitacionform = new ReporteHabitacionesXHotelForm();
+            reportehabitacionform.Owner = this;
+            reportehabitacionform.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
