@@ -25,6 +25,7 @@ namespace Grupo5_Hotel
         public ReservaForm()
         {
             InitializeComponent();
+            
         }
 
         private void ReservaForm_Load(object sender, EventArgs e)
@@ -34,7 +35,7 @@ namespace Grupo5_Hotel
             habitacionServicio = new HabitacionServicio();
             altaform = new AltaReservaForm();
             menu = new Menu();
-            
+
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
@@ -52,21 +53,9 @@ namespace Grupo5_Hotel
 
          private void btnListarReserva_Click(object sender, EventArgs e)
         {
-            List <Reserva> reservas = reservaServicio.TraerReservas();
-            List<Cliente> clientes = clienteServicio.TraerClientes();
-        
-            foreach (Reserva r in reservas)
-            {
-                //dataReserva.DefaultCellStyle.WrapMode = GrillaReservaWrapper(r);
-                // no entendi como asociar el wrapper
-                r.Cliente = clientes.Find(c => c.Id == r.IdCliente);
-                //se podria hacer lo mismo con habitacion, pro no tengo el id de hotel en reserva
-                //para consultar en la api
-              
-            }
-            dataReserva.DataSource = reservas;
-            dataReserva.Columns["idCliente"].Visible = false;
-            dataReserva.Columns["id"].Visible = false;
+            dataReserva.DataSource = reservaServicio.TraerReservaWrapper();
+            //dataReserva.Columns["idCliente"].Visible = false;
+            //dataReserva.Columns["id"].Visible = false;
         }
 
   

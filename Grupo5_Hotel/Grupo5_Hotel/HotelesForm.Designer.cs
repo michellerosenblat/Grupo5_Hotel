@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListHoteles = new System.Windows.Forms.ListBox();
             this.BotonListar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.dataHotel = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataHotel)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ListHoteles
-            // 
-            this.ListHoteles.FormattingEnabled = true;
-            this.ListHoteles.ItemHeight = 20;
-            this.ListHoteles.Location = new System.Drawing.Point(195, 141);
-            this.ListHoteles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ListHoteles.Name = "ListHoteles";
-            this.ListHoteles.Size = new System.Drawing.Size(940, 244);
-            this.ListHoteles.TabIndex = 0;
             // 
             // BotonListar
             // 
@@ -76,29 +67,40 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // HotelesForm
+            // dataHotel
+            // 
+            this.dataHotel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataHotel.Location = new System.Drawing.Point(194, 56);
+            this.dataHotel.Name = "dataHotel";
+            this.dataHotel.RowHeadersVisible = false;
+            this.dataHotel.RowHeadersWidth = 62;
+            this.dataHotel.RowTemplate.Height = 28;
+            this.dataHotel.Size = new System.Drawing.Size(959, 408);
+            this.dataHotel.TabIndex = 4;
+            // 
+            // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 562);
+            this.Controls.Add(this.dataHotel);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.BotonListar);
-            this.Controls.Add(this.ListHoteles);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "HotelesForm";
+            this.Name = "HotelForm";
             this.Text = "HotelesForm";
             this.Load += new System.EventHandler(this.HotelesForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataHotel)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox ListHoteles;
         private System.Windows.Forms.Button BotonListar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataHoteles;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.DataGridView dataHotel;
     }
 }

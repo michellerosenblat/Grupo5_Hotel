@@ -47,6 +47,7 @@
     <Compile Include="Entidades\Hotel.cs" />
     <Compile Include="Entidades\Persona.cs" />
     <Compile Include="Entidades\Reserva.cs" />
+    <Compile Include="Entidades\ReservaWrapper.cs" />
     <Compile Include="Entidades\TransactionResult.cs" />
     <Compile Include="Excepciones\CantHuespedesException.cs" />
     <Compile Include="Excepciones\ClienteExistenteException.cs" />

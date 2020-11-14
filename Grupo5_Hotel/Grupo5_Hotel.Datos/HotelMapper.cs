@@ -15,7 +15,8 @@ namespace Grupo5_Hotel.Datos
 
         public List<Hotel> TraerHoteles()
         {
-            string json = WebHelper.Get("./Hotel/Hoteles/" + ConfigurationManager.AppSettings["Legajo"]);
+            string json = WebHelper.Get("./Hotel/Hoteles/");
+            //+ ConfigurationManager.AppSettings["Legajo"]
             return MapList(json);
         }
         public List<Hotel> MapList(string json)
@@ -31,7 +32,7 @@ namespace Grupo5_Hotel.Datos
             NameValueCollection n = new NameValueCollection();
             n.Add("estrellas", hotel.Estrellas.ToString());
             n.Add("nombre", hotel.Nombre);
-            n.Add("direccion", hotel.direccion);
+            n.Add("direccion", hotel.Direccion);
             n.Add("Usuario", ConfigurationManager.AppSettings["Legajo"]);
             n.Add("amenities", hotel.Amenities.ToString()); 
             n.Add("id", hotel.Id.ToString()); 

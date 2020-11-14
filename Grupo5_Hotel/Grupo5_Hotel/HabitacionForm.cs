@@ -61,7 +61,7 @@ namespace Grupo5_Hotel
         {
             Hotel hotel = (Hotel)cmbHotel.SelectedValue;
             if (!(hotel is null))
-            dataClientes.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.id);
+            dataClientes.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.Id);
         }
 
         private void cmbHotel_Click(object sender, EventArgs e)

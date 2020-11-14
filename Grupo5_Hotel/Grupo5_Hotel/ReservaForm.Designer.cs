@@ -73,6 +73,8 @@
             this.dataReserva.AllowUserToAddRows = false;
             this.dataReserva.AllowUserToDeleteRows = false;
             this.dataReserva.AllowUserToOrderColumns = true;
+            this.dataReserva.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataReserva.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataReserva.Location = new System.Drawing.Point(228, 38);
             this.dataReserva.Name = "dataReserva";
@@ -80,14 +82,14 @@
             this.dataReserva.RowHeadersVisible = false;
             this.dataReserva.RowHeadersWidth = 62;
             this.dataReserva.RowTemplate.Height = 28;
-            this.dataReserva.Size = new System.Drawing.Size(901, 387);
+            this.dataReserva.Size = new System.Drawing.Size(1110, 432);
             this.dataReserva.TabIndex = 8;
             // 
             // ReservaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 483);
+            this.ClientSize = new System.Drawing.Size(1404, 590);
             this.Controls.Add(this.dataReserva);
             this.Controls.Add(this.btmAtras);
             this.Controls.Add(this.btmAltaReserva);

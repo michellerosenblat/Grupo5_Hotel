@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Grupo5_Hotel.Entidades.Entidades;
+using Grupo5_Hotel.Entidades.Excepciones;
 
 namespace Grupo5_Hotel
 {
@@ -59,6 +60,14 @@ namespace Grupo5_Hotel
                 }
                 BorrarCampos();
             }
+            catch (CantHuespedesException cantEx)
+            {
+                MessageBox.Show(cantEx.Message);
+            }
+            catch (FechaIncorrectaException fechaEx)
+            {
+                MessageBox.Show(fechaEx.Message);
+            }
             catch (FormatException fex)
             {
                 MessageBox.Show(fex.Message);
@@ -76,7 +85,8 @@ namespace Grupo5_Hotel
             {
                 return (Validacion.ValidarComboBox(comboClientes.SelectedIndex, "Cliente") +
                     Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
-                    Validacion.ValidarComboBox(cmbHabitacion.SelectedIndex, "Habitación"));
+                    Validacion.ValidarComboBox(cmbHabitacion.SelectedIndex, "Habitación") +
+                    Validacion.ValidarNumero(txtCantHuespedes.Text, "Cantidad de Huespedes"));
                    
             }
         }
@@ -115,7 +125,7 @@ namespace Grupo5_Hotel
             Hotel hotel = (Hotel)cmbHotel.SelectedItem;
             if (!(hotel is null)) {
                 cmbHabitacion.Enabled = true;
-                cmbHabitacion.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.id);
+                cmbHabitacion.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.Id);
             }
            
         }

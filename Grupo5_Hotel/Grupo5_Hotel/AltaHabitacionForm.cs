@@ -135,7 +135,7 @@ namespace Grupo5_Hotel
         }
         private Habitacion CrearHabitacion()
         {
-           return new Habitacion(((Hotel)cmbHotel.SelectedItem).id, int.Parse(cmbPlazas.SelectedItem.ToString()), cmbCategoria.SelectedItem.ToString(), int.Parse(txtPrecio.Text), rbSi.Checked);
+           return new Habitacion(((Hotel)cmbHotel.SelectedItem).Id, int.Parse(cmbPlazas.SelectedItem.ToString()), cmbCategoria.SelectedItem.ToString(), int.Parse(txtPrecio.Text), rbSi.Checked);
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

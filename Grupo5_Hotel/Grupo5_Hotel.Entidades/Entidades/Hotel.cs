@@ -11,15 +11,15 @@ namespace Grupo5_Hotel.Entidades.Entidades
     public class Hotel
     {
         [DataMember]
-        public int id;
+        private int id;
         [DataMember]
-        public string nombre;
+        private string nombre;
         [DataMember]
-        public string direccion;
+        private string direccion;
         [DataMember]
-        public int estrellas;
+        private int estrellas;
         [DataMember]
-        public bool amenities;
+        private bool amenities;
         public Hotel() { }
         public Hotel(int id, string nombre, string direccion, int estrellas, bool amenities) 
         {

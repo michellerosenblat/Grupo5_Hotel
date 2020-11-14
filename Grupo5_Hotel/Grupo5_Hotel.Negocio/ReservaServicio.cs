@@ -16,34 +16,61 @@ namespace Grupo5_Hotel.Negocio
         ReservaMapper reservaMapper;
         HotelMapper hotelMapper;
         HabitacionMapper habitacionMapper;
+        ClienteMapper clienteMapper;
         List<Reserva> cacheReservas;
+        List<Hotel> listaHoteles;
+        List<Cliente> listaClientes;
+        List<Habitacion> listaHabitaciones;
         public ReservaServicio()
         {
             reservaMapper = new ReservaMapper();
             hotelMapper = new HotelMapper ();
             habitacionMapper = new HabitacionMapper();
+            clienteMapper = new ClienteMapper();
             RefrescarCache();
+            LlenarListas();
         }
 
         private void RefrescarCache()
         {
             cacheReservas = reservaMapper.TraerReservas();
             List<Hotel> cacheHotel = hotelMapper.TraerHoteles();
-            List<Habitacion> cacheHabitaciones = new List<Habitacion>();
-            foreach (Hotel h in cacheHotel)
-            {
-                cacheHabitaciones.AddRange(habitacionMapper.TraerHabitacionesPorId(h.Id));
-            }
-            foreach (Reserva r in cacheReservas)
-            {
-                r.Habitacion = cacheHabitaciones.Find(hab => hab.Id == r.IdHabitacion);
-            }
+            //List<Habitacion> cacheHabitaciones = new List<Habitacion>();
         }
 
         public List<Reserva> TraerReservas()
         {
             return cacheReservas;
         }
+        public List <ReservaWrapper> TraerReservaWrapper()
+        {
+            List<ReservaWrapper> listaReservaWrapper = new List<ReservaWrapper>();
+            LlenarListas();
+            foreach (Reserva r in cacheReservas)
+            {
+                Habitacion habitacion = DevolverHabitacionDe(r);
+                Hotel hotel = listaHoteles.Find(ho => ho.Id == habitacion.IdHotel);
+                Cliente cliente = listaClientes.Find(c => c.Id == r.IdCliente);
+                listaReservaWrapper.Add(new ReservaWrapper(r, habitacion, cliente, hotel));
+            }
+            return listaReservaWrapper;
+        }
+
+        private void LlenarListas()
+        {
+            listaHoteles = hotelMapper.TraerHoteles();
+            listaClientes = clienteMapper.TraerClientes();
+            listaHabitaciones = new List<Habitacion>();
+            foreach (Hotel h in listaHoteles)
+            {
+                listaHabitaciones.AddRange(habitacionMapper.TraerHabitacionesPorId(h.Id));
+            }
+        }
+        private Habitacion DevolverHabitacionDe (Reserva r)
+        {
+            return listaHabitaciones.Find(hab => hab.Id == r.IdHabitacion);
+        }
+
         public void InsertarReserva(Reserva reserva)
         {
             if (ExisteReserva(reserva))
@@ -100,7 +127,7 @@ namespace Grupo5_Hotel.Negocio
             {
                 throw new FechaIncorrectaException ();
             }
-            if (r.CantidadHuespedes > r.Habitacion.CantidadPlazas)
+            if (r.CantidadHuespedes > DevolverHabitacionDe(r).CantidadPlazas)
             {
                throw new CantHuespedesException();
             }
