@@ -16,6 +16,7 @@ namespace Grupo5_Hotel
         int cantDias;
         string fechaIngreso;
         string fechaEgreso;
+        Reserva reserva;
         public ReservaWrapper(Reserva reserva, Habitacion habitacion, Cliente cliente, Hotel hotel)
         {
             codReserva = reserva.Id;
@@ -25,7 +26,7 @@ namespace Grupo5_Hotel
             cantDias = (reserva.FechaEgreso - reserva.FechaIngreso).Days;
             fechaIngreso= reserva.FechaIngreso.ToString("dddd, dd MMMM yyyy");
             fechaEgreso = reserva.FechaEgreso.ToShortDateString();
-            
+            this.reserva = reserva;
         }
        public int CodReserva
         {
@@ -36,6 +37,17 @@ namespace Grupo5_Hotel
             get
             {
                 return this.codReserva;
+            }
+        }
+        public Reserva Reserva
+        {
+            set
+            {
+                this.reserva = value;
+            }
+            get
+            {
+                return this.reserva;
             }
         }
         public Cliente Cliente

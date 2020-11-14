@@ -21,21 +21,24 @@ namespace Grupo5_Hotel.Negocio
         List<Hotel> listaHoteles;
         List<Cliente> listaClientes;
         List<Habitacion> listaHabitaciones;
+        List<ReservaWrapper> listaReservaWrapper;
+        
         public ReservaServicio()
         {
+            
             reservaMapper = new ReservaMapper();
-            hotelMapper = new HotelMapper ();
+            hotelMapper = new HotelMapper();
             habitacionMapper = new HabitacionMapper();
             clienteMapper = new ClienteMapper();
             RefrescarCache();
-            LlenarListas();
+            
+            listaReservaWrapper = TraerReservaWrapper();
+           
         }
-
         private void RefrescarCache()
         {
             cacheReservas = reservaMapper.TraerReservas();
             List<Hotel> cacheHotel = hotelMapper.TraerHoteles();
-            //List<Habitacion> cacheHabitaciones = new List<Habitacion>();
         }
 
         public List<Reserva> TraerReservas()
@@ -79,6 +82,7 @@ namespace Grupo5_Hotel.Negocio
             }
             else
             {
+                LlenarListas();
                 ValidacionDeReserva(reserva);
                 TransactionResult result = reservaMapper.Insert(reserva);
                 if (!result.IsOk)
@@ -99,23 +103,6 @@ namespace Grupo5_Hotel.Negocio
         {
             return cacheReservas.Find(c => c.Id == id);
         }
-        public List<Reserva> TraerReservasPorIdCliente(int idcliente)
-        {
-            List<Reserva> reservasporcliente = new List<Reserva>();
-            foreach (Reserva r in cacheReservas)
-                if (r.IdCliente == idcliente)
-                    reservasporcliente.Add(r);
-            return reservasporcliente;
-        }
-        public List<Reserva> TraerReservasPorHotel(Hotel hotel)
-        {
-            List<Reserva> reservasporhotel = new List<Reserva>();
-            foreach (Reserva r in cacheReservas)
-                if(r.Habitacion != null) //necesario por haber datos mal cargado en pruebas pasadas
-                    if (r.Habitacion.IdHotel == hotel.Id)
-                        reservasporhotel.Add(r);
-            return reservasporhotel;
-        }
         public int ProximoId()
         {
             return cacheReservas.Max(reserva => reserva.Id) + 1;
@@ -131,6 +118,25 @@ namespace Grupo5_Hotel.Negocio
             {
                throw new CantHuespedesException();
             }
+        }
+        //esto quedó medio desprolijo, no se si es mejor que la lista sea una propiedad, pero creo que 
+        //empeoro mas la performance
+        public List<ReservaWrapper> TraerReservasPorHotel(Hotel hotel)
+        {
+            List<ReservaWrapper> reservasporhotel = new List<ReservaWrapper>();
+            foreach (ReservaWrapper r in listaReservaWrapper)
+                if (r.Habitacion != null) //necesario por haber datos mal cargado en pruebas pasadas
+                    if (r.Habitacion.IdHotel == hotel.Id)
+                        reservasporhotel.Add(r);
+            return reservasporhotel;
+        }
+        public List<ReservaWrapper> TraerReservasPorIdCliente(int idcliente)
+        {
+            List<ReservaWrapper> reservasPorCliente = new List <ReservaWrapper>();
+            foreach (ReservaWrapper r in listaReservaWrapper)
+                if (r.Reserva.IdCliente== idcliente)
+                    reservasPorCliente.Add(r);
+            return reservasPorCliente;
         }
     }
 }

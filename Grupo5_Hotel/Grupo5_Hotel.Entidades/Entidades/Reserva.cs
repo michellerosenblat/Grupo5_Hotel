@@ -14,8 +14,6 @@ namespace Grupo5_Hotel.Entidades.Entidades
         private int cantidadHuespedes;
         private DateTime fechaIngreso;
         private DateTime fechaEgreso;
-        private Cliente cliente;
-        private Habitacion habitacion;
         public Reserva() { }
 
         public Reserva(int ID, int IDCliente, int IDHabitacion, int CantHues, DateTime FI, DateTime FE)
@@ -26,30 +24,15 @@ namespace Grupo5_Hotel.Entidades.Entidades
             this.cantidadHuespedes = CantHues;
             this.fechaIngreso = FI;
             this.fechaEgreso = FE;
-            this.habitacion = new Habitacion();
         }
-        public Reserva(int ID, Cliente cliente, int IDHabitacion, int CantHues, DateTime FI, DateTime FE)
+        public Reserva(int IDCliente, int IDHabitacion, int CantHues, DateTime FI, DateTime FE)
         {
-            this.id = ID;
-            this.cliente = cliente;
-            this.idCliente = cliente.Id;
+            this.idCliente = IDCliente;
             this.IdHabitacion = IDHabitacion;
             this.cantidadHuespedes = CantHues;
             this.fechaIngreso = FI;
             this.fechaEgreso = FE;
-            this.habitacion = new Habitacion();
         }
-        public Reserva(Cliente cliente, Habitacion habitacion, int CantHues, DateTime FI, DateTime FE)
-        {
-            this.cliente = cliente;
-            this.idCliente = cliente.Id;
-            this.IdHabitacion = habitacion.Id;
-            this.cantidadHuespedes = CantHues;
-            this.fechaIngreso = FI;
-            this.fechaEgreso = FE;
-            this.habitacion = habitacion;
-        }
-
         public int Id
         {
             get { return this.id; }
@@ -79,16 +62,6 @@ namespace Grupo5_Hotel.Entidades.Entidades
         {
             get { return this.fechaEgreso; }
             set { this.fechaEgreso = value; }
-        }
-        public Cliente Cliente
-        {
-            get { return this.cliente; }
-            set { this.cliente = value; }
-        }
-        public Habitacion Habitacion
-        {
-            get { return this.habitacion; }
-            set { this.habitacion = value; }
         }
         public override bool Equals(object obj)
         { return (obj != null && obj is Reserva && this.id == ((Reserva)obj).Id); }

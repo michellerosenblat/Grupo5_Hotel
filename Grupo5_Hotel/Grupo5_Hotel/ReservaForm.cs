@@ -55,7 +55,7 @@ namespace Grupo5_Hotel
         {
             dataReserva.DataSource = reservaServicio.TraerReservaWrapper();
             //dataReserva.Columns["idCliente"].Visible = false;
-            //dataReserva.Columns["id"].Visible = false;
+            dataReserva.Columns["Reserva"].Visible = false;
         }
 
   

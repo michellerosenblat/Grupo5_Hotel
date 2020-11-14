@@ -44,8 +44,11 @@ namespace Grupo5_Hotel
         }
         private void LlenarResumenGerencial()
         {
-            List<Reserva> listadoReservas = new List<Reserva>();
-            listadoReservas = reservaservicio.TraerReservas();
+            //List<Reserva> listadoReservas = new List<Reserva>();
+            //listadoReservas = reservaservicio.TraerReservas();
+
+            List<ReservaWrapper> listadoReservas = new List<ReservaWrapper>();
+            listadoReservas = reservaservicio.TraerReservaWrapper();
 
             //foreach (Hotel hotel in hotelservicio.TraerHoteles())
             //{
@@ -57,37 +60,37 @@ namespace Grupo5_Hotel
             txtboxFacturacionPromedio.Text = FacturacionPromedio(double.Parse(txtboxFacturacionTotal.Text), listadoReservas).ToString();
         }
 
-        private Double FacturacionTotal(List<Reserva> reservas)
+        private Double FacturacionTotal(List<ReservaWrapper> reservas)
         {
               Double facturacion = 0;
 
-             foreach (Reserva reserva in reservas)
+             foreach (ReservaWrapper reservaW in reservas)
              {
-                if (reserva.Habitacion != null) //Necesario por si hay reservas mal cargadas en pruebas pasadas
-                    if (reserva.FechaEgreso > reserva.FechaIngreso) //Necesario por si hay reservas mal cargadas en pruebas pasadas
-                        facturacion += reserva.Habitacion.Precio * (reserva.FechaEgreso - reserva.FechaIngreso).TotalDays;
+                if (reservaW.Habitacion != null) //Necesario por si hay reservas mal cargadas en pruebas pasadas
+                    if (reservaW.Reserva.FechaEgreso > reservaW.Reserva.FechaIngreso) //Necesario por si hay reservas mal cargadas en pruebas pasadas
+                        facturacion += reservaW.Habitacion.Precio * (reservaW.Reserva.FechaEgreso - reservaW.Reserva.FechaIngreso).TotalDays;
 
              }
                 return facturacion;
         }
 
-        private double OcupacionPromedio(List<Reserva> reservas)
+        private double OcupacionPromedio(List<ReservaWrapper> reservas)
         {
             int reservasTotal = 0;
             double ocupacionesPromedio = 0;
             double ocupacionesPromedioTotal;
 
-            foreach (Reserva reserva in reservas)
+            foreach (ReservaWrapper reservaW in reservas)
             {
-                if (reserva.Habitacion != null) //Necesario por si hay de reservas mal cargadas en pruebas pasadas
+                if (reservaW.Habitacion != null) //Necesario por si hay de reservas mal cargadas en pruebas pasadas
                 {
                     reservasTotal += 1;
-                    ocupacionesPromedio += (reserva.CantidadHuespedes) / (reserva.Habitacion.CantidadPlazas);
+                    ocupacionesPromedio += (reservaW.Reserva.CantidadHuespedes) / (reservaW.Habitacion.CantidadPlazas);
                 }
             }
             return ocupacionesPromedioTotal = ocupacionesPromedio / reservasTotal;
         }
-        private double FacturacionPromedio (double facturacion, List<Reserva> reservas)
+        private double FacturacionPromedio (double facturacion, List<ReservaWrapper> reservas)
         {
             double facturacionPromedio = 0;
             if (reservas.Count() != 0)
@@ -98,7 +101,7 @@ namespace Grupo5_Hotel
 
         private void LlenarResumenHotel (Hotel hotel)
         {
-            List<Reserva> listadoReservasHotel = new List<Reserva>();
+            List<ReservaWrapper> listadoReservasHotel = new List<ReservaWrapper>();
             listadoReservasHotel = reservaservicio.TraerReservasPorHotel(hotel);
             txtboxFacturacionTotalHotel.Text = FacturacionTotal(listadoReservasHotel).ToString();
             txtboxOcupacionPromedioHotel.Text = ("% " + (OcupacionPromedio(listadoReservasHotel) * 100).ToString());

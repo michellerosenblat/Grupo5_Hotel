@@ -40,18 +40,6 @@ namespace Grupo5_Hotel.Negocio
             }
             return error;
         }
-        public static string ValidacionDeReserva(Reserva r)
-        {
-            string error="";
-            if (r.FechaEgreso <= r.FechaIngreso)
-            {
-                error += "La fecha de ingreso no puede ser posterior a la de egreso" + "\n";
-            }
-            if (r.CantidadHuespedes > r.Habitacion.CantidadPlazas)
-            {
-                error += "La cantidad de huespedes no puede ser mayor a la plaza";
-            }
-            return error;
-        }
+
     }
 }
