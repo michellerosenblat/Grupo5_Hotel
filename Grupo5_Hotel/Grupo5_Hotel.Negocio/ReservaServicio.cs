@@ -22,7 +22,8 @@ namespace Grupo5_Hotel.Negocio
         private static List<Hotel> listaHoteles = HotelMapper.TraerHoteles();
         private static List<Cliente> listaClientes;
         private static List<Habitacion> listaHabitaciones;
-        private static List<ReservaWrapper> listaReservaWrapper;
+        private static List<ReservaWrapper> listaReservaWrapper = new List <ReservaWrapper> ();
+        //ver si esta clase tmb puede ser estatica
         
        /* public ReservaServicio()
         {

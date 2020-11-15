@@ -18,7 +18,7 @@ namespace Grupo5_Hotel
         HabitacionServicio habitacionservicio;
         //HotelServicio hotelservicio;
         //ReservaServicio reservaservicio;
-        Menu menuForm;
+        //Menu menuForm;
 
         public ReporteHabitacionesXHotelForm()
         {
@@ -26,7 +26,7 @@ namespace Grupo5_Hotel
             habitacionservicio = new HabitacionServicio();
             //hotelservicio = new HotelServicio();
             //reservaservicio = new ReservaServicio();
-            menuForm = new Menu();
+            //menuForm = new Menu();
         }
 
         private void ReporteHabitacionesXHotelForm_Load(object sender, EventArgs e)
@@ -118,8 +118,8 @@ namespace Grupo5_Hotel
 
         private void btmAtras_Click(object sender, EventArgs e)
         {
-            menuForm.Show();
-            this.Close();
+            this.Owner.Show();
+            this.Hide();
         }
 
         private void btmQFacTot_MouseHover(object sender, EventArgs e)

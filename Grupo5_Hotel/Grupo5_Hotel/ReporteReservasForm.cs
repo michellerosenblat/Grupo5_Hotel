@@ -18,13 +18,13 @@ namespace Grupo5_Hotel
 
         //ReservaServicio reservaServicio;
         //ClienteServicio clienteServicio;
-        Menu menuForm;
+        //Menu menuForm;
         public ReporteReservasForm()
         {
             InitializeComponent();
             //reservaServicio = new ReservaServicio();
             //clienteServicio = new ClienteServicio();
-            menuForm = new Menu();
+            //menuForm = new Menu();
         }
 
         private void ReporteReservasForm_Load(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace Grupo5_Hotel
 
         private void btmAtras_Click(object sender, EventArgs e)
         {
-            menuForm.Show();
+            this.Owner.Show();
             this.Close();
         }
     }
