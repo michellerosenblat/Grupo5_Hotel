@@ -11,41 +11,42 @@ using System.Net.Http.Headers;
 
 namespace Grupo5_Hotel.Negocio
 {
-    public class ReservaServicio
+    public static class ReservaServicio
     {
-        ReservaMapper reservaMapper;
-        HotelMapper hotelMapper;
-        HabitacionMapper habitacionMapper;
-        ClienteMapper clienteMapper;
-        List<Reserva> cacheReservas;
-        List<Hotel> listaHoteles;
-        List<Cliente> listaClientes;
-        List<Habitacion> listaHabitaciones;
-        List<ReservaWrapper> listaReservaWrapper;
+        //ReservaMapper reservaMapper;
+        //HotelMapper hotelMapper;
+        //HabitacionMapper habitacionMapper;
+        //ClienteMapper clienteMapper;
+        //llamar aca el metodo no me gusta pero no se como resolverlo
+        private static List<Reserva> cacheReservas = ReservaMapper.TraerReservas();
+        private static List<Hotel> listaHoteles = HotelMapper.TraerHoteles();
+        private static List<Cliente> listaClientes;
+        private static List<Habitacion> listaHabitaciones;
+        private static List<ReservaWrapper> listaReservaWrapper;
         
-        public ReservaServicio()
+       /* public ReservaServicio()
         {
             
-            reservaMapper = new ReservaMapper();
-            hotelMapper = new HotelMapper();
-            habitacionMapper = new HabitacionMapper();
-            clienteMapper = new ClienteMapper();
+            //reservaMapper = new ReservaMapper();
+            //hotelMapper = new HotelMapper();
+            //habitacionMapper = new HabitacionMapper();
+            //clienteMapper = new ClienteMapper();
             RefrescarCache();
             
             listaReservaWrapper = TraerReservaWrapper();
            
-        }
-        private void RefrescarCache()
+        }*/
+        private static void RefrescarCache()
         {
-            cacheReservas = reservaMapper.TraerReservas();
-            List<Hotel> cacheHotel = hotelMapper.TraerHoteles();
+            cacheReservas = ReservaMapper.TraerReservas();
+            listaHoteles = HotelMapper.TraerHoteles();
         }
 
-        public List<Reserva> TraerReservas()
+        public static List<Reserva> TraerReservas()
         {
             return cacheReservas;
         }
-        public List <ReservaWrapper> TraerReservaWrapper()
+        public static List <ReservaWrapper> TraerReservaWrapper()
         {
             List<ReservaWrapper> listaReservaWrapper = new List<ReservaWrapper>();
             LlenarListas();
@@ -59,22 +60,22 @@ namespace Grupo5_Hotel.Negocio
             return listaReservaWrapper;
         }
 
-        private void LlenarListas()
+        private static void LlenarListas()
         {
-            listaHoteles = hotelMapper.TraerHoteles();
-            listaClientes = clienteMapper.TraerClientes();
+            listaHoteles = HotelMapper.TraerHoteles();
+            listaClientes = ClienteMapper.TraerClientes();
             listaHabitaciones = new List<Habitacion>();
             foreach (Hotel h in listaHoteles)
             {
-                listaHabitaciones.AddRange(habitacionMapper.TraerHabitacionesPorId(h.Id));
+                listaHabitaciones.AddRange(HabitacionMapper.TraerHabitacionesPorId(h.Id));
             }
         }
-        private Habitacion DevolverHabitacionDe (Reserva r)
+        private static Habitacion DevolverHabitacionDe (Reserva r)
         {
             return listaHabitaciones.Find(hab => hab.Id == r.IdHabitacion);
         }
 
-        public void InsertarReserva(Reserva reserva)
+        public static void InsertarReserva(Reserva reserva)
         {
             if (ExisteReserva(reserva))
             {
@@ -84,7 +85,7 @@ namespace Grupo5_Hotel.Negocio
             {
                 LlenarListas();
                 ValidacionDeReserva(reserva);
-                TransactionResult result = reservaMapper.Insert(reserva);
+                TransactionResult result = ReservaMapper.Insert(reserva);
                 if (!result.IsOk)
                 {
                     throw new ErrorServidorException(result.Error);
@@ -95,19 +96,19 @@ namespace Grupo5_Hotel.Negocio
                 }
             }
         }
-        public bool ExisteReserva(Reserva reserva)
+        public static bool ExisteReserva(Reserva reserva)
         {
             return cacheReservas.Any(c => c.Equals(reserva));
         }
-        public Reserva TraerReservasPorId(int id)
+        public static Reserva TraerReservasPorId(int id)
         {
             return cacheReservas.Find(c => c.Id == id);
         }
-        public int ProximoId()
+        public static int ProximoId()
         {
             return cacheReservas.Max(reserva => reserva.Id) + 1;
         }
-        public void ValidacionDeReserva(Reserva r)
+        public static void ValidacionDeReserva(Reserva r)
         {
             string error = "";
             if (r.FechaEgreso <= r.FechaIngreso)
@@ -121,7 +122,7 @@ namespace Grupo5_Hotel.Negocio
         }
         //esto quedó medio desprolijo, no se si es mejor que la lista sea una propiedad, pero creo que 
         //empeoro mas la performance
-        public List<ReservaWrapper> TraerReservasPorHotel(Hotel hotel)
+        public static List<ReservaWrapper> TraerReservasPorHotel(Hotel hotel)
         {
             List<ReservaWrapper> reservasporhotel = new List<ReservaWrapper>();
             foreach (ReservaWrapper r in listaReservaWrapper)
@@ -130,7 +131,7 @@ namespace Grupo5_Hotel.Negocio
                         reservasporhotel.Add(r);
             return reservasporhotel;
         }
-        public List<ReservaWrapper> TraerReservasPorIdCliente(int idcliente)
+        public static List<ReservaWrapper> TraerReservasPorIdCliente(int idcliente)
         {
             List<ReservaWrapper> reservasPorCliente = new List <ReservaWrapper>();
             foreach (ReservaWrapper r in listaReservaWrapper)

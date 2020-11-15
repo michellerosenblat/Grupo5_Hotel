@@ -10,23 +10,23 @@ using System.Threading.Tasks;
 
 namespace Grupo5_Hotel.Datos
 {
-    public class ClienteMapper
+    public static class ClienteMapper
     {
-        public List <Cliente> TraerClientes()
+        public static List<Cliente> TraerClientes()
         {
             string json = WebHelper.Get("./cliente/");
             // si se quiere filtrar por nro de legajo agregar esto +ConfigurationManager.AppSettings["Legajo"]
             return MapList(json);
         }
-        public List <Cliente> MapList(string json)
+        public static List<Cliente> MapList(string json)
         {
             return JsonConvert.DeserializeObject<List<Cliente>>(json);
         }
-        private TransactionResult MapResultado(string json)
+        private static TransactionResult MapResultado(string json)
         {
             return JsonConvert.DeserializeObject<TransactionResult>(json);
         }
-        private NameValueCollection ReverseMap (Cliente cliente)
+        private static NameValueCollection ReverseMap (Cliente cliente)
         {
             NameValueCollection n = new NameValueCollection();
             n.Add("Nombre", cliente.Nombre);
@@ -38,7 +38,7 @@ namespace Grupo5_Hotel.Datos
             n.Add("Activo", cliente.Activo.ToString()); // bool
             return n;
         }
-        public TransactionResult Insert (Cliente cliente)
+        public static TransactionResult Insert (Cliente cliente)
         {
             NameValueCollection n = ReverseMap(cliente);
             string result = WebHelper.Post("./cliente", n);

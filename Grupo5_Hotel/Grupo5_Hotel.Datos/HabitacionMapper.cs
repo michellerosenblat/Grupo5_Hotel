@@ -9,22 +9,22 @@ using System.Threading.Tasks;
 
 namespace Grupo5_Hotel.Datos
 {
-    public class HabitacionMapper
+    public static class HabitacionMapper
     {
-        public List <Habitacion> TraerHabitacionesPorId(int idHotel)
+        public static List<Habitacion> TraerHabitacionesPorId(int idHotel)
         {
             string json = WebHelper.Get("/Hotel/Habitaciones/" + idHotel);
             return MapList(json);
         }
-        public List <Habitacion> MapList (string json)
+        public static List<Habitacion> MapList (string json)
         {
             return JsonConvert.DeserializeObject<List<Habitacion>>(json);
         }
-        public TransactionResult Resultado(string json)
+        public static TransactionResult Resultado(string json)
         {
             return JsonConvert.DeserializeObject<TransactionResult>(json);
         }
-        public NameValueCollection ReverseMap (Habitacion habitacion)
+        public static NameValueCollection ReverseMap (Habitacion habitacion)
         {
             NameValueCollection n = new NameValueCollection();
             n.Add("idHotel", habitacion.IdHotel.ToString());
@@ -35,7 +35,7 @@ namespace Grupo5_Hotel.Datos
             //n.Add("id", habitacion.Id.ToString());
             return n;
         }
-        public TransactionResult Insert (Habitacion habitacion)
+        public static TransactionResult Insert (Habitacion habitacion)
         {
             NameValueCollection n = ReverseMap(habitacion);
             string result = WebHelper.Post("Hotel/Habitaciones/", n);

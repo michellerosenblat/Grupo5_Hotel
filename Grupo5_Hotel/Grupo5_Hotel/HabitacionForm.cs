@@ -14,14 +14,14 @@ namespace Grupo5_Hotel
 {
     public partial class HabitacionForm : Form
     {
-        private HotelServicio hotelServicio;
+        //private HotelServicio hotelServicio;
         private HabitacionServicio habitacionServicio;
         private Menu menu;
         public HabitacionForm()
         {
             InitializeComponent();
             habitacionServicio = new HabitacionServicio();
-            hotelServicio = new HotelServicio();
+            //hotelServicio = new HotelServicio();
             //cmbHotel.SelectedIndex = -1;
             menu = new Menu();
         }
@@ -33,7 +33,7 @@ namespace Grupo5_Hotel
         }
         private void LlenarComboHoteles()
         {
-            cmbHotel.DataSource = hotelServicio.TraerHoteles();
+            cmbHotel.DataSource = HotelServicio.TraerHoteles();
             cmbHotel.SelectedIndex = -1;
             dataClientes.DataSource = null;
         }

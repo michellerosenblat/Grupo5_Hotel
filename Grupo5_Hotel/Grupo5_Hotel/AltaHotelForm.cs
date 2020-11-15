@@ -15,12 +15,12 @@ namespace Grupo5_Hotel
 {
     public partial class AltaHotelForm : Form
     {
-        HotelServicio hotelServicio;
+        //HotelServicio hotelServicio;
         HotelForm hotelForm;
         public AltaHotelForm()
         {
             InitializeComponent();
-            hotelServicio = new HotelServicio();
+            //hotelServicio = new HotelServicio();
             comboEstrellas.Items.Add("1");
             comboEstrellas.Items.Add("2");
             comboEstrellas.Items.Add("3");
@@ -39,7 +39,7 @@ namespace Grupo5_Hotel
         private Hotel CrearHotel()
         {
             //return new Hotel(hotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex , checkBox1.Checked);
-            return new Hotel(hotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex, rbSi.Checked);
+            return new Hotel(HotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex, rbSi.Checked);
            
         }
 
@@ -65,7 +65,7 @@ namespace Grupo5_Hotel
                 {
                     if (!string.IsNullOrEmpty(this.Errores))
                         throw new FormatException("Error en los campos: " + "\n" + this.Errores);
-                    hotelServicio.InsertarHotel(CrearHotel());
+                    HotelServicio.InsertarHotel(CrearHotel());
                     MessageBox.Show("Se ha ingresado correctamente el hotel");
                     lblAmenities.ForeColor = System.Drawing.Color.Black;
                     BorrarCampos();

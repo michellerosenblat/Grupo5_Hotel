@@ -14,7 +14,7 @@ namespace Grupo5_Hotel
 {
     public partial class HotelForm : Form
     {
-        HotelServicio hotelServicio;
+        //HotelServicio hotelServicio;
         private Menu menu;
         public HotelForm()
         {
@@ -24,12 +24,12 @@ namespace Grupo5_Hotel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataHotel.DataSource = hotelServicio.TraerHoteles();
+            dataHotel.DataSource = HotelServicio.TraerHoteles();
         }
 
         private void HotelesForm_Load(object sender, EventArgs e)
         {
-            hotelServicio = new HotelServicio();
+            //hotelServicio = new HotelServicio();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -9,26 +9,26 @@ using System.Threading.Tasks;
 
 namespace Grupo5_Hotel.Negocio
 {
-    public class HotelServicio
+    public static class HotelServicio
     {
-        HotelMapper mapper;
-        List<Hotel> cacheHoteles;
-        public HotelServicio()
+       // private static HotelMapper mapper;
+        private static List<Hotel> cacheHoteles = HotelMapper.TraerHoteles();
+       /* public HotelServicio()
         {
             mapper = new HotelMapper();
             RefrescarCache();
-        }
+        }*/
 
-        private void RefrescarCache()
+        private static void RefrescarCache()
         {
-            cacheHoteles = mapper.TraerHoteles();
+            cacheHoteles = HotelMapper.TraerHoteles();
         }
 
-        public List<Hotel> TraerHoteles()
+        public static List<Hotel> TraerHoteles()
         {
             return cacheHoteles;
         }
-        public void InsertarHotel(Hotel hotel)
+        public static void InsertarHotel(Hotel hotel)
         {
             if (ExisteHotel(hotel))
             {
@@ -36,7 +36,7 @@ namespace Grupo5_Hotel.Negocio
             }
             else
             {
-                TransactionResult result = mapper.Insert(hotel);
+                TransactionResult result = HotelMapper.Insert(hotel);
                 if (!result.IsOk)
                 {
                     throw new ErrorServidorException(result.Error);
@@ -47,15 +47,15 @@ namespace Grupo5_Hotel.Negocio
                 }
             }
         }
-        public bool ExisteHotel(Hotel hotel)
+        public static bool ExisteHotel(Hotel hotel)
         {
             return cacheHoteles.Any(h => h.Equals(hotel));
         }
-        public Hotel TraerHotelPorId(int id)
+        public static Hotel TraerHotelPorId(int id)
         {
             return cacheHoteles.Find(h => h.Id == id);
         }
-        public int ProximoId()
+        public static int ProximoId()
         {
             return cacheHoteles.Max(hotel => hotel.Id) + 1;
         }

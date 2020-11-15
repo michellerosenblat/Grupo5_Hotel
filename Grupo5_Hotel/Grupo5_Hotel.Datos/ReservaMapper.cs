@@ -10,22 +10,22 @@ using System.Threading.Tasks;
 
 namespace Grupo5_Hotel.Datos
 {
-    public class ReservaMapper
+    public static class ReservaMapper
     {
-        public List<Reserva> TraerReservas()
+        public static List<Reserva> TraerReservas()
         {
             string json = WebHelper.Get("./Hotel/Reservas/" + ConfigurationManager.AppSettings["Legajo"]);
             return MapList(json);
         }
-        public List<Reserva> MapList(string json)
+        public static List<Reserva> MapList(string json)
         {
             return JsonConvert.DeserializeObject<List<Reserva>>(json);
         }
-        public TransactionResult Resultado(string json)
+        public static TransactionResult Resultado(string json)
         {
             return JsonConvert.DeserializeObject<TransactionResult>(json);
         }
-        public NameValueCollection ReverseMap(Reserva reserva)
+        public static NameValueCollection ReverseMap(Reserva reserva)
         {
             NameValueCollection n = new NameValueCollection();
             n.Add("idHabitacion", reserva.IdHabitacion.ToString());
@@ -37,7 +37,7 @@ namespace Grupo5_Hotel.Datos
             n.Add("id", reserva.Id.ToString());
             return n;
         }
-        public TransactionResult Insert(Reserva reserva)
+        public static TransactionResult Insert(Reserva reserva)
         {
             NameValueCollection n = ReverseMap(reserva);
             string result = WebHelper.Post("./Hotel/Reservas/", n);

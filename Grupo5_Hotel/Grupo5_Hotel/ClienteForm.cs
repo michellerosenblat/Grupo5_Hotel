@@ -14,8 +14,7 @@ namespace Grupo5_Hotel
 {
     public partial class ClienteForm : Form
     {
-        ClienteServicio clienteServicio;
-        private Menu menu;
+        //ClienteServicio clienteServicio;
         public ClienteForm()
         {
             InitializeComponent();                        
@@ -23,8 +22,6 @@ namespace Grupo5_Hotel
 
         private void ClienteForm_Load(object sender, EventArgs e)
         {
-            clienteServicio = new ClienteServicio();
-            menu = new Menu();
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -34,7 +31,7 @@ namespace Grupo5_Hotel
 
         private void ListarClientes()
         {
-            dataClientes.DataSource = clienteServicio.TraerClientes();
+            dataClientes.DataSource = ClienteServicio.TraerClientes();
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
@@ -47,8 +44,8 @@ namespace Grupo5_Hotel
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            menu.Show();
-            this.Close();
+            this.Owner.Show();
+            this.Hide();
         }
 
        private void dataClientes_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

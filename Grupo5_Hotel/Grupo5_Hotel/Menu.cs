@@ -12,15 +12,9 @@ namespace Grupo5_Hotel
 {
     public partial class Menu : Form
     {
-        //private ClienteForm clienteForm;
-        //private HotelesForm hotelesForm;
-        //private HabitacionForm habitacionForm;
         public Menu()
         {
             InitializeComponent();
-            //clienteForm = new ClienteForm();
-            //hotelesForm = new HotelForm();
-            //habitacionForm = new HabitacionForm();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -30,8 +24,6 @@ namespace Grupo5_Hotel
             clienteForm.Show();
             this.Hide();
         }
-        
-
         private void Menu_Load(object sender, EventArgs e)
         {
 

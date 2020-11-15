@@ -14,15 +14,14 @@ namespace Grupo5_Hotel
 {
     public partial class AltaHabitacionForm : Form
     {
-        //seria mejor pasarselo por parametro del form anterior? o es necesario todas las veces 
-        // crear un servicio nuevo?
-        private HotelServicio hotelServicio;
+
+        //private HotelServicio hotelServicio;
         private HabitacionServicio habitacionServicio;
         private int hotelSeleccionado;
         public AltaHabitacionForm(int hotelSeleccionado)
         {
             InitializeComponent();
-            hotelServicio = new HotelServicio();
+            //hotelServicio = new HotelServicio();
             habitacionServicio = new HabitacionServicio();
             this.hotelSeleccionado = hotelSeleccionado;
         }
@@ -38,7 +37,7 @@ namespace Grupo5_Hotel
 
         private void AltaHabitacionForm_Load(object sender, EventArgs e)
         {
-            cmbHotel.DataSource = hotelServicio.TraerHoteles();
+            cmbHotel.DataSource = HotelServicio.TraerHoteles();
             //cmbHotel.SelectedItem = cmbHotel.Items.Equals(hotelSeleccionado);
             cmbHotel.SelectedIndex = hotelSeleccionado;
             CargarPlazas();

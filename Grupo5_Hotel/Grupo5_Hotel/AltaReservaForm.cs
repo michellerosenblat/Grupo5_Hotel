@@ -16,19 +16,17 @@ namespace Grupo5_Hotel
 {
     public partial class AltaReservaForm : Form
     {
-        ReservaServicio reservaServicio;
-        ClienteServicio clienteServicio;
+        //ReservaServicio reservaServicio;
+       // ClienteServicio clienteServicio;
         HabitacionServicio habitacionServicio;
-        HotelServicio hotelServicio;
-        ReservaForm reservaForm;
+        //HotelServicio hotelServicio;
         public AltaReservaForm()
         {
             InitializeComponent();
-            reservaServicio = new ReservaServicio();
-            clienteServicio = new ClienteServicio();
+            //reservaServicio = new ReservaServicio();
+            //clienteServicio = new ClienteServicio();
             habitacionServicio = new HabitacionServicio();
-            hotelServicio = new HotelServicio();
-            reservaForm = new ReservaForm();
+            //hotelServicio = new HotelServicio();
         }
         private void AltaReservaForm_Load(object sender, EventArgs e)
         {
@@ -38,7 +36,7 @@ namespace Grupo5_Hotel
 
         private void btmAtras_Click(object sender, EventArgs e)
         {
-            reservaForm.Show();
+            this.Owner.Show();
             this.Close();
         }
         private void btmLimpiar_Click(object sender, EventArgs e)
@@ -52,7 +50,7 @@ namespace Grupo5_Hotel
             {
                 if (!string.IsNullOrEmpty(this.Errores))
                     throw new FormatException("Error en los campos: " + "\n" + this.Errores);
-                reservaServicio.InsertarReserva(CrearReserva());
+                ReservaServicio.InsertarReserva(CrearReserva());
                 MessageBox.Show("Se ha ingresado correctamente la reserva");
                 if (comboClientes.SelectedIndex.Equals(comboClientes))
                 {
@@ -112,12 +110,12 @@ namespace Grupo5_Hotel
 
         private void ListarClientes()
         {
-            comboClientes.DataSource = clienteServicio.TraerClientes();
+            comboClientes.DataSource = ClienteServicio.TraerClientes();
         }
 
         private void ListarHoteles()
         {
-            cmbHotel.DataSource = hotelServicio.TraerHoteles();
+            cmbHotel.DataSource = HotelServicio.TraerHoteles();
         }
 
         private void cmbHotel_SelectedIndexChanged(object sender, EventArgs e)

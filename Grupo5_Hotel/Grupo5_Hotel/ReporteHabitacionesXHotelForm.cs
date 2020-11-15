@@ -16,16 +16,16 @@ namespace Grupo5_Hotel
     public partial class ReporteHabitacionesXHotelForm : Form
     {
         HabitacionServicio habitacionservicio;
-        HotelServicio hotelservicio;
-        ReservaServicio reservaservicio;
+        //HotelServicio hotelservicio;
+        //ReservaServicio reservaservicio;
         Menu menuForm;
 
         public ReporteHabitacionesXHotelForm()
         {
             InitializeComponent();
             habitacionservicio = new HabitacionServicio();
-            hotelservicio = new HotelServicio();
-            reservaservicio = new ReservaServicio();
+            //hotelservicio = new HotelServicio();
+            //reservaservicio = new ReservaServicio();
             menuForm = new Menu();
         }
 
@@ -39,7 +39,7 @@ namespace Grupo5_Hotel
         }
         private void LlenarCmbHotel()
         {
-            cmbHotel.DataSource = hotelservicio.TraerHoteles();
+            cmbHotel.DataSource = HotelServicio.TraerHoteles();
             cmbHotel.SelectedIndex = -1;
         }
         private void LlenarResumenGerencial()
@@ -48,7 +48,7 @@ namespace Grupo5_Hotel
             //listadoReservas = reservaservicio.TraerReservas();
 
             List<ReservaWrapper> listadoReservas = new List<ReservaWrapper>();
-            listadoReservas = reservaservicio.TraerReservaWrapper();
+            listadoReservas = ReservaServicio.TraerReservaWrapper();
 
             //foreach (Hotel hotel in hotelservicio.TraerHoteles())
             //{
@@ -102,7 +102,7 @@ namespace Grupo5_Hotel
         private void LlenarResumenHotel (Hotel hotel)
         {
             List<ReservaWrapper> listadoReservasHotel = new List<ReservaWrapper>();
-            listadoReservasHotel = reservaservicio.TraerReservasPorHotel(hotel);
+            listadoReservasHotel = ReservaServicio.TraerReservasPorHotel(hotel);
             txtboxFacturacionTotalHotel.Text = FacturacionTotal(listadoReservasHotel).ToString();
             txtboxOcupacionPromedioHotel.Text = ("% " + (OcupacionPromedio(listadoReservasHotel) * 100).ToString());
             txtboxFacturacionPromedioHotel.Text = FacturacionPromedio(double.Parse(txtboxFacturacionTotalHotel.Text), listadoReservasHotel).ToString();

@@ -14,12 +14,9 @@ namespace Grupo5_Hotel
 {
     public partial class AltaClienteForm : Form
     {
-        ClienteServicio clienteServicio;
-        ClienteForm clienteForm;
         public AltaClienteForm()
         {
             InitializeComponent();
-            clienteServicio = new ClienteServicio();
             
         }
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -27,7 +24,7 @@ namespace Grupo5_Hotel
             try {
                 if (!string.IsNullOrEmpty(this.Errores))
                     throw new FormatException("Error en los campos: " + "\n"+this.Errores);
-                clienteServicio.InsertarCliente(CrearCliente());
+                ClienteServicio.InsertarCliente(CrearCliente());
                 MessageBox.Show("Se ha ingresado correctamente el cliente");
                 BorrarCampos();
             }
@@ -55,12 +52,11 @@ namespace Grupo5_Hotel
         }
         private Cliente CrearCliente()
         {
-            return new Cliente(clienteServicio.ProximoId(),txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtMail.Text);
+            return new Cliente(ClienteServicio.ProximoId(),txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtMail.Text);
         }
 
         private void AltaClienteForm_Load(object sender, EventArgs e)
         {
-            //clienteForm = new ClienteForm();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -80,7 +76,7 @@ namespace Grupo5_Hotel
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

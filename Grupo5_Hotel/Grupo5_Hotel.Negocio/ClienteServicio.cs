@@ -6,33 +6,33 @@ using System.Linq;
 
 namespace Grupo5_Hotel.Negocio
 {
-    public class ClienteServicio
+    public static class ClienteServicio
     {
-        ClienteMapper mapper;
-        static List<Cliente> cacheClientes;
-        public ClienteServicio()
+        //static ClienteMapper mapper = new ClienteMapper();
+        static List<Cliente> cacheClientes = ClienteMapper.TraerClientes();
+       /* public static ClienteServicio()
         {
             mapper = new ClienteMapper();
             RefrescarCache();
-        }
+        }*/
 
-        private void RefrescarCache()
+        private static void RefrescarCache()
         {
-            cacheClientes = mapper.TraerClientes();
+            cacheClientes = ClienteMapper.TraerClientes();
         }
 
-        public List <Cliente> TraerClientes()
+        public static List <Cliente> TraerClientes()
         {
             return cacheClientes;
         }
-        public void InsertarCliente (Cliente cliente)
+        public static void InsertarCliente (Cliente cliente)
         {
             if (ExisteCliente(cliente))
             {
                 throw new ClienteExistenteException(cliente.Id);
             }
             else {
-                TransactionResult result = mapper.Insert(cliente);
+                TransactionResult result = ClienteMapper.Insert(cliente);
                 if (!result.IsOk)
                 {
                     throw new ErrorServidorException(result.Error);
@@ -43,15 +43,15 @@ namespace Grupo5_Hotel.Negocio
                 }
             }
         }
-        public bool ExisteCliente (Cliente cliente)
+        public static bool ExisteCliente (Cliente cliente)
         {
             return cacheClientes.Any(c => c.Equals(cliente));
         }
-        public Cliente TraerClientePorId (int id)
+        public static Cliente TraerClientePorId (int id)
         {
             return cacheClientes.Find(c => c.Id == id);
         }
-        public int ProximoId()
+        public static int ProximoId()
         {
             return cacheClientes.Max(cliente => cliente.Id) + 1;
         }
