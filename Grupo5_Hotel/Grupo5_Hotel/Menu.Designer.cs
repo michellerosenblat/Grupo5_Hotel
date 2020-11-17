@@ -36,7 +36,6 @@
             this.btmReporteHabitaciones = new System.Windows.Forms.Button();
             this.lblWhiteHat = new System.Windows.Forms.Label();
             this.lblSeleccion = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.lbllinea = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -126,7 +125,7 @@
             // 
             this.lblWhiteHat.AutoSize = true;
             this.lblWhiteHat.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWhiteHat.ForeColor = System.Drawing.Color.Moccasin;
+            this.lblWhiteHat.ForeColor = System.Drawing.Color.White;
             this.lblWhiteHat.Location = new System.Drawing.Point(378, 57);
             this.lblWhiteHat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWhiteHat.Name = "lblWhiteHat";
@@ -146,14 +145,6 @@
             this.lblSeleccion.TabIndex = 9;
             this.lblSeleccion.Text = "Seleccione la opción que\r\ndesea para continuar:";
             // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 392);
-            this.splitter1.TabIndex = 10;
-            this.splitter1.TabStop = false;
-            // 
             // lbllinea
             // 
             this.lbllinea.AutoSize = true;
@@ -169,9 +160,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(584, 392);
             this.Controls.Add(this.lbllinea);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.lblWhiteHat);
             this.Controls.Add(this.btmReporteHabitaciones);
@@ -180,6 +171,7 @@
             this.Controls.Add(this.btnHotel);
             this.Controls.Add(this.btnReserva);
             this.Controls.Add(this.btnCliente);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "Menu";
             this.Text = "Form1";
@@ -199,7 +191,6 @@
         private System.Windows.Forms.Button btmReporteHabitaciones;
         private System.Windows.Forms.Label lblWhiteHat;
         private System.Windows.Forms.Label lblSeleccion;
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label lbllinea;
     }
 }

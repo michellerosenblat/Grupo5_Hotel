@@ -29,11 +29,11 @@ namespace Grupo5_Hotel
 
         private void ReporteReservasForm_Load(object sender, EventArgs e)
         {
-            /*TransparentBackground(lblReporte);
-            TransparentBackground(lblNroReservas);
-            TransparentBackground(lblTotalClientes);
-            TransparentBackground(lblTotalReservas);
-            TransparentBackground(lbllinea);
+            /*DiseñoControl.TransparentBackground(lblReporte, this);
+            DiseñoControl.TransparentBackground(lblNroReservas, this);
+            DiseñoControl.TransparentBackground(lblTotalClientes, this);
+            DiseñoControl.TransparentBackground(lblTotalReservas, this);
+            DiseñoControl.TransparentBackground(lbllinea, this);
             dataReserva.Hide();*/
 
             LlenarCmbCliente();
@@ -97,24 +97,5 @@ namespace Grupo5_Hotel
             this.Owner.Show();
             this.Close();
         }
-        /*private void TransparentBackground(Control C)
-        {
-            C.Visible = false;
-
-            C.Refresh();
-            Application.DoEvents();
-
-            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
-            int titleHeight = screenRectangle.Top - this.Top;
-            int Right = screenRectangle.Left - this.Left;
-
-            Bitmap bmp = new Bitmap(this.Width, this.Height);
-            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
-            Bitmap bmpImage = new Bitmap(bmp);
-            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
-            C.BackgroundImage = bmp;
-
-            C.Visible = true;
-        }*/
     }
 }

@@ -57,12 +57,12 @@ namespace Grupo5_Hotel
 
         private void AltaClienteForm_Load(object sender, EventArgs e)
         {
-            TransparentBackground(lblApellido);
-            TransparentBackground(lblDatos);
-            TransparentBackground(lblNombre);
-            TransparentBackground(label2);
-            TransparentBackground(label1);
-            TransparentBackground(label3);
+            DiseñoControl.TransparentBackground(lblApellido, this);
+            DiseñoControl.TransparentBackground(lblDatos, this);
+            DiseñoControl.TransparentBackground(lblNombre, this);
+            DiseñoControl.TransparentBackground(label2, this);
+            DiseñoControl.TransparentBackground(label1, this);
+            DiseñoControl.TransparentBackground(label3, this);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -83,25 +83,6 @@ namespace Grupo5_Hotel
         {
             this.Owner.Show();
             this.Hide();
-        }
-        private void TransparentBackground(Control C)
-        {
-            C.Visible = false;
-
-            C.Refresh();
-            Application.DoEvents();
-
-            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
-            int titleHeight = screenRectangle.Top - this.Top;
-            int Right = screenRectangle.Left - this.Left;
-
-            Bitmap bmp = new Bitmap(this.Width, this.Height);
-            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
-            Bitmap bmpImage = new Bitmap(bmp);
-            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
-            C.BackgroundImage = bmp;
-
-            C.Visible = true;
         }
     }
 }
