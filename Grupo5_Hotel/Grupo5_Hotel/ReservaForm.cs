@@ -16,9 +16,6 @@ namespace Grupo5_Hotel
 {
     public partial class ReservaForm : Form
     {
-        //ReservaServicio reservaServicio;
-        //ClienteServicio clienteServicio;
-        //HabitacionServicio habitacionServicio;
         AltaReservaForm altaform;
         public ReservaForm()
         {
@@ -28,16 +25,13 @@ namespace Grupo5_Hotel
 
         private void ReservaForm_Load(object sender, EventArgs e)
         {
-            //reservaServicio = new ReservaServicio();
-            //clienteServicio = new ClienteServicio();
-            //habitacionServicio = new HabitacionServicio();
             DiseñoControl.TransparentBackground(lblReservas, this);
             dataReserva.Hide();
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
         {
-            this.dataReserva.DataSource = null; // esto es opcional, podes limpiar la grilla antes de ocultar.
+            this.dataReserva.DataSource = null; 
             this.Owner.Show();
             this.Hide();
         }
@@ -53,7 +47,6 @@ namespace Grupo5_Hotel
          private void btnListarReserva_Click(object sender, EventArgs e)
         {
             dataReserva.DataSource = ReservaServicio.TraerReservaWrapper();
-            //dataReserva.Columns["idCliente"].Visible = false;
             dataReserva.Columns["Reserva"].Visible = false;
             dataReserva.Show();
         }

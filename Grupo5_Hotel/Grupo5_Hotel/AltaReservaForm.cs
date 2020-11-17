@@ -16,17 +16,9 @@ namespace Grupo5_Hotel
 {
     public partial class AltaReservaForm : Form
     {
-        //ReservaServicio reservaServicio;
-       // ClienteServicio clienteServicio;
-
-        //HotelServicio hotelServicio;
         public AltaReservaForm()
         {
             InitializeComponent();
-            //reservaServicio = new ReservaServicio();
-            //clienteServicio = new ClienteServicio();
-            //habitacionServicio = new HabitacionServicio();
-            //hotelServicio = new HotelServicio();
         }
         private void AltaReservaForm_Load(object sender, EventArgs e)
         {
@@ -60,10 +52,10 @@ namespace Grupo5_Hotel
                     throw new FormatException("Error en los campos: " + "\n" + this.Errores);
                 ReservaServicio.InsertarReserva(CrearReserva());
                 MessageBox.Show("Se ha ingresado correctamente la reserva");
-                if (comboClientes.SelectedIndex.Equals(comboClientes))
+               /* if (comboClientes.SelectedIndex.Equals(comboClientes))
                 {
                     
-                }
+                }+*/
                 BorrarCampos();
             }
             catch (CantHuespedesException cantEx)
@@ -93,12 +85,10 @@ namespace Grupo5_Hotel
                     Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
                     Validacion.ValidarComboBox(cmbHabitacion.SelectedIndex, "Habitación") +
                     Validacion.ValidarNumero(txtCantHuespedes.Text, "Cantidad de Huespedes"));
-                   
             }
         }
         private Reserva CrearReserva()
-        {
-            //return new Reserva(reservaServicio.ProximoId(), ((Cliente)comboClientes.SelectedItem).Id, ((Habitacion)cmbHabitacion.SelectedItem).Id, int.Parse(txtCantHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
+        { 
             return new Reserva(((Cliente) comboClientes.SelectedItem).Id, ((Habitacion)cmbHabitacion.SelectedItem).Id, int.Parse(txtCantHuespedes.Text), dtpIngreso.Value, dtpEgreso.Value);
         }
 
