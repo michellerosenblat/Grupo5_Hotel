@@ -49,7 +49,7 @@ namespace Grupo5_Hotel.Negocio
         }
         public static List <ReservaWrapper> TraerReservaWrapper()
         {
-            List<ReservaWrapper> listaReservaWrapper = new List<ReservaWrapper>();
+            //List<ReservaWrapper> listaReservaWrapper = new List<ReservaWrapper>();
             LlenarListas();
             foreach (Reserva r in cacheReservas)
             {
@@ -63,8 +63,8 @@ namespace Grupo5_Hotel.Negocio
 
         private static void LlenarListas()
         {
-            listaHoteles = HotelMapper.TraerHoteles();
-            listaClientes = ClienteMapper.TraerClientes();
+            listaHoteles = HotelServicio.TraerHoteles();
+            listaClientes = ClienteServicio.TraerClientes();
             listaHabitaciones = new List<Habitacion>();
             foreach (Hotel h in listaHoteles)
             {

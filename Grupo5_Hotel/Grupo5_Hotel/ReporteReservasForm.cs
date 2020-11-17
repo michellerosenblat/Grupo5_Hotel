@@ -29,17 +29,20 @@ namespace Grupo5_Hotel
 
         private void ReporteReservasForm_Load(object sender, EventArgs e)
         {
-            TransparentBackground(lblReporte);
+            /*TransparentBackground(lblReporte);
             TransparentBackground(lblNroReservas);
             TransparentBackground(lblTotalClientes);
             TransparentBackground(lblTotalReservas);
             TransparentBackground(lbllinea);
-            dataReserva.Hide();
+            dataReserva.Hide();*/
 
             LlenarCmbCliente();
             txtNroClientes.Text = listaclientesconreserva().Count.ToString();
             txtNroReservas.Text = ReservaServicio.TraerReservas().Count.ToString();
-            
+
+
+
+
         }
         private List<Cliente> listaclientesconreserva()
         {
@@ -94,7 +97,7 @@ namespace Grupo5_Hotel
             this.Owner.Show();
             this.Close();
         }
-        private void TransparentBackground(Control C)
+        /*private void TransparentBackground(Control C)
         {
             C.Visible = false;
 
@@ -112,7 +115,6 @@ namespace Grupo5_Hotel
             C.BackgroundImage = bmp;
 
             C.Visible = true;
-        }
-
+        }*/
     }
 }

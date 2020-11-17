@@ -93,7 +93,7 @@
             this.lblTotalReservas.AutoSize = true;
             this.lblTotalReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalReservas.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblTotalReservas.Location = new System.Drawing.Point(178, 131);
+            this.lblTotalReservas.Location = new System.Drawing.Point(178, 97);
             this.lblTotalReservas.Name = "lblTotalReservas";
             this.lblTotalReservas.Size = new System.Drawing.Size(141, 16);
             this.lblTotalReservas.TabIndex = 4;
@@ -104,7 +104,7 @@
             this.lblTotalClientes.AutoSize = true;
             this.lblTotalClientes.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalClientes.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblTotalClientes.Location = new System.Drawing.Point(178, 96);
+            this.lblTotalClientes.Location = new System.Drawing.Point(178, 126);
             this.lblTotalClientes.Name = "lblTotalClientes";
             this.lblTotalClientes.Size = new System.Drawing.Size(219, 16);
             this.lblTotalClientes.TabIndex = 5;
