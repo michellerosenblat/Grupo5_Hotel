@@ -18,14 +18,14 @@ namespace Grupo5_Hotel
     {
         //ReservaServicio reservaServicio;
        // ClienteServicio clienteServicio;
-        HabitacionServicio habitacionServicio;
+
         //HotelServicio hotelServicio;
         public AltaReservaForm()
         {
             InitializeComponent();
             //reservaServicio = new ReservaServicio();
             //clienteServicio = new ClienteServicio();
-            habitacionServicio = new HabitacionServicio();
+            //habitacionServicio = new HabitacionServicio();
             //hotelServicio = new HotelServicio();
         }
         private void AltaReservaForm_Load(object sender, EventArgs e)
@@ -131,7 +131,8 @@ namespace Grupo5_Hotel
             Hotel hotel = (Hotel)cmbHotel.SelectedItem;
             if (!(hotel is null)) {
                 cmbHabitacion.Enabled = true;
-                cmbHabitacion.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.Id);
+                cmbHabitacion.DataSource = HabitacionServicio.TraerHabitacionesPorId(hotel.Id);
+                cmbHabitacion.Show();
             }
            
         }
@@ -149,7 +150,7 @@ namespace Grupo5_Hotel
 
         private void cmbHotel_DisplayMemberChanged(object sender, EventArgs e)
         {
-            cmbHabitacion.Show();
+            
         }
         private void TransparentBackground(Control C)
         {

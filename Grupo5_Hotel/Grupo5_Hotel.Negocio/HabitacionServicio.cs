@@ -10,18 +10,18 @@ using Grupo5_Hotel.Entidades.Excepciones;
 
 namespace Grupo5_Hotel.Negocio
 {
-    public class HabitacionServicio
+    public static class HabitacionServicio
     {
         //private HabitacionMapper mapper;
-        public HabitacionServicio()
+        /*public static HabitacionServicio()
         {
             //mapper = new HabitacionMapper();
-        }
-        public List <Habitacion>TraerHabitacionesPorId(int idHotel)
+        }*/
+        public static List <Habitacion>TraerHabitacionesPorId(int idHotel)
         {
             return HabitacionMapper.TraerHabitacionesPorId(idHotel);
         }
-        public void InsertarHabitacion (Habitacion habitacion)
+        public static void InsertarHabitacion (Habitacion habitacion)
         {
             TransactionResult result = HabitacionMapper.Insert(habitacion);
             if (!result.IsOk)

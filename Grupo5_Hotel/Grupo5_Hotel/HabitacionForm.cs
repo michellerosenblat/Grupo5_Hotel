@@ -15,12 +15,12 @@ namespace Grupo5_Hotel
     public partial class HabitacionForm : Form
     {
         //private HotelServicio hotelServicio;
-        private HabitacionServicio habitacionServicio;
+
         private Menu menu;
         public HabitacionForm()
         {
             InitializeComponent();
-            habitacionServicio = new HabitacionServicio();
+            //habitacionServicio = new HabitacionServicio();
             //hotelServicio = new HotelServicio();
             //cmbHotel.SelectedIndex = -1;
             menu = new Menu();
@@ -65,7 +65,7 @@ namespace Grupo5_Hotel
         {
             Hotel hotel = (Hotel)cmbHotel.SelectedValue;
             if (!(hotel is null))
-            dataClientes.DataSource = habitacionServicio.TraerHabitacionesPorId(hotel.Id);
+            dataClientes.DataSource = HabitacionServicio.TraerHabitacionesPorId(hotel.Id);
         }
 
         private void cmbHotel_Click(object sender, EventArgs e)

@@ -16,13 +16,13 @@ namespace Grupo5_Hotel
     {
 
         //private HotelServicio hotelServicio;
-        private HabitacionServicio habitacionServicio;
+        //private HabitacionServicio habitacionServicio;
         private int hotelSeleccionado;
         public AltaHabitacionForm(int hotelSeleccionado)
         {
             InitializeComponent();
             //hotelServicio = new HotelServicio();
-            habitacionServicio = new HabitacionServicio();
+            //habitacionServicio = new HabitacionServicio();
             this.hotelSeleccionado = hotelSeleccionado;
         }
 
@@ -110,7 +110,7 @@ namespace Grupo5_Hotel
                 {
                     if (!string.IsNullOrEmpty(this.Errores))
                         throw new FormatException("Error en los campos: " + "\n" + this.Errores);
-                    habitacionServicio.InsertarHabitacion(CrearHabitacion());
+                    //habitacionServicio.InsertarHabitacion(CrearHabitacion());
                     MessageBox.Show("Se ha ingresado correctamente la habitacion");
                     lblCancelable.ForeColor = System.Drawing.Color.Black;
                     ((HabitacionForm)this.Owner).ChangeHotelTo(cmbHotel.SelectedIndex);

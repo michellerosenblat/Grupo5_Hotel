@@ -18,7 +18,7 @@ namespace Grupo5_Hotel
     {
         //ReservaServicio reservaServicio;
         //ClienteServicio clienteServicio;
-        HabitacionServicio habitacionServicio;
+        //HabitacionServicio habitacionServicio;
         AltaReservaForm altaform;
         public ReservaForm()
         {
@@ -30,7 +30,7 @@ namespace Grupo5_Hotel
         {
             //reservaServicio = new ReservaServicio();
             //clienteServicio = new ClienteServicio();
-            habitacionServicio = new HabitacionServicio();
+            //habitacionServicio = new HabitacionServicio();
             TransparentBackground(lblReservas);
             dataReserva.Hide();
         }

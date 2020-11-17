@@ -15,7 +15,7 @@ namespace Grupo5_Hotel
 {
     public partial class ReporteHabitacionesXHotelForm : Form
     {
-        HabitacionServicio habitacionservicio;
+
         //HotelServicio hotelservicio;
         //ReservaServicio reservaservicio;
         private Menu menuForm;
@@ -23,7 +23,7 @@ namespace Grupo5_Hotel
         public ReporteHabitacionesXHotelForm()
         {
             InitializeComponent();
-            habitacionservicio = new HabitacionServicio();
+            //habitacionservicio = new HabitacionServicio();
             //hotelservicio = new HotelServicio();
             //reservaservicio = new ReservaServicio();
             //menuForm = new Menu();
@@ -31,8 +31,9 @@ namespace Grupo5_Hotel
 
         private void ReporteHabitacionesXHotelForm_Load(object sender, EventArgs e)
         {
-            LlenarCmbHotel();
+
             LlenarResumenGerencial();
+            LlenarCmbHotel();
             lblQFacTot.Hide();
             lblQOcupProm.Hide();
             lblQFacProm.Hide();
@@ -166,7 +167,7 @@ namespace Grupo5_Hotel
         }
 
         private void btmGeneral_Click(object sender, EventArgs e)
-        {
+        {           
             lblReporte.Text = "Reporte gerencial:";
             txtboxFacturacionPromedio.Show();
             txtboxFacturacionTotal.Show();
@@ -181,6 +182,7 @@ namespace Grupo5_Hotel
 
         private void btmXHotel_Click(object sender, EventArgs e)
         {
+
             lblReporte.Text = "Reporte por hotel:";
             txtboxFacturacionPromedio.Hide();
             txtboxFacturacionTotal.Hide();
