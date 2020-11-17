@@ -26,6 +26,11 @@ namespace Grupo5_Hotel
         }
         private void Menu_Load(object sender, EventArgs e)
         {
+            TransparentBackground(lblTitulo);
+            TransparentBackground(lblWhiteHat);
+            TransparentBackground(lblSeleccion);
+            TransparentBackground(lbllinea); // más sencillo que los códigos que encontré para dibujar una simple línea
+
 
         }
 
@@ -68,10 +73,25 @@ namespace Grupo5_Hotel
             reportehabitacionform.Show();
             this.Hide();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void TransparentBackground(Control C)
         {
-            this.Close();
+            C.Visible = false;
+
+            C.Refresh();
+            Application.DoEvents();
+
+            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+            int titleHeight = screenRectangle.Top - this.Top;
+            int Right = screenRectangle.Left - this.Left;
+
+            Bitmap bmp = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
+            Bitmap bmpImage = new Bitmap(bmp);
+            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
+            C.BackgroundImage = bmp;
+
+            C.Visible = true;
         }
     }
+
 }

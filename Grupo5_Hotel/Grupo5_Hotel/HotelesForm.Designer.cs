@@ -32,67 +32,95 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.dataHotel = new System.Windows.Forms.DataGridView();
+            this.lblHoteles = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataHotel)).BeginInit();
             this.SuspendLayout();
             // 
             // BotonListar
             // 
-            this.BotonListar.Location = new System.Drawing.Point(25, 141);
-            this.BotonListar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BotonListar.BackColor = System.Drawing.Color.Moccasin;
+            this.BotonListar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BotonListar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonListar.Location = new System.Drawing.Point(11, 102);
+            this.BotonListar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BotonListar.Name = "BotonListar";
-            this.BotonListar.Size = new System.Drawing.Size(128, 58);
+            this.BotonListar.Size = new System.Drawing.Size(118, 34);
             this.BotonListar.TabIndex = 1;
-            this.BotonListar.Text = "Listar Hoteles";
-            this.BotonListar.UseVisualStyleBackColor = true;
+            this.BotonListar.Text = "LISTAR";
+            this.BotonListar.UseVisualStyleBackColor = false;
             this.BotonListar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(25, 236);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAgregar.BackColor = System.Drawing.Color.Moccasin;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(11, 149);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(128, 59);
+            this.btnAgregar.Size = new System.Drawing.Size(118, 34);
             this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar Hotel";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Text = "ALTA";
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(26, 468);
+            this.btnAtras.BackColor = System.Drawing.Color.Moccasin;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAtras.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(29, 347);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(127, 51);
+            this.btnAtras.Size = new System.Drawing.Size(90, 34);
             this.btnAtras.TabIndex = 3;
-            this.btnAtras.Text = "Atras";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Text = "VOLVER";
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // dataHotel
             // 
+            this.dataHotel.BackgroundColor = System.Drawing.Color.Moccasin;
             this.dataHotel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataHotel.Location = new System.Drawing.Point(194, 56);
+            this.dataHotel.GridColor = System.Drawing.Color.Moccasin;
+            this.dataHotel.Location = new System.Drawing.Point(171, 71);
+            this.dataHotel.Margin = new System.Windows.Forms.Padding(2);
             this.dataHotel.Name = "dataHotel";
             this.dataHotel.RowHeadersVisible = false;
             this.dataHotel.RowHeadersWidth = 62;
             this.dataHotel.RowTemplate.Height = 28;
-            this.dataHotel.Size = new System.Drawing.Size(959, 408);
+            this.dataHotel.Size = new System.Drawing.Size(384, 298);
             this.dataHotel.TabIndex = 4;
+            // 
+            // lblHoteles
+            // 
+            this.lblHoteles.AutoSize = true;
+            this.lblHoteles.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoteles.ForeColor = System.Drawing.Color.Moccasin;
+            this.lblHoteles.Location = new System.Drawing.Point(165, 38);
+            this.lblHoteles.Name = "lblHoteles";
+            this.lblHoteles.Size = new System.Drawing.Size(130, 31);
+            this.lblHoteles.TabIndex = 5;
+            this.lblHoteles.Text = "Hoteles:";
             // 
             // HotelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1235, 562);
+            this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
+            this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblHoteles);
             this.Controls.Add(this.dataHotel);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.BotonListar);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "HotelForm";
             this.Text = "HotelesForm";
             this.Load += new System.EventHandler(this.HotelesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataHotel)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +130,6 @@
         private System.Windows.Forms.DataGridView dataHoteles;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.DataGridView dataHotel;
+        private System.Windows.Forms.Label lblHoteles;
     }
 }

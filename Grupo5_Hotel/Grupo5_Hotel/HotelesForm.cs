@@ -25,10 +25,13 @@ namespace Grupo5_Hotel
         private void button1_Click(object sender, EventArgs e)
         {
             dataHotel.DataSource = HotelServicio.TraerHoteles();
+            dataHotel.Show();
         }
 
         private void HotelesForm_Load(object sender, EventArgs e)
         {
+            TransparentBackground(lblHoteles);
+            dataHotel.Hide();
             //hotelServicio = new HotelServicio();
         }
 
@@ -44,6 +47,25 @@ namespace Grupo5_Hotel
         {
             menu.Show();
             this.Close();
+        }
+        private void TransparentBackground(Control C)
+        {
+            C.Visible = false;
+
+            C.Refresh();
+            Application.DoEvents();
+
+            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+            int titleHeight = screenRectangle.Top - this.Top;
+            int Right = screenRectangle.Left - this.Left;
+
+            Bitmap bmp = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
+            Bitmap bmpImage = new Bitmap(bmp);
+            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
+            C.BackgroundImage = bmp;
+
+            C.Visible = true;
         }
     }
 }

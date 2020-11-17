@@ -32,6 +32,13 @@ namespace Grupo5_Hotel
             LlenarCmbCliente();
             txtNroClientes.Text = listaclientesconreserva().Count.ToString();
             txtNroReservas.Text = ReservaServicio.TraerReservas().Count.ToString();
+
+            TransparentBackground(lblReporte);
+            TransparentBackground(lblNroReservas);
+            TransparentBackground(lblTotalClientes);
+            TransparentBackground(lblTotalReservas);
+            TransparentBackground(lbllinea);
+            dataReserva.Hide();
         }
         private List<Cliente> listaclientesconreserva()
         {
@@ -70,12 +77,32 @@ namespace Grupo5_Hotel
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListarReservas();
+            dataReserva.Show();
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
             this.Close();
+        }
+        private void TransparentBackground(Control C)
+        {
+            C.Visible = false;
+
+            C.Refresh();
+            Application.DoEvents();
+
+            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+            int titleHeight = screenRectangle.Top - this.Top;
+            int Right = screenRectangle.Left - this.Left;
+
+            Bitmap bmp = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
+            Bitmap bmpImage = new Bitmap(bmp);
+            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
+            C.BackgroundImage = bmp;
+
+            C.Visible = true;
         }
     }
 }

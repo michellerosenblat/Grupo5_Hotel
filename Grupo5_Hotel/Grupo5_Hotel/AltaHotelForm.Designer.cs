@@ -30,9 +30,9 @@
         {
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textDireccion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblEstrellas = new System.Windows.Forms.Label();
             this.lblAmenities = new System.Windows.Forms.Label();
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonVolver = new System.Windows.Forms.Button();
@@ -40,100 +40,128 @@
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
             this.panelAmenities = new System.Windows.Forms.Panel();
+            this.lblDatos = new System.Windows.Forms.Label();
             this.panelAmenities.SuspendLayout();
             this.SuspendLayout();
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(202, 92);
-            this.textNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textNombre.BackColor = System.Drawing.Color.Moccasin;
+            this.textNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textNombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textNombre.Location = new System.Drawing.Point(282, 109);
+            this.textNombre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(202, 26);
+            this.textNombre.Size = new System.Drawing.Size(200, 22);
             this.textNombre.TabIndex = 0;
             // 
             // textDireccion
             // 
-            this.textDireccion.Location = new System.Drawing.Point(202, 140);
-            this.textDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textDireccion.BackColor = System.Drawing.Color.Moccasin;
+            this.textDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textDireccion.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDireccion.Location = new System.Drawing.Point(282, 151);
+            this.textDireccion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textDireccion.Name = "textDireccion";
-            this.textDireccion.Size = new System.Drawing.Size(202, 26);
+            this.textDireccion.Size = new System.Drawing.Size(200, 22);
             this.textDireccion.TabIndex = 1;
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.SystemColors.Control;
+            this.lblNombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.Moccasin;
+            this.lblNombre.Location = new System.Drawing.Point(178, 112);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(67, 16);
+            this.lblNombre.TabIndex = 5;
+            this.lblNombre.Text = "Nombre";
             // 
-            // label2
+            // lblDireccion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Direccion";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.ForeColor = System.Drawing.Color.Moccasin;
+            this.lblDireccion.Location = new System.Drawing.Point(178, 152);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(79, 16);
+            this.lblDireccion.TabIndex = 6;
+            this.lblDireccion.Text = "Direccion";
             // 
-            // label3
+            // lblEstrellas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Estrellas";
+            this.lblEstrellas.AutoSize = true;
+            this.lblEstrellas.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstrellas.ForeColor = System.Drawing.Color.Moccasin;
+            this.lblEstrellas.Location = new System.Drawing.Point(178, 187);
+            this.lblEstrellas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEstrellas.Name = "lblEstrellas";
+            this.lblEstrellas.Size = new System.Drawing.Size(71, 16);
+            this.lblEstrellas.TabIndex = 7;
+            this.lblEstrellas.Text = "Estrellas";
             // 
             // lblAmenities
             // 
             this.lblAmenities.AutoSize = true;
-            this.lblAmenities.Location = new System.Drawing.Point(96, 250);
+            this.lblAmenities.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmenities.ForeColor = System.Drawing.Color.Moccasin;
+            this.lblAmenities.Location = new System.Drawing.Point(178, 244);
+            this.lblAmenities.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAmenities.Name = "lblAmenities";
-            this.lblAmenities.Size = new System.Drawing.Size(79, 20);
+            this.lblAmenities.Size = new System.Drawing.Size(83, 16);
             this.lblAmenities.TabIndex = 8;
             this.lblAmenities.Text = "Amenities";
             // 
             // buttonAgregar
             // 
-            this.buttonAgregar.Location = new System.Drawing.Point(99, 322);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAgregar.BackColor = System.Drawing.Color.Moccasin;
+            this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAgregar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregar.Location = new System.Drawing.Point(11, 102);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(107, 42);
+            this.buttonAgregar.Size = new System.Drawing.Size(118, 34);
             this.buttonAgregar.TabIndex = 9;
-            this.buttonAgregar.Text = "Agregar";
-            this.buttonAgregar.UseVisualStyleBackColor = true;
+            this.buttonAgregar.Text = "AGREGAR";
+            this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
             // buttonVolver
             // 
-            this.buttonVolver.Location = new System.Drawing.Point(304, 322);
-            this.buttonVolver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonVolver.BackColor = System.Drawing.Color.Moccasin;
+            this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonVolver.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVolver.Location = new System.Drawing.Point(29, 347);
+            this.buttonVolver.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonVolver.Name = "buttonVolver";
-            this.buttonVolver.Size = new System.Drawing.Size(101, 42);
+            this.buttonVolver.Size = new System.Drawing.Size(90, 34);
             this.buttonVolver.TabIndex = 10;
-            this.buttonVolver.Text = "Volver";
-            this.buttonVolver.UseVisualStyleBackColor = true;
+            this.buttonVolver.Text = "VOLVER";
+            this.buttonVolver.UseVisualStyleBackColor = false;
             this.buttonVolver.Click += new System.EventHandler(this.buttonVolver_Click);
             // 
             // comboEstrellas
             // 
+            this.comboEstrellas.BackColor = System.Drawing.Color.Moccasin;
+            this.comboEstrellas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboEstrellas.FormattingEnabled = true;
-            this.comboEstrellas.Location = new System.Drawing.Point(202, 192);
-            this.comboEstrellas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboEstrellas.Location = new System.Drawing.Point(282, 186);
+            this.comboEstrellas.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboEstrellas.Name = "comboEstrellas";
-            this.comboEstrellas.Size = new System.Drawing.Size(202, 28);
+            this.comboEstrellas.Size = new System.Drawing.Size(200, 21);
             this.comboEstrellas.TabIndex = 11;
             this.comboEstrellas.SelectedIndexChanged += new System.EventHandler(this.comboEstrellas_SelectedIndexChanged);
             // 
             // rbSi
             // 
             this.rbSi.AutoSize = true;
-            this.rbSi.Location = new System.Drawing.Point(0, 18);
-            this.rbSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbSi.Location = new System.Drawing.Point(16, 11);
+            this.rbSi.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.rbSi.Name = "rbSi";
-            this.rbSi.Size = new System.Drawing.Size(48, 24);
+            this.rbSi.Size = new System.Drawing.Size(37, 20);
             this.rbSi.TabIndex = 0;
             this.rbSi.TabStop = true;
             this.rbSi.Text = "Si";
@@ -142,10 +170,10 @@
             // rbNo
             // 
             this.rbNo.AutoSize = true;
-            this.rbNo.Location = new System.Drawing.Point(150, 18);
-            this.rbNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbNo.Location = new System.Drawing.Point(77, 11);
+            this.rbNo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(54, 24);
+            this.rbNo.Size = new System.Drawing.Size(44, 20);
             this.rbNo.TabIndex = 1;
             this.rbNo.TabStop = true;
             this.rbNo.Text = "No";
@@ -153,31 +181,46 @@
             // 
             // panelAmenities
             // 
+            this.panelAmenities.BackColor = System.Drawing.Color.Moccasin;
             this.panelAmenities.Controls.Add(this.rbSi);
             this.panelAmenities.Controls.Add(this.rbNo);
-            this.panelAmenities.Location = new System.Drawing.Point(202, 230);
-            this.panelAmenities.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelAmenities.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelAmenities.Location = new System.Drawing.Point(310, 229);
+            this.panelAmenities.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelAmenities.Name = "panelAmenities";
-            this.panelAmenities.Size = new System.Drawing.Size(202, 60);
+            this.panelAmenities.Size = new System.Drawing.Size(135, 39);
             this.panelAmenities.TabIndex = 13;
             this.panelAmenities.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAmenities_Paint);
             // 
+            // lblDatos
+            // 
+            this.lblDatos.AutoSize = true;
+            this.lblDatos.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatos.ForeColor = System.Drawing.Color.Moccasin;
+            this.lblDatos.Location = new System.Drawing.Point(165, 38);
+            this.lblDatos.Name = "lblDatos";
+            this.lblDatos.Size = new System.Drawing.Size(231, 31);
+            this.lblDatos.TabIndex = 14;
+            this.lblDatos.Text = "Datos del hotel:";
+            // 
             // AltaHotelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 439);
+            this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
+            this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.comboEstrellas);
             this.Controls.Add(this.buttonVolver);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.lblAmenities);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEstrellas);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.textDireccion);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.panelAmenities);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "AltaHotelForm";
             this.Text = "AgregarHotel";
             this.Load += new System.EventHandler(this.AltaHotelForm_Load);
@@ -192,9 +235,9 @@
 
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textDireccion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblEstrellas;
         private System.Windows.Forms.Label lblAmenities;
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Button buttonVolver;
@@ -202,5 +245,6 @@
         private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.Panel panelAmenities;
+        private System.Windows.Forms.Label lblDatos;
     }
 }

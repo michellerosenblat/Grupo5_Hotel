@@ -36,6 +36,21 @@ namespace Grupo5_Hotel
             lblQFacTot.Hide();
             lblQOcupProm.Hide();
             lblQFacProm.Hide();
+
+            lblHotel.Hide();
+            cmbHotel.Hide();
+            txtboxFacturacionTotal.Hide();
+            txtboxFacturacionPromedio.Hide();
+            txtboxOcupacionPromedio.Hide();
+            txtboxFacturacionPromedioHotel.Hide();
+            txtboxFacturacionTotalHotel.Hide();
+            txtboxOcupacionPromedioHotel.Hide();
+
+            TransparentBackground(lblHotel);
+            TransparentBackground(lblReporte);
+            TransparentBackground(lblFacturacionTotal);
+            TransparentBackground(lblFacturacionPromedio);
+            TransparentBackground(lblOcupacionPromedio);
         }
         private void LlenarCmbHotel()
         {
@@ -147,6 +162,61 @@ namespace Grupo5_Hotel
         private void btmQFacProm_MouseLeave(object sender, EventArgs e)
         {
             lblQFacProm.Hide();
+        }
+        private void TransparentBackground(Control C)
+        {
+            C.Visible = false;
+
+            C.Refresh();
+            Application.DoEvents();
+
+            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+            int titleHeight = screenRectangle.Top - this.Top;
+            int Right = screenRectangle.Left - this.Left;
+
+            Bitmap bmp = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
+            Bitmap bmpImage = new Bitmap(bmp);
+            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
+            C.BackgroundImage = bmp;
+
+            C.Visible = true;
+        }
+
+        private void btmGeneral_Click(object sender, EventArgs e)
+        {
+            lblReporte.Text = "Reporte gerencial:";
+            txtboxFacturacionPromedio.Show();
+            txtboxFacturacionTotal.Show();
+            txtboxOcupacionPromedio.Show();
+
+            txtboxFacturacionPromedioHotel.Hide();
+            txtboxFacturacionTotalHotel.Hide();
+            txtboxOcupacionPromedioHotel.Hide();
+            lblHotel.Hide();
+            cmbHotel.Hide();
+        }
+
+        private void btmXHotel_Click(object sender, EventArgs e)
+        {
+            lblReporte.Text = "Reporte por hotel:";
+            txtboxFacturacionPromedio.Hide();
+            txtboxFacturacionTotal.Hide();
+            txtboxOcupacionPromedio.Hide();
+
+            txtboxFacturacionPromedioHotel.Show();
+            txtboxFacturacionTotalHotel.Show();
+            txtboxOcupacionPromedioHotel.Show();
+            lblHotel.Show();
+            cmbHotel.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReporteReservasForm reportereservaForm = new ReporteReservasForm();
+            reportereservaForm.Owner = this;
+            reportereservaForm.Show();
+            this.Hide();
         }
     }
 }

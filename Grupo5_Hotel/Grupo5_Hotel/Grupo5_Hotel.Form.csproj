@@ -146,6 +146,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReporteHabitacionesXHotelForm.resx">
       <DependentUpon>ReporteHabitacionesXHotelForm.cs</DependentUpon>
@@ -178,6 +179,15 @@
       <Project>{3522e8fa-5a4f-49c5-96d5-bd418d9df4cf}</Project>
       <Name>Grupo5_Hotel.Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WHITE HAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WHITE HAT logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marrón Dorado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
