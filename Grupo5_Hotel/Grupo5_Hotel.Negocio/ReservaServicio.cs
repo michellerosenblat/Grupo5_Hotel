@@ -49,7 +49,7 @@ namespace Grupo5_Hotel.Negocio
         }
         public static List <ReservaWrapper> TraerReservaWrapper()
         {
-            //List<ReservaWrapper> listaReservaWrapper = new List<ReservaWrapper>();
+           listaReservaWrapper = new List<ReservaWrapper>();
             LlenarListas();
             foreach (Reserva r in cacheReservas)
             {

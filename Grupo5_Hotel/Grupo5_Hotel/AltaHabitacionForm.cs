@@ -110,11 +110,11 @@ namespace Grupo5_Hotel
                 {
                     if (!string.IsNullOrEmpty(this.Errores))
                         throw new FormatException("Error en los campos: " + "\n" + this.Errores);
-                    //habitacionServicio.InsertarHabitacion(CrearHabitacion());
+                    HabitacionServicio.InsertarHabitacion(CrearHabitacion());
                     MessageBox.Show("Se ha ingresado correctamente la habitacion");
                     lblCancelable.ForeColor = System.Drawing.Color.Black;
                     ((HabitacionForm)this.Owner).ChangeHotelTo(cmbHotel.SelectedIndex);
-                    //BorrarCampos();
+                    BorrarCampos();
                 }
             }
             catch (FormatException fex)

@@ -26,6 +26,7 @@ namespace Grupo5_Hotel
         {
             dataHotel.DataSource = HotelServicio.TraerHoteles();
             dataHotel.Show();
+           
         }
 
         private void HotelesForm_Load(object sender, EventArgs e)
@@ -33,6 +34,7 @@ namespace Grupo5_Hotel
 
             DiseñoControl.TransparentBackground(lblHoteles, this);
             dataHotel.Hide();
+            
             //hotelServicio = new HotelServicio();
         }
 
@@ -48,6 +50,11 @@ namespace Grupo5_Hotel
         {
             menu.Show();
             this.Close();
+        }
+
+        private void dataHotel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
