@@ -18,7 +18,7 @@ namespace Grupo5_Hotel
         HabitacionServicio habitacionservicio;
         //HotelServicio hotelservicio;
         //ReservaServicio reservaservicio;
-        //Menu menuForm;
+        private Menu menuForm;
 
         public ReporteHabitacionesXHotelForm()
         {
@@ -36,6 +36,7 @@ namespace Grupo5_Hotel
             lblQFacTot.Hide();
             lblQOcupProm.Hide();
             lblQFacProm.Hide();
+
 
             lblHotel.Hide();
             cmbHotel.Hide();
@@ -71,7 +72,7 @@ namespace Grupo5_Hotel
             //}
 
             txtboxFacturacionTotal.Text = FacturacionTotal(listadoReservas).ToString();
-            txtboxOcupacionPromedio.Text = ("% " + (OcupacionPromedio(listadoReservas)*100).ToString());
+            txtboxOcupacionPromedio.Text = ((OcupacionPromedio(listadoReservas)*100).ToString() + " %");
             txtboxFacturacionPromedio.Text = FacturacionPromedio(double.Parse(txtboxFacturacionTotal.Text), listadoReservas).ToString();
         }
 
@@ -119,7 +120,7 @@ namespace Grupo5_Hotel
             List<ReservaWrapper> listadoReservasHotel = new List<ReservaWrapper>();
             listadoReservasHotel = ReservaServicio.TraerReservasPorHotel(hotel);
             txtboxFacturacionTotalHotel.Text = FacturacionTotal(listadoReservasHotel).ToString();
-            txtboxOcupacionPromedioHotel.Text = ("% " + (OcupacionPromedio(listadoReservasHotel) * 100).ToString());
+            txtboxOcupacionPromedioHotel.Text = ((OcupacionPromedio(listadoReservasHotel) * 100).ToString() + " %");
             txtboxFacturacionPromedioHotel.Text = FacturacionPromedio(double.Parse(txtboxFacturacionTotalHotel.Text), listadoReservasHotel).ToString();
 
         }
@@ -163,25 +164,6 @@ namespace Grupo5_Hotel
         {
             lblQFacProm.Hide();
         }
-        private void TransparentBackground(Control C)
-        {
-            C.Visible = false;
-
-            C.Refresh();
-            Application.DoEvents();
-
-            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
-            int titleHeight = screenRectangle.Top - this.Top;
-            int Right = screenRectangle.Left - this.Left;
-
-            Bitmap bmp = new Bitmap(this.Width, this.Height);
-            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
-            Bitmap bmpImage = new Bitmap(bmp);
-            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
-            C.BackgroundImage = bmp;
-
-            C.Visible = true;
-        }
 
         private void btmGeneral_Click(object sender, EventArgs e)
         {
@@ -211,12 +193,37 @@ namespace Grupo5_Hotel
             cmbHotel.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            ReporteReservasForm reportereservaForm = new ReporteReservasForm();
-            reportereservaForm.Owner = this;
-            reportereservaForm.Show();
+            this.Owner.Show();
+            this.Close();
+        }
+
+        private void btmRepRes_Click(object sender, EventArgs e)
+        {
+            ReporteReservasForm reportereservaform = new ReporteReservasForm();
+            reportereservaform.Owner = this;
+            reportereservaform.Show();
             this.Hide();
+        }
+        private void TransparentBackground(Control C)
+        {
+            C.Visible = false;
+
+            C.Refresh();
+            Application.DoEvents();
+
+            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+            int titleHeight = screenRectangle.Top - this.Top;
+            int Right = screenRectangle.Left - this.Left;
+
+            Bitmap bmp = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
+            Bitmap bmpImage = new Bitmap(bmp);
+            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
+            C.BackgroundImage = bmp;
+
+            C.Visible = true;
         }
     }
 }

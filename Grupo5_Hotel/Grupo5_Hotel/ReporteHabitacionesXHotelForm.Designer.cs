@@ -50,7 +50,7 @@
             this.btmGeneral = new System.Windows.Forms.Button();
             this.btmXHotel = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btmRepRes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblReporte
@@ -302,19 +302,20 @@
             this.btnAtras.TabIndex = 25;
             this.btnAtras.Text = "VOLVER";
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // button1
+            // btmRepRes
             // 
-            this.button1.BackColor = System.Drawing.Color.Moccasin;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(166, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 27);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "REPORTE  DE RESERVAS";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btmRepRes.BackColor = System.Drawing.Color.Moccasin;
+            this.btmRepRes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btmRepRes.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmRepRes.Location = new System.Drawing.Point(166, 330);
+            this.btmRepRes.Name = "btmRepRes";
+            this.btmRepRes.Size = new System.Drawing.Size(230, 27);
+            this.btmRepRes.TabIndex = 26;
+            this.btmRepRes.Text = "REPORTE  DE RESERVAS";
+            this.btmRepRes.UseVisualStyleBackColor = false;
+            this.btmRepRes.Click += new System.EventHandler(this.btmRepRes_Click);
             // 
             // ReporteHabitacionesXHotelForm
             // 
@@ -322,7 +323,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
             this.ClientSize = new System.Drawing.Size(584, 392);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btmRepRes);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btmXHotel);
             this.Controls.Add(this.btmGeneral);
@@ -377,6 +378,6 @@
         private System.Windows.Forms.Button btmGeneral;
         private System.Windows.Forms.Button btmXHotel;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btmRepRes;
     }
 }

@@ -29,21 +29,22 @@ namespace Grupo5_Hotel
 
         private void ReporteReservasForm_Load(object sender, EventArgs e)
         {
-            LlenarCmbCliente();
-            txtNroClientes.Text = listaclientesconreserva().Count.ToString();
-            txtNroReservas.Text = ReservaServicio.TraerReservas().Count.ToString();
-
             TransparentBackground(lblReporte);
             TransparentBackground(lblNroReservas);
             TransparentBackground(lblTotalClientes);
             TransparentBackground(lblTotalReservas);
             TransparentBackground(lbllinea);
             dataReserva.Hide();
+
+            LlenarCmbCliente();
+            txtNroClientes.Text = listaclientesconreserva().Count.ToString();
+            txtNroReservas.Text = ReservaServicio.TraerReservas().Count.ToString();
+            
         }
         private List<Cliente> listaclientesconreserva()
         {
             List<Cliente> listadoclientes = new List<Cliente>();
-            List<Reserva> listadoreserva = ReservaServicio.TraerReservas();
+            /*List<Reserva> listadoreserva = ReservaServicio.TraerReservas();
             List<Cliente> clientes = ClienteServicio.TraerClientes();
             foreach (Cliente c in clientes)
             {
@@ -53,7 +54,14 @@ namespace Grupo5_Hotel
                         listadoclientes.Add(c);
                 }
             }
+            return listadoclientes;*/
+            List<ReservaWrapper> reservas = ReservaServicio.TraerReservaWrapper();
+                foreach  (ReservaWrapper r in reservas)
+                {
+                    listadoclientes.Add(r.Cliente);
+                }
             return listadoclientes;
+
         }
         private void LlenarCmbCliente()
         {
@@ -65,7 +73,7 @@ namespace Grupo5_Hotel
         {
             Cliente Cliente = (Cliente)cmbCliente.SelectedValue;
             if (!(Cliente is null))
-            {
+            {                
                 dataReserva.DataSource = ReservaServicio.TraerReservasPorIdCliente(Cliente.Id);
                 dataReserva.Columns["Cliente"].Visible = false;
                 dataReserva.Columns["Reserva"].Visible = false;
@@ -75,9 +83,10 @@ namespace Grupo5_Hotel
         }
 
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {          
             ListarReservas();
-            dataReserva.Show();
+            if (cmbCliente.Text != null)
+                dataReserva.Show();
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
@@ -104,5 +113,6 @@ namespace Grupo5_Hotel
 
             C.Visible = true;
         }
+
     }
 }

@@ -55,6 +55,7 @@ namespace Grupo5_Hotel
             dataReserva.DataSource = ReservaServicio.TraerReservaWrapper();
             //dataReserva.Columns["idCliente"].Visible = false;
             dataReserva.Columns["Reserva"].Visible = false;
+            dataReserva.Show();
         }
         private void TransparentBackground(Control C)
         {
