@@ -126,10 +126,10 @@ namespace Grupo5_Hotel
         {
             get
             {
-                return Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "hotel") +
-                    Validacion.ValidarComboBox (cmbPlazas.SelectedIndex, "cantidad de plazas")
-                    + Validacion.ValidarComboBox (cmbCategoria.SelectedIndex, "categoría") +
-                    Validacion.ValidarNumero(txtPrecio.Text, "precio");
+                return Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
+                    Validacion.ValidarComboBox (cmbPlazas.SelectedIndex, "Cantidad de plazas")
+                    + Validacion.ValidarComboBox (cmbCategoria.SelectedIndex, "Categoría") +
+                    Validacion.ValidarNumero(txtPrecio.Text, "Precio");
             }
         }
 

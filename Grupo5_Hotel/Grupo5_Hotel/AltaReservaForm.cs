@@ -99,6 +99,8 @@ namespace Grupo5_Hotel
             cmbHotel.SelectedIndex = -1;
             cmbHabitacion.SelectedIndex = -1;
             cmbHabitacion.Enabled = false;
+            dtpIngreso.Value = DateTime.Now;
+            dtpEgreso.Value = DateTime.Now;
 
         }
         private void btnListar_Click(object sender, EventArgs e)
