@@ -49,7 +49,7 @@ namespace Grupo5_Hotel.Datos
             }
             catch (Exception ex)
             {
-                return "{ \"isOk\":false,\"id\":5,\"error\":null}";
+                return "{ \"isOk\":false,\"id\":-1,\"error\":null}";
             }
 
 
