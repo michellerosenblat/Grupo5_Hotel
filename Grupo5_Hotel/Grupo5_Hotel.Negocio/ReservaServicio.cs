@@ -45,7 +45,7 @@ namespace Grupo5_Hotel.Negocio
             foreach (Reserva r in cacheReservas)
             {
                 //Habitacion habitacion = DevolverHabitacionDe(r);
-                Hotel hotel = listaHoteles.SingleOrDefault(x => x.Habitaciones.Any(d => d.Id == r.Id));
+                Hotel hotel = listaHoteles.SingleOrDefault(x => x.Habitaciones.Any(d => d.Id == r.IdHabitacion));
                 Cliente cliente = listaClientes.Find(c => c.Id == r.IdCliente);
                 listaReservaWrapper.Add(new ReservaWrapper(r,  cliente, hotel));
             }
@@ -126,10 +126,13 @@ namespace Grupo5_Hotel.Negocio
         public static List<ReservaWrapper> TraerReservasPorIdCliente(int idcliente)
         {
             List<ReservaWrapper> reservasPorCliente = new List <ReservaWrapper>();
-            foreach (ReservaWrapper r in listaReservaWrapper)
+            reservasPorCliente = listaReservaWrapper.FindAll(r => r.Reserva.IdCliente == idcliente);
+            /*foreach (ReservaWrapper r in listaReservaWrapper)
                 if (r.Reserva.IdCliente== idcliente)
-                    reservasPorCliente.Add(r);
+                    reservasPorCliente.Add(r);*/
             return reservasPorCliente;
         }
+
+
     }
 }
