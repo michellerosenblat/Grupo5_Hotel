@@ -51,11 +51,15 @@
             this.btmXHotel = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btmRepRes = new System.Windows.Forms.Button();
+            this.lblWH = new System.Windows.Forms.Label();
+            this.pbWH = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).BeginInit();
             this.SuspendLayout();
             // 
             // lblReporte
             // 
             this.lblReporte.AutoSize = true;
+            this.lblReporte.BackColor = System.Drawing.Color.Transparent;
             this.lblReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReporte.ForeColor = System.Drawing.Color.Moccasin;
             this.lblReporte.Location = new System.Drawing.Point(159, 31);
@@ -67,6 +71,7 @@
             // lblFacturacionTotal
             // 
             this.lblFacturacionTotal.AutoSize = true;
+            this.lblFacturacionTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblFacturacionTotal.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFacturacionTotal.ForeColor = System.Drawing.Color.Moccasin;
             this.lblFacturacionTotal.Location = new System.Drawing.Point(178, 152);
@@ -78,6 +83,7 @@
             // lblOcupacionPromedio
             // 
             this.lblOcupacionPromedio.AutoSize = true;
+            this.lblOcupacionPromedio.BackColor = System.Drawing.Color.Transparent;
             this.lblOcupacionPromedio.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOcupacionPromedio.ForeColor = System.Drawing.Color.Moccasin;
             this.lblOcupacionPromedio.Location = new System.Drawing.Point(178, 190);
@@ -89,6 +95,7 @@
             // lblFacturacionPromedio
             // 
             this.lblFacturacionPromedio.AutoSize = true;
+            this.lblFacturacionPromedio.BackColor = System.Drawing.Color.Transparent;
             this.lblFacturacionPromedio.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFacturacionPromedio.ForeColor = System.Drawing.Color.Moccasin;
             this.lblFacturacionPromedio.Location = new System.Drawing.Point(178, 228);
@@ -160,6 +167,7 @@
             // lblHotel
             // 
             this.lblHotel.AutoSize = true;
+            this.lblHotel.BackColor = System.Drawing.Color.Transparent;
             this.lblHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHotel.ForeColor = System.Drawing.Color.Moccasin;
             this.lblHotel.Location = new System.Drawing.Point(179, 114);
@@ -317,12 +325,38 @@
             this.btmRepRes.UseVisualStyleBackColor = false;
             this.btmRepRes.Click += new System.EventHandler(this.btmRepRes_Click);
             // 
+            // lblWH
+            // 
+            this.lblWH.AutoSize = true;
+            this.lblWH.BackColor = System.Drawing.Color.Transparent;
+            this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWH.ForeColor = System.Drawing.Color.White;
+            this.lblWH.Location = new System.Drawing.Point(21, 68);
+            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Name = "lblWH";
+            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.TabIndex = 28;
+            this.lblWH.Text = "WHITE HAT\r\n";
+            // 
+            // pbWH
+            // 
+            this.pbWH.BackColor = System.Drawing.Color.Transparent;
+            this.pbWH.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
+            this.pbWH.Location = new System.Drawing.Point(18, 18);
+            this.pbWH.Name = "pbWH";
+            this.pbWH.Size = new System.Drawing.Size(100, 47);
+            this.pbWH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbWH.TabIndex = 27;
+            this.pbWH.TabStop = false;
+            // 
             // ReporteHabitacionesXHotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
             this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblWH);
+            this.Controls.Add(this.pbWH);
             this.Controls.Add(this.btmRepRes);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btmXHotel);
@@ -347,8 +381,10 @@
             this.Controls.Add(this.lblFacturacionTotal);
             this.Controls.Add(this.lblReporte);
             this.Name = "ReporteHabitacionesXHotelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteHabitacionesXHotelForm";
             this.Load += new System.EventHandler(this.ReporteHabitacionesXHotelForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +415,7 @@
         private System.Windows.Forms.Button btmXHotel;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btmRepRes;
+        private System.Windows.Forms.Label lblWH;
+        private System.Windows.Forms.PictureBox pbWH;
     }
 }

@@ -22,7 +22,6 @@ namespace Grupo5_Hotel
 
         private void ClienteForm_Load(object sender, EventArgs e)
         {
-            DiseñoControl.TransparentBackground(lblCliente, this);
             dataClientes.Hide();
         }
 

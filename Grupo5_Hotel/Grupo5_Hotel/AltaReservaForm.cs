@@ -24,13 +24,6 @@ namespace Grupo5_Hotel
         {
             ListarClientes();
             ListarHoteles();
-            DiseñoControl.TransparentBackground(lblCantindadHuespedes, this);
-            DiseñoControl.TransparentBackground(lblHotel, this);
-            DiseñoControl.TransparentBackground(lblCliente, this);
-            DiseñoControl.TransparentBackground(lblDatos, this);
-            DiseñoControl.TransparentBackground(lblHabitacion, this);
-            DiseñoControl.TransparentBackground(lblEgreso, this);
-            DiseñoControl.TransparentBackground(lblIngreso, this);
             cmbHabitacion.Hide();
         }
 

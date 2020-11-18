@@ -34,7 +34,10 @@
             this.cmbHotel = new System.Windows.Forms.ComboBox();
             this.lblHotel = new System.Windows.Forms.Label();
             this.lblHabitaciones = new System.Windows.Forms.Label();
+            this.lblWH = new System.Windows.Forms.Label();
+            this.pbWH = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).BeginInit();
             this.SuspendLayout();
             // 
             // dataClientes
@@ -100,7 +103,7 @@
             // lblHotel
             // 
             this.lblHotel.AutoSize = true;
-            this.lblHotel.BackColor = System.Drawing.SystemColors.Control;
+            this.lblHotel.BackColor = System.Drawing.Color.Transparent;
             this.lblHotel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHotel.ForeColor = System.Drawing.Color.Moccasin;
             this.lblHotel.Location = new System.Drawing.Point(11, 102);
@@ -113,6 +116,7 @@
             // lblHabitaciones
             // 
             this.lblHabitaciones.AutoSize = true;
+            this.lblHabitaciones.BackColor = System.Drawing.Color.Transparent;
             this.lblHabitaciones.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHabitaciones.ForeColor = System.Drawing.Color.Moccasin;
             this.lblHabitaciones.Location = new System.Drawing.Point(165, 38);
@@ -121,12 +125,38 @@
             this.lblHabitaciones.TabIndex = 10;
             this.lblHabitaciones.Text = "Habitaciones:";
             // 
+            // lblWH
+            // 
+            this.lblWH.AutoSize = true;
+            this.lblWH.BackColor = System.Drawing.Color.Transparent;
+            this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWH.ForeColor = System.Drawing.Color.White;
+            this.lblWH.Location = new System.Drawing.Point(21, 68);
+            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Name = "lblWH";
+            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.TabIndex = 32;
+            this.lblWH.Text = "WHITE HAT\r\n";
+            // 
+            // pbWH
+            // 
+            this.pbWH.BackColor = System.Drawing.Color.Transparent;
+            this.pbWH.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
+            this.pbWH.Location = new System.Drawing.Point(18, 18);
+            this.pbWH.Name = "pbWH";
+            this.pbWH.Size = new System.Drawing.Size(100, 47);
+            this.pbWH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbWH.TabIndex = 31;
+            this.pbWH.TabStop = false;
+            // 
             // HabitacionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
             this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblWH);
+            this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblHabitaciones);
             this.Controls.Add(this.lblHotel);
             this.Controls.Add(this.cmbHotel);
@@ -135,10 +165,12 @@
             this.Controls.Add(this.btnAlta);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HabitacionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HabitacionForm";
             this.Load += new System.EventHandler(this.HabitacionForm_Load);
             this.VisibleChanged += new System.EventHandler(this.HabitacionForm_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +184,7 @@
         private System.Windows.Forms.ComboBox cmbHotel;
         private System.Windows.Forms.Label lblHotel;
         private System.Windows.Forms.Label lblHabitaciones;
+        private System.Windows.Forms.Label lblWH;
+        private System.Windows.Forms.PictureBox pbWH;
     }
 }

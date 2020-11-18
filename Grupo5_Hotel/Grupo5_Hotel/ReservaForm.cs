@@ -25,7 +25,6 @@ namespace Grupo5_Hotel
 
         private void ReservaForm_Load(object sender, EventArgs e)
         {
-            DiseñoControl.TransparentBackground(lblReservas, this);
             dataReserva.Hide();
         }
 

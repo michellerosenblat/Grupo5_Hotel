@@ -41,7 +41,10 @@
             this.rbNo = new System.Windows.Forms.RadioButton();
             this.panelAmenities = new System.Windows.Forms.Panel();
             this.lblDatos = new System.Windows.Forms.Label();
+            this.lblWH = new System.Windows.Forms.Label();
+            this.pbWH = new System.Windows.Forms.PictureBox();
             this.panelAmenities.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).BeginInit();
             this.SuspendLayout();
             // 
             // textNombre
@@ -69,7 +72,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.SystemColors.Control;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Moccasin;
             this.lblNombre.Location = new System.Drawing.Point(178, 112);
@@ -82,6 +85,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
+            this.lblDireccion.BackColor = System.Drawing.Color.Transparent;
             this.lblDireccion.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.Color.Moccasin;
             this.lblDireccion.Location = new System.Drawing.Point(178, 152);
@@ -94,6 +98,7 @@
             // lblEstrellas
             // 
             this.lblEstrellas.AutoSize = true;
+            this.lblEstrellas.BackColor = System.Drawing.Color.Transparent;
             this.lblEstrellas.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstrellas.ForeColor = System.Drawing.Color.Moccasin;
             this.lblEstrellas.Location = new System.Drawing.Point(178, 187);
@@ -106,6 +111,7 @@
             // lblAmenities
             // 
             this.lblAmenities.AutoSize = true;
+            this.lblAmenities.BackColor = System.Drawing.Color.Transparent;
             this.lblAmenities.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmenities.ForeColor = System.Drawing.Color.Moccasin;
             this.lblAmenities.Location = new System.Drawing.Point(178, 244);
@@ -158,6 +164,7 @@
             // rbSi
             // 
             this.rbSi.AutoSize = true;
+            this.rbSi.ForeColor = System.Drawing.Color.Moccasin;
             this.rbSi.Location = new System.Drawing.Point(16, 11);
             this.rbSi.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.rbSi.Name = "rbSi";
@@ -170,6 +177,7 @@
             // rbNo
             // 
             this.rbNo.AutoSize = true;
+            this.rbNo.ForeColor = System.Drawing.Color.Moccasin;
             this.rbNo.Location = new System.Drawing.Point(77, 11);
             this.rbNo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.rbNo.Name = "rbNo";
@@ -181,7 +189,7 @@
             // 
             // panelAmenities
             // 
-            this.panelAmenities.BackColor = System.Drawing.Color.Moccasin;
+            this.panelAmenities.BackColor = System.Drawing.Color.Transparent;
             this.panelAmenities.Controls.Add(this.rbSi);
             this.panelAmenities.Controls.Add(this.rbNo);
             this.panelAmenities.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,6 +203,7 @@
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
+            this.lblDatos.BackColor = System.Drawing.Color.Transparent;
             this.lblDatos.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatos.ForeColor = System.Drawing.Color.Moccasin;
             this.lblDatos.Location = new System.Drawing.Point(165, 38);
@@ -203,12 +212,38 @@
             this.lblDatos.TabIndex = 14;
             this.lblDatos.Text = "Datos del hotel:";
             // 
+            // lblWH
+            // 
+            this.lblWH.AutoSize = true;
+            this.lblWH.BackColor = System.Drawing.Color.Transparent;
+            this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWH.ForeColor = System.Drawing.Color.White;
+            this.lblWH.Location = new System.Drawing.Point(21, 68);
+            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Name = "lblWH";
+            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.TabIndex = 38;
+            this.lblWH.Text = "WHITE HAT\r\n";
+            // 
+            // pbWH
+            // 
+            this.pbWH.BackColor = System.Drawing.Color.Transparent;
+            this.pbWH.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
+            this.pbWH.Location = new System.Drawing.Point(18, 18);
+            this.pbWH.Name = "pbWH";
+            this.pbWH.Size = new System.Drawing.Size(100, 47);
+            this.pbWH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbWH.TabIndex = 37;
+            this.pbWH.TabStop = false;
+            // 
             // AltaHotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
             this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblWH);
+            this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.comboEstrellas);
             this.Controls.Add(this.buttonVolver);
@@ -222,10 +257,12 @@
             this.Controls.Add(this.panelAmenities);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "AltaHotelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarHotel";
             this.Load += new System.EventHandler(this.AltaHotelForm_Load);
             this.panelAmenities.ResumeLayout(false);
             this.panelAmenities.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +283,7 @@
         private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.Panel panelAmenities;
         private System.Windows.Forms.Label lblDatos;
+        private System.Windows.Forms.Label lblWH;
+        private System.Windows.Forms.PictureBox pbWH;
     }
 }

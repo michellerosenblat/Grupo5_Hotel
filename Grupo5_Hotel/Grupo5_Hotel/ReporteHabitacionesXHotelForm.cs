@@ -38,7 +38,6 @@ namespace Grupo5_Hotel
             lblQOcupProm.Hide();
             lblQFacProm.Hide();
 
-
             lblHotel.Hide();
             cmbHotel.Hide();
             txtboxFacturacionTotal.Hide();
@@ -47,12 +46,8 @@ namespace Grupo5_Hotel
             txtboxFacturacionPromedioHotel.Hide();
             txtboxFacturacionTotalHotel.Hide();
             txtboxOcupacionPromedioHotel.Hide();
+            Visualoff();
 
-            DiseñoControl.TransparentBackground(lblHotel, this);
-            DiseñoControl.TransparentBackground(lblReporte, this);
-            DiseñoControl.TransparentBackground(lblFacturacionTotal, this);
-            DiseñoControl.TransparentBackground(lblFacturacionPromedio, this);
-            DiseñoControl.TransparentBackground(lblOcupacionPromedio, this);
         }
         private void LlenarCmbHotel()
         {
@@ -172,6 +167,7 @@ namespace Grupo5_Hotel
             txtboxFacturacionPromedio.Show();
             txtboxFacturacionTotal.Show();
             txtboxOcupacionPromedio.Show();
+            Visualon();
 
             txtboxFacturacionPromedioHotel.Hide();
             txtboxFacturacionTotalHotel.Hide();
@@ -193,6 +189,10 @@ namespace Grupo5_Hotel
             txtboxOcupacionPromedioHotel.Show();
             lblHotel.Show();
             cmbHotel.Show();
+            lblFacturacionPromedio.Show();
+            lblFacturacionTotal.Show();
+            lblOcupacionPromedio.Show();
+            Visualon();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -207,6 +207,25 @@ namespace Grupo5_Hotel
             reportereservaform.Owner = this;
             reportereservaform.Show();
             this.Hide();
+        }
+        private void Visualon()
+        {
+
+            lblFacturacionPromedio.Show();
+            lblFacturacionTotal.Show();
+            lblOcupacionPromedio.Show();
+            btmQFacProm.Show();
+            btmQFacTot.Show();
+            btmQOcProm.Show();
+        }
+        private void Visualoff()
+        { 
+            lblFacturacionPromedio.Hide();
+            lblFacturacionTotal.Hide();
+            lblOcupacionPromedio.Hide();
+            btmQFacProm.Hide();
+            btmQFacTot.Hide();
+            btmQOcProm.Hide();
         }
     }
 }

@@ -42,12 +42,6 @@ namespace Grupo5_Hotel
             cmbHotel.SelectedIndex = hotelSeleccionado;
             CargarPlazas();
             CargarCategorias();
-            DiseñoControl.TransparentBackground(lblDatos, this);
-            DiseñoControl.TransparentBackground(lblCancelable, this);
-            DiseñoControl.TransparentBackground(Precio, this);
-            DiseñoControl.TransparentBackground(label1, this);
-            DiseñoControl.TransparentBackground(label2, this);
-            DiseñoControl.TransparentBackground(Hotel, this);
         }
         private void BorrarCampos()
         {

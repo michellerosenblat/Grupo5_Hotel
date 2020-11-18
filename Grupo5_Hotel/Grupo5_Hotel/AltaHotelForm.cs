@@ -47,11 +47,7 @@ namespace Grupo5_Hotel
         private void AltaHotelForm_Load(object sender, EventArgs e)
         {
             hotelForm = new HotelForm();
-            DiseñoControl.TransparentBackground(lblAmenities, this);
-            DiseñoControl.TransparentBackground(lblDatos, this);
-            DiseñoControl.TransparentBackground(lblDireccion, this);
-            DiseñoControl.TransparentBackground(lblEstrellas, this);
-            DiseñoControl.TransparentBackground(lblNombre, this);
+
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)

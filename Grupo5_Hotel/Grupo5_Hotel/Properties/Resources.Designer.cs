@@ -69,5 +69,15 @@ namespace Grupo5_Hotel.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sombrero_vaquero_blanco {
+            get {
+                object obj = ResourceManager.GetObject("Sombrero vaquero blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
