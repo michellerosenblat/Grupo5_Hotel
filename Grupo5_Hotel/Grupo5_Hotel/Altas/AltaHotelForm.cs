@@ -68,7 +68,7 @@ namespace Grupo5_Hotel
                         throw new FormatException("Error en los campos: " + "\n" + this.Errores);
                     HotelServicio.InsertarHotel(CrearHotel());
                     MessageBox.Show("Se ha ingresado correctamente el hotel");
-                    lblAmenities.ForeColor = System.Drawing.Color.Black;
+                   
                     BorrarCampos();
                 }
             }
@@ -85,6 +85,7 @@ namespace Grupo5_Hotel
             comboEstrellas.SelectedIndex = -1;
             rbSi.Checked = false;
             rbNo.Checked = false;
+            lblAmenities.ForeColor = System.Drawing.Color.White;
         }
 
         private void buttonVolver_Click(object sender, EventArgs e)
@@ -95,8 +96,7 @@ namespace Grupo5_Hotel
 
         private void panelAmenities_Paint(object sender, PaintEventArgs e)
         {
-            rbSi.Checked = false;
-            rbNo.Checked = false;
+            
         }
 
         private void comboEstrellas_SelectedIndexChanged(object sender, EventArgs e)

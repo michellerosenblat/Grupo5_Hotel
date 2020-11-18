@@ -52,10 +52,10 @@
             this.textNombre.BackColor = System.Drawing.Color.Moccasin;
             this.textNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textNombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNombre.Location = new System.Drawing.Point(282, 109);
-            this.textNombre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textNombre.Location = new System.Drawing.Point(423, 168);
+            this.textNombre.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(200, 22);
+            this.textNombre.Size = new System.Drawing.Size(299, 30);
             this.textNombre.TabIndex = 0;
             // 
             // textDireccion
@@ -63,10 +63,10 @@
             this.textDireccion.BackColor = System.Drawing.Color.Moccasin;
             this.textDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textDireccion.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDireccion.Location = new System.Drawing.Point(282, 151);
-            this.textDireccion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textDireccion.Location = new System.Drawing.Point(423, 232);
+            this.textDireccion.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textDireccion.Name = "textDireccion";
-            this.textDireccion.Size = new System.Drawing.Size(200, 22);
+            this.textDireccion.Size = new System.Drawing.Size(299, 30);
             this.textDireccion.TabIndex = 1;
             // 
             // lblNombre
@@ -75,10 +75,9 @@
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblNombre.Location = new System.Drawing.Point(178, 112);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(267, 172);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(67, 16);
+            this.lblNombre.Size = new System.Drawing.Size(94, 24);
             this.lblNombre.TabIndex = 5;
             this.lblNombre.Text = "Nombre";
             // 
@@ -88,10 +87,9 @@
             this.lblDireccion.BackColor = System.Drawing.Color.Transparent;
             this.lblDireccion.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblDireccion.Location = new System.Drawing.Point(178, 152);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDireccion.Location = new System.Drawing.Point(267, 234);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(79, 16);
+            this.lblDireccion.Size = new System.Drawing.Size(111, 24);
             this.lblDireccion.TabIndex = 6;
             this.lblDireccion.Text = "Direccion";
             // 
@@ -101,10 +99,9 @@
             this.lblEstrellas.BackColor = System.Drawing.Color.Transparent;
             this.lblEstrellas.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstrellas.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblEstrellas.Location = new System.Drawing.Point(178, 187);
-            this.lblEstrellas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEstrellas.Location = new System.Drawing.Point(267, 288);
             this.lblEstrellas.Name = "lblEstrellas";
-            this.lblEstrellas.Size = new System.Drawing.Size(71, 16);
+            this.lblEstrellas.Size = new System.Drawing.Size(99, 24);
             this.lblEstrellas.TabIndex = 7;
             this.lblEstrellas.Text = "Estrellas";
             // 
@@ -114,10 +111,9 @@
             this.lblAmenities.BackColor = System.Drawing.Color.Transparent;
             this.lblAmenities.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmenities.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblAmenities.Location = new System.Drawing.Point(178, 244);
-            this.lblAmenities.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAmenities.Location = new System.Drawing.Point(267, 375);
             this.lblAmenities.Name = "lblAmenities";
-            this.lblAmenities.Size = new System.Drawing.Size(83, 16);
+            this.lblAmenities.Size = new System.Drawing.Size(113, 24);
             this.lblAmenities.TabIndex = 8;
             this.lblAmenities.Text = "Amenities";
             // 
@@ -126,10 +122,10 @@
             this.buttonAgregar.BackColor = System.Drawing.Color.Moccasin;
             this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAgregar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAgregar.Location = new System.Drawing.Point(11, 102);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonAgregar.Location = new System.Drawing.Point(16, 157);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(118, 34);
+            this.buttonAgregar.Size = new System.Drawing.Size(177, 52);
             this.buttonAgregar.TabIndex = 9;
             this.buttonAgregar.Text = "AGREGAR";
             this.buttonAgregar.UseVisualStyleBackColor = false;
@@ -140,10 +136,10 @@
             this.buttonVolver.BackColor = System.Drawing.Color.Moccasin;
             this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonVolver.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVolver.Location = new System.Drawing.Point(29, 347);
-            this.buttonVolver.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonVolver.Location = new System.Drawing.Point(44, 534);
+            this.buttonVolver.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buttonVolver.Name = "buttonVolver";
-            this.buttonVolver.Size = new System.Drawing.Size(90, 34);
+            this.buttonVolver.Size = new System.Drawing.Size(135, 52);
             this.buttonVolver.TabIndex = 10;
             this.buttonVolver.Text = "VOLVER";
             this.buttonVolver.UseVisualStyleBackColor = false;
@@ -154,10 +150,10 @@
             this.comboEstrellas.BackColor = System.Drawing.Color.Moccasin;
             this.comboEstrellas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboEstrellas.FormattingEnabled = true;
-            this.comboEstrellas.Location = new System.Drawing.Point(282, 186);
-            this.comboEstrellas.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.comboEstrellas.Location = new System.Drawing.Point(423, 286);
+            this.comboEstrellas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.comboEstrellas.Name = "comboEstrellas";
-            this.comboEstrellas.Size = new System.Drawing.Size(200, 21);
+            this.comboEstrellas.Size = new System.Drawing.Size(298, 28);
             this.comboEstrellas.TabIndex = 11;
             this.comboEstrellas.SelectedIndexChanged += new System.EventHandler(this.comboEstrellas_SelectedIndexChanged);
             // 
@@ -165,10 +161,10 @@
             // 
             this.rbSi.AutoSize = true;
             this.rbSi.ForeColor = System.Drawing.Color.Moccasin;
-            this.rbSi.Location = new System.Drawing.Point(16, 11);
-            this.rbSi.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.rbSi.Location = new System.Drawing.Point(24, 17);
+            this.rbSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbSi.Name = "rbSi";
-            this.rbSi.Size = new System.Drawing.Size(37, 20);
+            this.rbSi.Size = new System.Drawing.Size(52, 28);
             this.rbSi.TabIndex = 0;
             this.rbSi.TabStop = true;
             this.rbSi.Text = "Si";
@@ -178,10 +174,10 @@
             // 
             this.rbNo.AutoSize = true;
             this.rbNo.ForeColor = System.Drawing.Color.Moccasin;
-            this.rbNo.Location = new System.Drawing.Point(77, 11);
-            this.rbNo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.rbNo.Location = new System.Drawing.Point(116, 17);
+            this.rbNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(44, 20);
+            this.rbNo.Size = new System.Drawing.Size(61, 28);
             this.rbNo.TabIndex = 1;
             this.rbNo.TabStop = true;
             this.rbNo.Text = "No";
@@ -193,12 +189,11 @@
             this.panelAmenities.Controls.Add(this.rbSi);
             this.panelAmenities.Controls.Add(this.rbNo);
             this.panelAmenities.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelAmenities.Location = new System.Drawing.Point(310, 229);
-            this.panelAmenities.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panelAmenities.Location = new System.Drawing.Point(465, 352);
+            this.panelAmenities.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelAmenities.Name = "panelAmenities";
-            this.panelAmenities.Size = new System.Drawing.Size(135, 39);
+            this.panelAmenities.Size = new System.Drawing.Size(202, 60);
             this.panelAmenities.TabIndex = 13;
-            this.panelAmenities.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAmenities_Paint);
             // 
             // lblDatos
             // 
@@ -206,9 +201,10 @@
             this.lblDatos.BackColor = System.Drawing.Color.Transparent;
             this.lblDatos.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatos.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblDatos.Location = new System.Drawing.Point(165, 38);
+            this.lblDatos.Location = new System.Drawing.Point(248, 58);
+            this.lblDatos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(231, 31);
+            this.lblDatos.Size = new System.Drawing.Size(347, 47);
             this.lblDatos.TabIndex = 14;
             this.lblDatos.Text = "Datos del hotel:";
             // 
@@ -218,10 +214,9 @@
             this.lblWH.BackColor = System.Drawing.Color.Transparent;
             this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWH.ForeColor = System.Drawing.Color.White;
-            this.lblWH.Location = new System.Drawing.Point(21, 68);
-            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Location = new System.Drawing.Point(32, 105);
             this.lblWH.Name = "lblWH";
-            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.Size = new System.Drawing.Size(139, 22);
             this.lblWH.TabIndex = 38;
             this.lblWH.Text = "WHITE HAT\r\n";
             // 
@@ -229,19 +224,20 @@
             // 
             this.pbWH.BackColor = System.Drawing.Color.Transparent;
             this.pbWH.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
-            this.pbWH.Location = new System.Drawing.Point(18, 18);
+            this.pbWH.Location = new System.Drawing.Point(27, 28);
+            this.pbWH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbWH.Name = "pbWH";
-            this.pbWH.Size = new System.Drawing.Size(100, 47);
+            this.pbWH.Size = new System.Drawing.Size(150, 72);
             this.pbWH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbWH.TabIndex = 37;
             this.pbWH.TabStop = false;
             // 
             // AltaHotelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
-            this.ClientSize = new System.Drawing.Size(584, 392);
+            this.ClientSize = new System.Drawing.Size(876, 603);
             this.Controls.Add(this.lblWH);
             this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblDatos);
@@ -255,7 +251,7 @@
             this.Controls.Add(this.textDireccion);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.panelAmenities);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "AltaHotelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarHotel";

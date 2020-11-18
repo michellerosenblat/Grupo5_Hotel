@@ -51,6 +51,7 @@ namespace Grupo5_Hotel
             txtPrecio.Clear();
             rbSi.Checked = false;
             rbNo.Checked = false;
+            lblCancelable.ForeColor = System.Drawing.Color.White;
         }
         private void cmbHotel_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -126,12 +127,6 @@ namespace Grupo5_Hotel
                     Validacion.ValidarNumero(txtPrecio.Text, "Precio");
             }
         }
-
-        private void panelCancelable_Paint(object sender, PaintEventArgs e)
-        {
-            rbSi.Checked = false;
-            rbNo.Checked = false;
-        }
         private Habitacion CrearHabitacion()
         {
            return new Habitacion(((Hotel)cmbHotel.SelectedItem).Id, int.Parse(cmbPlazas.SelectedItem.ToString()), cmbCategoria.SelectedItem.ToString(), int.Parse(txtPrecio.Text), rbSi.Checked);
@@ -148,5 +143,9 @@ namespace Grupo5_Hotel
             BorrarCampos();
         }
 
+        private void rbSi_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

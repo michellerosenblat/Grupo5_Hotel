@@ -55,10 +55,9 @@
             this.cmbHotel.BackColor = System.Drawing.Color.Moccasin;
             this.cmbHotel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbHotel.FormattingEnabled = true;
-            this.cmbHotel.Location = new System.Drawing.Point(282, 109);
-            this.cmbHotel.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbHotel.Location = new System.Drawing.Point(423, 168);
             this.cmbHotel.Name = "cmbHotel";
-            this.cmbHotel.Size = new System.Drawing.Size(200, 21);
+            this.cmbHotel.Size = new System.Drawing.Size(298, 28);
             this.cmbHotel.TabIndex = 0;
             this.cmbHotel.SelectedIndexChanged += new System.EventHandler(this.cmbHotel_SelectedIndexChanged);
             this.cmbHotel.Click += new System.EventHandler(this.cmbHotel_Click);
@@ -69,10 +68,9 @@
             this.Hotel.BackColor = System.Drawing.Color.Transparent;
             this.Hotel.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hotel.ForeColor = System.Drawing.Color.Moccasin;
-            this.Hotel.Location = new System.Drawing.Point(178, 112);
-            this.Hotel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Hotel.Location = new System.Drawing.Point(267, 172);
             this.Hotel.Name = "Hotel";
-            this.Hotel.Size = new System.Drawing.Size(48, 16);
+            this.Hotel.Size = new System.Drawing.Size(67, 24);
             this.Hotel.TabIndex = 1;
             this.Hotel.Text = "Hotel";
             // 
@@ -82,10 +80,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Moccasin;
-            this.label1.Location = new System.Drawing.Point(178, 152);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(267, 234);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.Size = new System.Drawing.Size(136, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Cant. Plazas";
             // 
@@ -94,10 +91,9 @@
             this.cmbPlazas.BackColor = System.Drawing.Color.Moccasin;
             this.cmbPlazas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbPlazas.FormattingEnabled = true;
-            this.cmbPlazas.Location = new System.Drawing.Point(282, 151);
-            this.cmbPlazas.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbPlazas.Location = new System.Drawing.Point(423, 232);
             this.cmbPlazas.Name = "cmbPlazas";
-            this.cmbPlazas.Size = new System.Drawing.Size(200, 21);
+            this.cmbPlazas.Size = new System.Drawing.Size(298, 28);
             this.cmbPlazas.TabIndex = 3;
             this.cmbPlazas.SelectedIndexChanged += new System.EventHandler(this.cmbPlazas_SelectedIndexChanged);
             this.cmbPlazas.Click += new System.EventHandler(this.cmbPlazas_Click);
@@ -108,10 +104,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Moccasin;
-            this.label2.Location = new System.Drawing.Point(178, 191);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(267, 294);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 16);
+            this.label2.Size = new System.Drawing.Size(109, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "Categoria";
             // 
@@ -120,10 +115,9 @@
             this.cmbCategoria.BackColor = System.Drawing.Color.Moccasin;
             this.cmbCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(282, 190);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbCategoria.Location = new System.Drawing.Point(423, 292);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(200, 21);
+            this.cmbCategoria.Size = new System.Drawing.Size(298, 28);
             this.cmbCategoria.TabIndex = 5;
             this.cmbCategoria.Click += new System.EventHandler(this.cmbCategoria_Click);
             // 
@@ -133,10 +127,9 @@
             this.Precio.BackColor = System.Drawing.Color.Transparent;
             this.Precio.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Precio.ForeColor = System.Drawing.Color.Moccasin;
-            this.Precio.Location = new System.Drawing.Point(178, 228);
-            this.Precio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Precio.Location = new System.Drawing.Point(267, 351);
             this.Precio.Name = "Precio";
-            this.Precio.Size = new System.Drawing.Size(54, 16);
+            this.Precio.Size = new System.Drawing.Size(76, 24);
             this.Precio.TabIndex = 6;
             this.Precio.Text = "Precio";
             // 
@@ -144,10 +137,9 @@
             // 
             this.txtPrecio.BackColor = System.Drawing.Color.Moccasin;
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecio.Location = new System.Drawing.Point(282, 227);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecio.Location = new System.Drawing.Point(423, 349);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(200, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(299, 26);
             this.txtPrecio.TabIndex = 7;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
@@ -157,10 +149,9 @@
             this.lblCancelable.BackColor = System.Drawing.Color.Transparent;
             this.lblCancelable.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCancelable.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblCancelable.Location = new System.Drawing.Point(178, 286);
-            this.lblCancelable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCancelable.Location = new System.Drawing.Point(267, 440);
             this.lblCancelable.Name = "lblCancelable";
-            this.lblCancelable.Size = new System.Drawing.Size(87, 16);
+            this.lblCancelable.Size = new System.Drawing.Size(122, 24);
             this.lblCancelable.TabIndex = 8;
             this.lblCancelable.Text = "Cancelable";
             // 
@@ -169,10 +160,9 @@
             this.btnAgregar.BackColor = System.Drawing.Color.Moccasin;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(11, 102);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(16, 157);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(118, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(177, 52);
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -183,10 +173,9 @@
             this.btnAtras.BackColor = System.Drawing.Color.Moccasin;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAtras.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(29, 347);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAtras.Location = new System.Drawing.Point(44, 534);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(90, 34);
+            this.btnAtras.Size = new System.Drawing.Size(135, 52);
             this.btnAtras.TabIndex = 12;
             this.btnAtras.Text = "VOLVER";
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -198,34 +187,34 @@
             this.panelCancelable.Controls.Add(this.rbSi);
             this.panelCancelable.Controls.Add(this.rbNo);
             this.panelCancelable.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCancelable.Location = new System.Drawing.Point(310, 270);
-            this.panelCancelable.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panelCancelable.Location = new System.Drawing.Point(465, 415);
+            this.panelCancelable.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelCancelable.Name = "panelCancelable";
-            this.panelCancelable.Size = new System.Drawing.Size(135, 39);
+            this.panelCancelable.Size = new System.Drawing.Size(202, 60);
             this.panelCancelable.TabIndex = 14;
-            this.panelCancelable.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCancelable_Paint);
             // 
             // rbSi
             // 
             this.rbSi.AutoSize = true;
             this.rbSi.ForeColor = System.Drawing.Color.Moccasin;
-            this.rbSi.Location = new System.Drawing.Point(14, 12);
-            this.rbSi.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.rbSi.Location = new System.Drawing.Point(21, 18);
+            this.rbSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbSi.Name = "rbSi";
-            this.rbSi.Size = new System.Drawing.Size(37, 20);
+            this.rbSi.Size = new System.Drawing.Size(52, 28);
             this.rbSi.TabIndex = 0;
             this.rbSi.TabStop = true;
             this.rbSi.Text = "Si";
             this.rbSi.UseVisualStyleBackColor = true;
+            this.rbSi.CheckedChanged += new System.EventHandler(this.rbSi_CheckedChanged);
             // 
             // rbNo
             // 
             this.rbNo.AutoSize = true;
             this.rbNo.ForeColor = System.Drawing.Color.Moccasin;
-            this.rbNo.Location = new System.Drawing.Point(81, 12);
-            this.rbNo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.rbNo.Location = new System.Drawing.Point(122, 18);
+            this.rbNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(44, 20);
+            this.rbNo.Size = new System.Drawing.Size(61, 28);
             this.rbNo.TabIndex = 1;
             this.rbNo.TabStop = true;
             this.rbNo.Text = "No";
@@ -236,10 +225,9 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.Moccasin;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(11, 149);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Location = new System.Drawing.Point(16, 229);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(118, 41);
+            this.btnLimpiar.Size = new System.Drawing.Size(177, 63);
             this.btnLimpiar.TabIndex = 15;
             this.btnLimpiar.Text = "LIMPIAR CAMPOS";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -251,9 +239,10 @@
             this.lblDatos.BackColor = System.Drawing.Color.Transparent;
             this.lblDatos.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatos.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblDatos.Location = new System.Drawing.Point(165, 38);
+            this.lblDatos.Location = new System.Drawing.Point(248, 58);
+            this.lblDatos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(332, 31);
+            this.lblDatos.Size = new System.Drawing.Size(498, 47);
             this.lblDatos.TabIndex = 23;
             this.lblDatos.Text = "Datos de la habitación:";
             // 
@@ -263,10 +252,9 @@
             this.lblWH.BackColor = System.Drawing.Color.Transparent;
             this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWH.ForeColor = System.Drawing.Color.White;
-            this.lblWH.Location = new System.Drawing.Point(21, 68);
-            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Location = new System.Drawing.Point(32, 105);
             this.lblWH.Name = "lblWH";
-            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.Size = new System.Drawing.Size(139, 22);
             this.lblWH.TabIndex = 40;
             this.lblWH.Text = "WHITE HAT\r\n";
             // 
@@ -274,19 +262,20 @@
             // 
             this.pbWH.BackColor = System.Drawing.Color.Transparent;
             this.pbWH.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
-            this.pbWH.Location = new System.Drawing.Point(18, 18);
+            this.pbWH.Location = new System.Drawing.Point(27, 28);
+            this.pbWH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbWH.Name = "pbWH";
-            this.pbWH.Size = new System.Drawing.Size(100, 47);
+            this.pbWH.Size = new System.Drawing.Size(150, 72);
             this.pbWH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbWH.TabIndex = 39;
             this.pbWH.TabStop = false;
             // 
             // AltaHabitacionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
-            this.ClientSize = new System.Drawing.Size(584, 392);
+            this.ClientSize = new System.Drawing.Size(876, 603);
             this.Controls.Add(this.lblWH);
             this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblDatos);
@@ -303,7 +292,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Hotel);
             this.Controls.Add(this.cmbHotel);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AltaHabitacionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaHabitacionForm";
