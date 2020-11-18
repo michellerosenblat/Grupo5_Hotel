@@ -26,10 +26,6 @@ namespace Grupo5_Hotel
         }
         private void Menu_Load(object sender, EventArgs e)
         {
-            DiseñoControl.TransparentBackground(lblTitulo, this);
-            DiseñoControl.TransparentBackground(lblWhiteHat, this);
-            DiseñoControl.TransparentBackground(lblSeleccion, this);
-            DiseñoControl.TransparentBackground(lbllinea, this); // más sencillo que los códigos que encontré para dibujar una simple línea
 
 
         }

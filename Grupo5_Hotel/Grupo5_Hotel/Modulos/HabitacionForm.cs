@@ -29,8 +29,6 @@ namespace Grupo5_Hotel
         private void HabitacionForm_Load(object sender, EventArgs e)
         {
             LlenarComboHoteles();
-            DiseñoControl.TransparentBackground(lblHotel, this);
-            DiseñoControl.TransparentBackground(lblHabitaciones, this);
             dataClientes.Hide();
 
         }

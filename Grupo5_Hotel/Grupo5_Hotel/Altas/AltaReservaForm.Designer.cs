@@ -44,6 +44,9 @@
             this.lblHotel = new System.Windows.Forms.Label();
             this.cmbHotel = new System.Windows.Forms.ComboBox();
             this.lblDatos = new System.Windows.Forms.Label();
+            this.lblWH = new System.Windows.Forms.Label();
+            this.pbWH = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).BeginInit();
             this.SuspendLayout();
             // 
             // btmAtras
@@ -98,6 +101,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
+            this.lblCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblCliente.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.ForeColor = System.Drawing.Color.Moccasin;
             this.lblCliente.Location = new System.Drawing.Point(178, 112);
@@ -109,6 +113,7 @@
             // lblHabitacion
             // 
             this.lblHabitacion.AutoSize = true;
+            this.lblHabitacion.BackColor = System.Drawing.Color.Transparent;
             this.lblHabitacion.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHabitacion.ForeColor = System.Drawing.Color.Moccasin;
             this.lblHabitacion.Location = new System.Drawing.Point(178, 191);
@@ -120,6 +125,7 @@
             // lblCantindadHuespedes
             // 
             this.lblCantindadHuespedes.AutoSize = true;
+            this.lblCantindadHuespedes.BackColor = System.Drawing.Color.Transparent;
             this.lblCantindadHuespedes.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantindadHuespedes.ForeColor = System.Drawing.Color.Moccasin;
             this.lblCantindadHuespedes.Location = new System.Drawing.Point(178, 228);
@@ -131,6 +137,7 @@
             // lblIngreso
             // 
             this.lblIngreso.AutoSize = true;
+            this.lblIngreso.BackColor = System.Drawing.Color.Transparent;
             this.lblIngreso.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngreso.ForeColor = System.Drawing.Color.Moccasin;
             this.lblIngreso.Location = new System.Drawing.Point(178, 292);
@@ -142,6 +149,7 @@
             // lblEgreso
             // 
             this.lblEgreso.AutoSize = true;
+            this.lblEgreso.BackColor = System.Drawing.Color.Transparent;
             this.lblEgreso.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEgreso.ForeColor = System.Drawing.Color.Moccasin;
             this.lblEgreso.Location = new System.Drawing.Point(178, 320);
@@ -152,9 +160,9 @@
             // 
             // dtpIngreso
             // 
-            this.dtpIngreso.CalendarMonthBackground = System.Drawing.Color.Moccasin;
-            this.dtpIngreso.CalendarTitleBackColor = System.Drawing.Color.Moccasin;
-            this.dtpIngreso.CalendarTrailingForeColor = System.Drawing.Color.Moccasin;
+            this.dtpIngreso.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.dtpIngreso.CalendarTitleBackColor = System.Drawing.Color.Transparent;
+            this.dtpIngreso.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
             this.dtpIngreso.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpIngreso.Location = new System.Drawing.Point(282, 287);
             this.dtpIngreso.Name = "dtpIngreso";
@@ -197,6 +205,7 @@
             // lblHotel
             // 
             this.lblHotel.AutoSize = true;
+            this.lblHotel.BackColor = System.Drawing.Color.Transparent;
             this.lblHotel.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHotel.ForeColor = System.Drawing.Color.Moccasin;
             this.lblHotel.Location = new System.Drawing.Point(178, 152);
@@ -222,6 +231,7 @@
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
+            this.lblDatos.BackColor = System.Drawing.Color.Transparent;
             this.lblDatos.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatos.ForeColor = System.Drawing.Color.Moccasin;
             this.lblDatos.Location = new System.Drawing.Point(165, 38);
@@ -230,12 +240,38 @@
             this.lblDatos.TabIndex = 22;
             this.lblDatos.Text = "Datos de la reserva:";
             // 
+            // lblWH
+            // 
+            this.lblWH.AutoSize = true;
+            this.lblWH.BackColor = System.Drawing.Color.Transparent;
+            this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWH.ForeColor = System.Drawing.Color.White;
+            this.lblWH.Location = new System.Drawing.Point(21, 68);
+            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Name = "lblWH";
+            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.TabIndex = 36;
+            this.lblWH.Text = "WHITE HAT\r\n";
+            // 
+            // pbWH
+            // 
+            this.pbWH.BackColor = System.Drawing.Color.Transparent;
+            this.pbWH.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
+            this.pbWH.Location = new System.Drawing.Point(18, 18);
+            this.pbWH.Name = "pbWH";
+            this.pbWH.Size = new System.Drawing.Size(100, 47);
+            this.pbWH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbWH.TabIndex = 35;
+            this.pbWH.TabStop = false;
+            // 
             // AltaReservaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
             this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblWH);
+            this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.cmbHotel);
             this.Controls.Add(this.lblHotel);
@@ -253,9 +289,11 @@
             this.Controls.Add(this.btmAgregar);
             this.Controls.Add(this.btmAtras);
             this.Name = "AltaReservaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaReservaForm";
             this.Load += new System.EventHandler(this.AltaReservaForm_Load);
             this.VisibleChanged += new System.EventHandler(this.AltaReservaForm_VisibleChanged);
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +317,7 @@
         private System.Windows.Forms.Label lblHotel;
         private System.Windows.Forms.ComboBox cmbHotel;
         private System.Windows.Forms.Label lblDatos;
+        private System.Windows.Forms.Label lblWH;
+        private System.Windows.Forms.PictureBox pbWH;
     }
 }

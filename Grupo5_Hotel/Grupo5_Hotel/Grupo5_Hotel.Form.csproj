@@ -46,34 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaHabitacionForm.cs">
+    <Compile Include="Altas\AltaHabitacionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaHabitacionForm.Designer.cs">
+    <Compile Include="Altas\AltaHabitacionForm.Designer.cs">
       <DependentUpon>AltaHabitacionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltaHotelForm.cs">
+    <Compile Include="Altas\AltaHotelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaHotelForm.Designer.cs">
+    <Compile Include="Altas\AltaHotelForm.Designer.cs">
       <DependentUpon>AltaHotelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltaClienteForm.cs">
+    <Compile Include="Altas\AltaClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaClienteForm.Designer.cs">
+    <Compile Include="Altas\AltaClienteForm.Designer.cs">
       <DependentUpon>AltaClienteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltaReservaForm.cs">
+    <Compile Include="Altas\AltaReservaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaReservaForm.Designer.cs">
+    <Compile Include="Altas\AltaReservaForm.Designer.cs">
       <DependentUpon>AltaReservaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClienteForm.cs">
+    <Compile Include="Modulos\ClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteForm.Designer.cs">
+    <Compile Include="Modulos\ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DiseñoControl.cs">
@@ -82,16 +82,16 @@
     <Compile Include="DiseñoControl.Designer.cs">
       <DependentUpon>DiseñoControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="HabitacionForm.cs">
+    <Compile Include="Modulos\HabitacionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HabitacionForm.Designer.cs">
+    <Compile Include="Modulos\HabitacionForm.Designer.cs">
       <DependentUpon>HabitacionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HotelesForm.cs">
+    <Compile Include="Modulos\HotelesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HotelesForm.Designer.cs">
+    <Compile Include="Modulos\HotelesForm.Designer.cs">
       <DependentUpon>HotelesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
@@ -107,46 +107,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ReporteHabitacionesXHotelForm.cs">
+    <Compile Include="Reportes\ReporteHabitacionesXHotelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteHabitacionesXHotelForm.Designer.cs">
+    <Compile Include="Reportes\ReporteHabitacionesXHotelForm.Designer.cs">
       <DependentUpon>ReporteHabitacionesXHotelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteReservasForm.cs">
+    <Compile Include="Reportes\ReporteReservasForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteReservasForm.Designer.cs">
+    <Compile Include="Reportes\ReporteReservasForm.Designer.cs">
       <DependentUpon>ReporteReservasForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReservaForm.cs">
+    <Compile Include="Modulos\ReservaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReservaForm.Designer.cs">
+    <Compile Include="Modulos\ReservaForm.Designer.cs">
       <DependentUpon>ReservaForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AltaHabitacionForm.resx">
+    <EmbeddedResource Include="Altas\AltaHabitacionForm.resx">
       <DependentUpon>AltaHabitacionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AltaHotelForm.resx">
+    <EmbeddedResource Include="Altas\AltaHotelForm.resx">
       <DependentUpon>AltaHotelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AltaClienteForm.resx">
+    <EmbeddedResource Include="Altas\AltaClienteForm.resx">
       <DependentUpon>AltaClienteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AltaReservaForm.resx">
+    <EmbeddedResource Include="Altas\AltaReservaForm.resx">
       <DependentUpon>AltaReservaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteForm.resx">
+    <EmbeddedResource Include="Modulos\ClienteForm.resx">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DiseñoControl.resx">
       <DependentUpon>DiseñoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HabitacionForm.resx">
+    <EmbeddedResource Include="Modulos\HabitacionForm.resx">
       <DependentUpon>HabitacionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HotelesForm.resx">
+    <EmbeddedResource Include="Modulos\HotelesForm.resx">
       <DependentUpon>HotelesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
@@ -157,13 +157,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteHabitacionesXHotelForm.resx">
+    <EmbeddedResource Include="Reportes\ReporteHabitacionesXHotelForm.resx">
       <DependentUpon>ReporteHabitacionesXHotelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteReservasForm.resx">
+    <EmbeddedResource Include="Reportes\ReporteReservasForm.resx">
       <DependentUpon>ReporteReservasForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReservaForm.resx">
+    <EmbeddedResource Include="Modulos\ReservaForm.resx">
       <DependentUpon>ReservaForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -191,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Marrón Dorado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sombrero vaquero blanco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

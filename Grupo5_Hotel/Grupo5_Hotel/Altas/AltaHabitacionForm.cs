@@ -42,12 +42,6 @@ namespace Grupo5_Hotel
             cmbHotel.SelectedIndex = hotelSeleccionado;
             CargarPlazas();
             CargarCategorias();
-            DiseñoControl.TransparentBackground(lblDatos, this);
-            DiseñoControl.TransparentBackground(lblCancelable, this);
-            DiseñoControl.TransparentBackground(Precio, this);
-            DiseñoControl.TransparentBackground(label1, this);
-            DiseñoControl.TransparentBackground(label2, this);
-            DiseñoControl.TransparentBackground(Hotel, this);
         }
         private void BorrarCampos()
         {
@@ -126,10 +120,10 @@ namespace Grupo5_Hotel
         {
             get
             {
-                return Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "hotel") +
-                    Validacion.ValidarComboBox (cmbPlazas.SelectedIndex, "cantidad de plazas")
-                    + Validacion.ValidarComboBox (cmbCategoria.SelectedIndex, "categoría") +
-                    Validacion.ValidarNumero(txtPrecio.Text, "precio");
+                return Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
+                    Validacion.ValidarComboBox (cmbPlazas.SelectedIndex, "Cantidad de plazas")
+                    + Validacion.ValidarComboBox (cmbCategoria.SelectedIndex, "Categoría") +
+                    Validacion.ValidarNumero(txtPrecio.Text, "Precio");
             }
         }
 

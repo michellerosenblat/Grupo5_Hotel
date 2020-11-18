@@ -24,13 +24,6 @@ namespace Grupo5_Hotel
         {
             ListarClientes();
             ListarHoteles();
-            DiseñoControl.TransparentBackground(lblCantindadHuespedes, this);
-            DiseñoControl.TransparentBackground(lblHotel, this);
-            DiseñoControl.TransparentBackground(lblCliente, this);
-            DiseñoControl.TransparentBackground(lblDatos, this);
-            DiseñoControl.TransparentBackground(lblHabitacion, this);
-            DiseñoControl.TransparentBackground(lblEgreso, this);
-            DiseñoControl.TransparentBackground(lblIngreso, this);
             cmbHabitacion.Hide();
         }
 
@@ -99,6 +92,8 @@ namespace Grupo5_Hotel
             cmbHotel.SelectedIndex = -1;
             cmbHabitacion.SelectedIndex = -1;
             cmbHabitacion.Enabled = false;
+            dtpIngreso.Value = DateTime.Now;
+            dtpEgreso.Value = DateTime.Now;
 
         }
         private void btnListar_Click(object sender, EventArgs e)

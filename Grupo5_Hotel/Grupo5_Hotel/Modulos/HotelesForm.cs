@@ -32,7 +32,6 @@ namespace Grupo5_Hotel
         private void HotelesForm_Load(object sender, EventArgs e)
         {
 
-            DiseñoControl.TransparentBackground(lblHoteles, this);
             dataHotel.Hide();
             
             //hotelServicio = new HotelServicio();

@@ -33,7 +33,10 @@
             this.btmAtras = new System.Windows.Forms.Button();
             this.dataReserva = new System.Windows.Forms.DataGridView();
             this.lblReservas = new System.Windows.Forms.Label();
+            this.lblWH = new System.Windows.Forms.Label();
+            this.pbWH = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataReserva)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).BeginInit();
             this.SuspendLayout();
             // 
             // btnListarReserva
@@ -98,6 +101,7 @@
             // lblReservas
             // 
             this.lblReservas.AutoSize = true;
+            this.lblReservas.BackColor = System.Drawing.Color.Transparent;
             this.lblReservas.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReservas.ForeColor = System.Drawing.Color.Moccasin;
             this.lblReservas.Location = new System.Drawing.Point(165, 38);
@@ -106,21 +110,49 @@
             this.lblReservas.TabIndex = 9;
             this.lblReservas.Text = "Reservas:";
             // 
+            // lblWH
+            // 
+            this.lblWH.AutoSize = true;
+            this.lblWH.BackColor = System.Drawing.Color.Transparent;
+            this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWH.ForeColor = System.Drawing.Color.White;
+            this.lblWH.Location = new System.Drawing.Point(21, 68);
+            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Name = "lblWH";
+            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.TabIndex = 15;
+            this.lblWH.Text = "WHITE HAT\r\n";
+            // 
+            // pbWH
+            // 
+            this.pbWH.BackColor = System.Drawing.Color.Transparent;
+            this.pbWH.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
+            this.pbWH.Location = new System.Drawing.Point(18, 18);
+            this.pbWH.Name = "pbWH";
+            this.pbWH.Size = new System.Drawing.Size(100, 47);
+            this.pbWH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbWH.TabIndex = 14;
+            this.pbWH.TabStop = false;
+            // 
             // ReservaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
             this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblWH);
+            this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblReservas);
             this.Controls.Add(this.dataReserva);
             this.Controls.Add(this.btmAtras);
             this.Controls.Add(this.btmAltaReserva);
             this.Controls.Add(this.btnListarReserva);
             this.Name = "ReservaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReservaForm";
             this.Load += new System.EventHandler(this.ReservaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataReserva)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +165,7 @@
         private System.Windows.Forms.Button btmAtras;
         private System.Windows.Forms.DataGridView dataReserva;
         private System.Windows.Forms.Label lblReservas;
+        private System.Windows.Forms.Label lblWH;
+        private System.Windows.Forms.PictureBox pbWH;
     }
 }

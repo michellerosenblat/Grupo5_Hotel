@@ -33,7 +33,10 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.dataClientes = new System.Windows.Forms.DataGridView();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.lblWH = new System.Windows.Forms.Label();
+            this.pbWH = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).BeginInit();
             this.SuspendLayout();
             // 
             // btnListar
@@ -42,7 +45,7 @@
             this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.Location = new System.Drawing.Point(11, 102);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(2);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(118, 34);
             this.btnListar.TabIndex = 0;
@@ -56,7 +59,7 @@
             this.btnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlta.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlta.Location = new System.Drawing.Point(11, 149);
-            this.btnAlta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAlta.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(118, 34);
             this.btnAlta.TabIndex = 1;
@@ -70,7 +73,7 @@
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAtras.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.Location = new System.Drawing.Point(29, 347);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(90, 34);
             this.btnAtras.TabIndex = 2;
@@ -87,7 +90,7 @@
             this.dataClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataClientes.GridColor = System.Drawing.Color.Moccasin;
             this.dataClientes.Location = new System.Drawing.Point(171, 71);
-            this.dataClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataClientes.Margin = new System.Windows.Forms.Padding(2);
             this.dataClientes.Name = "dataClientes";
             this.dataClientes.ReadOnly = true;
             this.dataClientes.RowHeadersVisible = false;
@@ -101,6 +104,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
+            this.lblCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblCliente.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.ForeColor = System.Drawing.Color.Moccasin;
             this.lblCliente.Location = new System.Drawing.Point(165, 38);
@@ -109,23 +113,51 @@
             this.lblCliente.TabIndex = 6;
             this.lblCliente.Text = "Clientes:";
             // 
+            // lblWH
+            // 
+            this.lblWH.AutoSize = true;
+            this.lblWH.BackColor = System.Drawing.Color.Transparent;
+            this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWH.ForeColor = System.Drawing.Color.White;
+            this.lblWH.Location = new System.Drawing.Point(21, 68);
+            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Name = "lblWH";
+            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.TabIndex = 34;
+            this.lblWH.Text = "WHITE HAT\r\n";
+            // 
+            // pbWH
+            // 
+            this.pbWH.BackColor = System.Drawing.Color.Transparent;
+            this.pbWH.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
+            this.pbWH.Location = new System.Drawing.Point(18, 18);
+            this.pbWH.Name = "pbWH";
+            this.pbWH.Size = new System.Drawing.Size(100, 47);
+            this.pbWH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbWH.TabIndex = 33;
+            this.pbWH.TabStop = false;
+            // 
             // ClienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
             this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblWH);
+            this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.dataClientes);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.btnListar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClienteForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClienteForm";
             this.Load += new System.EventHandler(this.ClienteForm_Load);
             this.VisibleChanged += new System.EventHandler(this.ClienteForm_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +170,7 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.DataGridView dataClientes;
         private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Label lblWH;
+        private System.Windows.Forms.PictureBox pbWH;
     }
 }

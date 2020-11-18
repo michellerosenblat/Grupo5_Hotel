@@ -37,6 +37,9 @@
             this.lblWhiteHat = new System.Windows.Forms.Label();
             this.lblSeleccion = new System.Windows.Forms.Label();
             this.lbllinea = new System.Windows.Forms.Label();
+            this.pbHW = new System.Windows.Forms.PictureBox();
+            this.lblWH = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHW)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCliente
@@ -99,9 +102,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblTitulo.Location = new System.Drawing.Point(172, 57);
+            this.lblTitulo.Location = new System.Drawing.Point(265, 100);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(202, 31);
@@ -124,9 +128,10 @@
             // lblWhiteHat
             // 
             this.lblWhiteHat.AutoSize = true;
+            this.lblWhiteHat.BackColor = System.Drawing.Color.Transparent;
             this.lblWhiteHat.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWhiteHat.ForeColor = System.Drawing.Color.White;
-            this.lblWhiteHat.Location = new System.Drawing.Point(378, 57);
+            this.lblWhiteHat.Location = new System.Drawing.Point(275, 171);
             this.lblWhiteHat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWhiteHat.Name = "lblWhiteHat";
             this.lblWhiteHat.Size = new System.Drawing.Size(185, 31);
@@ -136,24 +141,50 @@
             // lblSeleccion
             // 
             this.lblSeleccion.AutoSize = true;
+            this.lblSeleccion.BackColor = System.Drawing.Color.Transparent;
             this.lblSeleccion.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeleccion.ForeColor = System.Drawing.Color.Moccasin;
-            this.lblSeleccion.Location = new System.Drawing.Point(172, 102);
+            this.lblSeleccion.Location = new System.Drawing.Point(205, 238);
             this.lblSeleccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSeleccion.Name = "lblSeleccion";
-            this.lblSeleccion.Size = new System.Drawing.Size(352, 62);
+            this.lblSeleccion.Size = new System.Drawing.Size(314, 31);
             this.lblSeleccion.TabIndex = 9;
-            this.lblSeleccion.Text = "Seleccione la opción que\r\ndesea para continuar:";
+            this.lblSeleccion.Text = "Seleccione el módulo:";
             // 
             // lbllinea
             // 
             this.lbllinea.AutoSize = true;
+            this.lbllinea.BackColor = System.Drawing.Color.Transparent;
             this.lbllinea.ForeColor = System.Drawing.Color.Moccasin;
             this.lbllinea.Location = new System.Drawing.Point(8, 287);
             this.lbllinea.Name = "lbllinea";
             this.lbllinea.Size = new System.Drawing.Size(124, 13);
             this.lbllinea.TabIndex = 11;
             this.lbllinea.Text = "---------------------------------------";
+            // 
+            // pbHW
+            // 
+            this.pbHW.BackColor = System.Drawing.Color.Transparent;
+            this.pbHW.Image = global::Grupo5_Hotel.Properties.Resources.Sombrero_vaquero_blanco;
+            this.pbHW.Location = new System.Drawing.Point(18, 18);
+            this.pbHW.Name = "pbHW";
+            this.pbHW.Size = new System.Drawing.Size(100, 47);
+            this.pbHW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHW.TabIndex = 12;
+            this.pbHW.TabStop = false;
+            // 
+            // lblWH
+            // 
+            this.lblWH.AutoSize = true;
+            this.lblWH.BackColor = System.Drawing.Color.Transparent;
+            this.lblWH.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWH.ForeColor = System.Drawing.Color.White;
+            this.lblWH.Location = new System.Drawing.Point(21, 68);
+            this.lblWH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWH.Name = "lblWH";
+            this.lblWH.Size = new System.Drawing.Size(94, 15);
+            this.lblWH.TabIndex = 13;
+            this.lblWH.Text = "WHITE HAT\r\n";
             // 
             // Menu
             // 
@@ -162,6 +193,8 @@
             this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(584, 392);
+            this.Controls.Add(this.lblWH);
+            this.Controls.Add(this.pbHW);
             this.Controls.Add(this.lbllinea);
             this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.lblWhiteHat);
@@ -174,8 +207,10 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sistema White Hat";
             this.Load += new System.EventHandler(this.Menu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbHW)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +227,8 @@
         private System.Windows.Forms.Label lblWhiteHat;
         private System.Windows.Forms.Label lblSeleccion;
         private System.Windows.Forms.Label lbllinea;
+        private System.Windows.Forms.PictureBox pbHW;
+        private System.Windows.Forms.Label lblWH;
     }
 }
 

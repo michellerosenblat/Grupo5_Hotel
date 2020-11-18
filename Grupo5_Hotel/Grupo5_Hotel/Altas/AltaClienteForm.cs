@@ -57,12 +57,6 @@ namespace Grupo5_Hotel
 
         private void AltaClienteForm_Load(object sender, EventArgs e)
         {
-            DiseñoControl.TransparentBackground(lblApellido, this);
-            DiseñoControl.TransparentBackground(lblDatos, this);
-            DiseñoControl.TransparentBackground(lblNombre, this);
-            DiseñoControl.TransparentBackground(label2, this);
-            DiseñoControl.TransparentBackground(label1, this);
-            DiseñoControl.TransparentBackground(label3, this);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

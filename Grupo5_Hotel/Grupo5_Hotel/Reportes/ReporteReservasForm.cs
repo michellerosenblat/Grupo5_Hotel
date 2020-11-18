@@ -24,16 +24,10 @@ namespace Grupo5_Hotel
 
         private void ReporteReservasForm_Load(object sender, EventArgs e)
         {
-            /*DiseñoControl.TransparentBackground(lblReporte, this);
-            DiseñoControl.TransparentBackground(lblNroReservas, this);
-            DiseñoControl.TransparentBackground(lblTotalClientes, this);
-            DiseñoControl.TransparentBackground(lblTotalReservas, this);
-            DiseñoControl.TransparentBackground(lbllinea, this);
-            dataReserva.Hide();*/
-
             LlenarCmbCliente();
             txtNroClientes.Text = listaclientesconreserva().Count.ToString();
             txtNroReservas.Text = ReservaServicio.TraerReservas().Count.ToString();
+            dataReserva.Hide();
         }
         private List<Cliente> listaclientesconreserva()
         {
@@ -72,8 +66,8 @@ namespace Grupo5_Hotel
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {          
             ListarReservas();
-            //if (cmbCliente.Text != null)
-                //dataReserva.Show();
+            if (cmbCliente.Text != null)
+                dataReserva.Show();
         }
 
         private void btmAtras_Click(object sender, EventArgs e)
