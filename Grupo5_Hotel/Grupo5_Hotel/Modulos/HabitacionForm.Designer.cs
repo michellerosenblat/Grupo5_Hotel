@@ -56,7 +56,7 @@
             this.dataClientes.RowHeadersVisible = false;
             this.dataClientes.RowHeadersWidth = 62;
             this.dataClientes.RowTemplate.Height = 28;
-            this.dataClientes.Size = new System.Drawing.Size(386, 252);
+            this.dataClientes.Size = new System.Drawing.Size(617, 252);
             this.dataClientes.TabIndex = 7;
             // 
             // btnAtras
@@ -153,8 +153,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
-            this.ClientSize = new System.Drawing.Size(584, 392);
+            this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado_UltraWide;
+            this.ClientSize = new System.Drawing.Size(816, 392);
             this.Controls.Add(this.lblWH);
             this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblHabitaciones);

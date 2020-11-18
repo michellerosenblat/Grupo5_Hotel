@@ -95,7 +95,7 @@
             this.dataReserva.RowHeadersVisible = false;
             this.dataReserva.RowHeadersWidth = 62;
             this.dataReserva.RowTemplate.Height = 28;
-            this.dataReserva.Size = new System.Drawing.Size(384, 298);
+            this.dataReserva.Size = new System.Drawing.Size(616, 288);
             this.dataReserva.TabIndex = 8;
             // 
             // lblReservas
@@ -138,8 +138,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado;
-            this.ClientSize = new System.Drawing.Size(584, 392);
+            this.BackgroundImage = global::Grupo5_Hotel.Properties.Resources.Marrón_Dorado_UltraWide;
+            this.ClientSize = new System.Drawing.Size(816, 392);
             this.Controls.Add(this.lblWH);
             this.Controls.Add(this.pbWH);
             this.Controls.Add(this.lblReservas);
