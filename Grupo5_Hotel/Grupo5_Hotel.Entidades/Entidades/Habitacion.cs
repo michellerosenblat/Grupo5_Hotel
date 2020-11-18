@@ -12,17 +12,17 @@ namespace Grupo5_Hotel.Entidades.Entidades
         private int idHotel;
         private string categoria;
         private int cantidadPlazas;
-        private bool cancelacion;
+        private bool cancelable;
         private double precio;
         private Hotel hotel;
 
-        public Habitacion (int idHotel, int cantidadPlazas, string categoria, int precio, bool cancelacion){
-        
+        public Habitacion (int idHotel, int cantidadPlazas, string categoria, int precio, bool cancelable)
+        { 
             this.idHotel = idHotel;
             this.cantidadPlazas = cantidadPlazas;
             this.categoria = categoria;
             this.precio = precio;
-            this.cancelacion = cancelacion;
+            this.cancelable = cancelable;
             this.hotel = new Hotel();
 
         }
@@ -82,15 +82,15 @@ namespace Grupo5_Hotel.Entidades.Entidades
                 this.cantidadPlazas = value;
             }
         }
-        public bool Cancelacion
+        public bool Cancelable
         {
             get
             {
-                return this.cancelacion;
+                return this.cancelable;
             }
             set
             {
-                this.cancelacion = value;
+                this.cancelable = value;
             }
         }
         public double Precio

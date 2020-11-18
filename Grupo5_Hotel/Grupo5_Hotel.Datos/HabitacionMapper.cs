@@ -31,7 +31,7 @@ namespace Grupo5_Hotel.Datos
             n.Add("CantidadPlazas", habitacion.CantidadPlazas.ToString());
             n.Add("Categoria", habitacion.Categoria);
             n.Add("Precio", habitacion.Precio.ToString());
-            n.Add("Cancelable", habitacion.Cancelacion.ToString());
+            n.Add("Cancelable", habitacion.Cancelable.ToString());
             //n.Add("id", habitacion.Id.ToString());
             return n;
         }
