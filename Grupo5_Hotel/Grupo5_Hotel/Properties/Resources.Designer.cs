@@ -73,6 +73,26 @@ namespace Grupo5_Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Marrón_Dorado_ancho {
+            get {
+                object obj = ResourceManager.GetObject("Marrón Dorado ancho", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Marrón_Dorado_UltraWide {
+            get {
+                object obj = ResourceManager.GetObject("Marrón Dorado UltraWide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sombrero_vaquero_blanco {
             get {
                 object obj = ResourceManager.GetObject("Sombrero vaquero blanco", resourceCulture);
