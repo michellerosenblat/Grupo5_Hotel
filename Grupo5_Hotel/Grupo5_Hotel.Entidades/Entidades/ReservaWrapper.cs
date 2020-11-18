@@ -17,15 +17,15 @@ namespace Grupo5_Hotel
         string fechaIngreso;
         string fechaEgreso;
         Reserva reserva;
-        public ReservaWrapper(Reserva reserva, Habitacion habitacion, Cliente cliente, Hotel hotel)
+        public ReservaWrapper(Reserva reserva,  Cliente cliente, Hotel hotel)
         {
             codReserva = reserva.Id;
             this.cliente = cliente;
-            this.habitacion = habitacion;
+            //this.habitacion = habitacion;
             this.hotel = hotel;
             cantDias = (reserva.FechaEgreso - reserva.FechaIngreso).Days;
             fechaIngreso= reserva.FechaIngreso.ToString("dddd, dd MMMM yyyy");
-            fechaEgreso = reserva.FechaEgreso.ToShortDateString();
+            fechaEgreso = reserva.FechaEgreso.ToString("dddd, dd MMMM yyyy");
             this.reserva = reserva;
         }
        public int CodReserva
@@ -69,7 +69,7 @@ namespace Grupo5_Hotel
             }
             get
             {
-                return this.habitacion;
+                return this.hotel.Habitaciones.SingleOrDefault(x => x.Id == this.reserva.IdHabitacion);
             }
         }
         public Hotel Hotel

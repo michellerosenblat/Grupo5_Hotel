@@ -20,7 +20,10 @@ namespace Grupo5_Hotel.Entidades.Entidades
         private int estrellas;
         [DataMember]
         private bool amenities;
-        public Hotel() { }
+        private List<Habitacion> habitaciones;
+        public Hotel() {
+            habitaciones = new List<Habitacion>();
+        }
         public Hotel(int id, string nombre, string direccion, int estrellas, bool amenities) 
         {
             this.id = id;
@@ -28,6 +31,17 @@ namespace Grupo5_Hotel.Entidades.Entidades
             this.direccion = direccion;
             this.estrellas = estrellas;
             this.amenities = amenities;
+        }
+        public List <Habitacion> Habitaciones
+        {
+            get
+            {
+                return this.habitaciones;
+            }
+            set
+            {
+                this.habitaciones = value;
+            }
         }
         public int Id
         {

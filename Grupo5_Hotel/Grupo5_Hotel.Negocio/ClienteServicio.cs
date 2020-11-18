@@ -8,13 +8,11 @@ namespace Grupo5_Hotel.Negocio
 {
     public static class ClienteServicio
     {
-        //static ClienteMapper mapper = new ClienteMapper();
-        static List<Cliente> cacheClientes = ClienteMapper.TraerClientes();
-       /* public static ClienteServicio()
+        static List<Cliente> cacheClientes;
+       static ClienteServicio()
         {
-            mapper = new ClienteMapper();
             RefrescarCache();
-        }*/
+        }
 
         private static void RefrescarCache()
         {

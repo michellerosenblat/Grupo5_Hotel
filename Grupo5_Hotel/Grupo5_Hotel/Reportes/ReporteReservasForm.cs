@@ -60,6 +60,7 @@ namespace Grupo5_Hotel
                 dataReserva.DataSource = ReservaServicio.TraerReservasPorIdCliente(cliente.Id);
                 dataReserva.Columns["Cliente"].Visible = false;
                 dataReserva.Columns["Reserva"].Visible = false;
+                dataReserva.Columns["CodReserva"].Visible = false;
             }
         }
 

@@ -13,34 +13,25 @@ namespace Grupo5_Hotel.Negocio
 {
     public static class ReservaServicio
     {
-        //ReservaMapper reservaMapper;
-        //HotelMapper hotelMapper;
-        //HabitacionMapper habitacionMapper;
-        //ClienteMapper clienteMapper;
-        //llamar aca el metodo no me gusta pero no se como resolverlo
-        private static List<Reserva> cacheReservas = ReservaMapper.TraerReservas();
-        private static List<Hotel> listaHoteles = HotelMapper.TraerHoteles();
+        private static List<Reserva> cacheReservas;
+        private static List<Hotel> listaHoteles;
         private static List<Cliente> listaClientes;
         private static List<Habitacion> listaHabitaciones;
-        private static List<ReservaWrapper> listaReservaWrapper = new List <ReservaWrapper> ();
-        //ver si esta clase tmb puede ser estatica
-        
-       /* public ReservaServicio()
+        private static List<ReservaWrapper> listaReservaWrapper;
+
+        static ReservaServicio()
         {
-            
-            //reservaMapper = new ReservaMapper();
-            //hotelMapper = new HotelMapper();
-            //habitacionMapper = new HabitacionMapper();
-            //clienteMapper = new ClienteMapper();
             RefrescarCache();
-            
             listaReservaWrapper = TraerReservaWrapper();
            
-        }*/
+        }
         private static void RefrescarCache()
         {
             cacheReservas = ReservaMapper.TraerReservas();
             listaHoteles = HotelMapper.TraerHoteles();
+            listaClientes = ClienteServicio.TraerClientes();
+            listaHoteles.ForEach(x => x.Habitaciones.AddRange(HabitacionMapper.TraerHabitacionesPorId(x.Id)));
+            LlenarListas();
         }
 
         public static List<Reserva> TraerReservas()
@@ -50,21 +41,21 @@ namespace Grupo5_Hotel.Negocio
         public static List <ReservaWrapper> TraerReservaWrapper()
         {
            listaReservaWrapper = new List<ReservaWrapper>();
-            LlenarListas();
+            
             foreach (Reserva r in cacheReservas)
             {
-                Habitacion habitacion = DevolverHabitacionDe(r);
-                Hotel hotel = listaHoteles.Find(ho => ho.Id == habitacion.IdHotel);
+                //Habitacion habitacion = DevolverHabitacionDe(r);
+                Hotel hotel = listaHoteles.SingleOrDefault(x => x.Habitaciones.Any(d => d.Id == r.Id));
                 Cliente cliente = listaClientes.Find(c => c.Id == r.IdCliente);
-                listaReservaWrapper.Add(new ReservaWrapper(r, habitacion, cliente, hotel));
+                listaReservaWrapper.Add(new ReservaWrapper(r,  cliente, hotel));
             }
             return listaReservaWrapper;
         }
 
         private static void LlenarListas()
         {
-            listaHoteles = HotelServicio.TraerHoteles();
-            listaClientes = ClienteServicio.TraerClientes();
+            //listaHoteles = HotelServicio.TraerHoteles();
+            //listaClientes = ClienteServicio.TraerClientes();
             listaHabitaciones = new List<Habitacion>();
             foreach (Hotel h in listaHoteles)
             {

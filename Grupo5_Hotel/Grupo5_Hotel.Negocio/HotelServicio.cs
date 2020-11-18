@@ -11,13 +11,11 @@ namespace Grupo5_Hotel.Negocio
 {
     public static class HotelServicio
     {
-       // private static HotelMapper mapper;
-        private static List<Hotel> cacheHoteles = HotelMapper.TraerHoteles();
-       /* public HotelServicio()
+        private static List<Hotel> cacheHoteles;
+       static HotelServicio()
         {
-            mapper = new HotelMapper();
             RefrescarCache();
-        }*/
+        }
 
         private static void RefrescarCache()
         {
