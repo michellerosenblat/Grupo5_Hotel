@@ -24,6 +24,7 @@ namespace Grupo5_Hotel
             //hotelServicio = new HotelServicio();
             //cmbHotel.SelectedIndex = -1;
             menu = new Menu();
+            this.cmbHotel.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void HabitacionForm_Load(object sender, EventArgs e)

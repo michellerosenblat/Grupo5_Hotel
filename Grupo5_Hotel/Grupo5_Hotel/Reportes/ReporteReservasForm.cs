@@ -20,6 +20,7 @@ namespace Grupo5_Hotel
         {
             InitializeComponent();
             clientesConReserva = new List<Cliente>();
+            this.cmbCliente.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void ReporteReservasForm_Load(object sender, EventArgs e)

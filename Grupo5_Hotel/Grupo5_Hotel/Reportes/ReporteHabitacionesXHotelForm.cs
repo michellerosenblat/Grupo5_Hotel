@@ -27,6 +27,7 @@ namespace Grupo5_Hotel
             //hotelservicio = new HotelServicio();
             //reservaservicio = new ReservaServicio();
             //menuForm = new Menu();
+            this.cmbHotel.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void ReporteHabitacionesXHotelForm_Load(object sender, EventArgs e)

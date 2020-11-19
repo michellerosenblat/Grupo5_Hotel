@@ -26,6 +26,7 @@ namespace Grupo5_Hotel
             comboEstrellas.Items.Add("3");
             comboEstrellas.Items.Add("4");
             comboEstrellas.Items.Add("5");
+            this.comboEstrellas.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private string Errores
         {

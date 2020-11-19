@@ -40,6 +40,15 @@ namespace Grupo5_Hotel.Negocio
             }
             return error;
         }
+        public static string ValidarFecha(DateTime input, string campoEsperado)
+        {
+            string error = "";
+            if (input <= DateTime.Today)
+            {
+                error = campoEsperado + " la fecha debe ser posterior al día de hoy" + "\n";
+            }
+            return error;
+        }
 
     }
 }

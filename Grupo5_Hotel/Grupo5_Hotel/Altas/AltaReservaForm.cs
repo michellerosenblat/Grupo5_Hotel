@@ -19,6 +19,9 @@ namespace Grupo5_Hotel
         public AltaReservaForm()
         {
             InitializeComponent();
+            this.comboClientes.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.cmbHotel.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.cmbHabitacion.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private void AltaReservaForm_Load(object sender, EventArgs e)
         {
@@ -68,6 +71,7 @@ namespace Grupo5_Hotel
                 MessageBox.Show(ex.Message);
             }
 
+
         }
 
         private string Errores
@@ -77,7 +81,8 @@ namespace Grupo5_Hotel
                 return (Validacion.ValidarComboBox(comboClientes.SelectedIndex, "Cliente") +
                     Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
                     Validacion.ValidarComboBox(cmbHabitacion.SelectedIndex, "Habitación") +
-                    Validacion.ValidarNumero(txtCantHuespedes.Text, "Cantidad de Huespedes"));
+                    Validacion.ValidarNumero(txtCantHuespedes.Text, "Cantidad de Huespedes")) +
+                    Validacion.ValidarFecha(dtpIngreso.Value, "Fecha Ingreso");
             }
         }
         private Reserva CrearReserva()

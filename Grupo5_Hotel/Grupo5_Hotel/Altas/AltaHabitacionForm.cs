@@ -24,6 +24,9 @@ namespace Grupo5_Hotel
             //hotelServicio = new HotelServicio();
             //habitacionServicio = new HabitacionServicio();
             this.hotelSeleccionado = hotelSeleccionado;
+            this.cmbHotel.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.cmbPlazas.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void CargarPlazas()
