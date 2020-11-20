@@ -14,15 +14,11 @@ namespace Grupo5_Hotel
 {
     public partial class HabitacionForm : Form
     {
-        //private HotelServicio hotelServicio;
 
         private Menu menu;
         public HabitacionForm()
         {
             InitializeComponent();
-            //habitacionServicio = new HabitacionServicio();
-            //hotelServicio = new HotelServicio();
-            //cmbHotel.SelectedIndex = -1;
             menu = new Menu();
             this.cmbHotel.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -38,6 +34,16 @@ namespace Grupo5_Hotel
             cmbHotel.DataSource = HotelServicio.TraerHoteles();
             cmbHotel.SelectedIndex = -1;
             dataClientes.DataSource = null;
+        }
+        private void ListarHabitacionPorHotel()
+        {
+            Hotel hotel = (Hotel)cmbHotel.SelectedValue;
+            if (!(hotel is null))
+            {
+                dataClientes.DataSource = HabitacionServicio.TraerHabitacionesPorId(hotel.Id);
+                dataClientes.Columns["Hotel"].Visible = false;
+                dataClientes.Columns["idHotel"].Visible = false;
+            }
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -58,17 +64,6 @@ namespace Grupo5_Hotel
         {
             ListarHabitacionPorHotel();
             dataClientes.Show();
-        }
-
-        private void ListarHabitacionPorHotel()
-        {
-            Hotel hotel = (Hotel)cmbHotel.SelectedValue;
-            if (!(hotel is null))
-            {
-                dataClientes.DataSource = HabitacionServicio.TraerHabitacionesPorId(hotel.Id);
-                dataClientes.Columns["Hotel"].Visible = false;
-                dataClientes.Columns["idHotel"].Visible = false;
-            }
         }
 
         private void cmbHotel_Click(object sender, EventArgs e)

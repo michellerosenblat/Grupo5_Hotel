@@ -14,7 +14,6 @@ namespace Grupo5_Hotel
 {
     public partial class ClienteForm : Form
     {
-        //ClienteServicio clienteServicio;
         public ClienteForm()
         {
             InitializeComponent();                        
@@ -25,16 +24,17 @@ namespace Grupo5_Hotel
             dataClientes.Hide();
         }
 
+        private void ListarClientes()
+        {
+            dataClientes.DataSource = ClienteServicio.TraerClientes();
+        }
+
         private void btnListar_Click(object sender, EventArgs e)
         {
             ListarClientes();
             dataClientes.Show();
         }
 
-        private void ListarClientes()
-        {
-            dataClientes.DataSource = ClienteServicio.TraerClientes();
-        }
 
         private void btnAlta_Click(object sender, EventArgs e)
         {

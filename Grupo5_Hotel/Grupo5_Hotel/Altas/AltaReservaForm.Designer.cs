@@ -200,7 +200,6 @@
             this.cmbHabitacion.Name = "cmbHabitacion";
             this.cmbHabitacion.Size = new System.Drawing.Size(200, 24);
             this.cmbHabitacion.TabIndex = 19;
-            this.cmbHabitacion.Click += new System.EventHandler(this.cmbHabitacion_Click);
             // 
             // lblHotel
             // 
@@ -226,7 +225,6 @@
             this.cmbHotel.Size = new System.Drawing.Size(200, 24);
             this.cmbHotel.TabIndex = 21;
             this.cmbHotel.SelectedIndexChanged += new System.EventHandler(this.cmbHotel_SelectedIndexChanged);
-            this.cmbHotel.DisplayMemberChanged += new System.EventHandler(this.cmbHotel_DisplayMemberChanged);
             // 
             // lblDatos
             // 

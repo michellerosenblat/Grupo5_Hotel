@@ -155,7 +155,6 @@
             this.comboEstrellas.Name = "comboEstrellas";
             this.comboEstrellas.Size = new System.Drawing.Size(298, 28);
             this.comboEstrellas.TabIndex = 11;
-            this.comboEstrellas.SelectedIndexChanged += new System.EventHandler(this.comboEstrellas_SelectedIndexChanged);
             // 
             // rbSi
             // 

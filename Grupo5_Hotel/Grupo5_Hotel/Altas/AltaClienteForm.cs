@@ -19,26 +19,11 @@ namespace Grupo5_Hotel
             InitializeComponent();
             
         }
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            try {
-                if (!string.IsNullOrEmpty(this.Errores))
-                    throw new FormatException("Error en los campos: " + "\n"+this.Errores);
-                ClienteServicio.InsertarCliente(CrearCliente());
-                MessageBox.Show("Se ha ingresado correctamente el cliente");
-                BorrarCampos();
-            }
-            catch (FormatException fex)
-            {
-                MessageBox.Show(fex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
-            }
-        
+        private void AltaClienteForm_Load(object sender, EventArgs e)
+        {
+        }
+
         private string Errores
         {
             get
@@ -52,18 +37,8 @@ namespace Grupo5_Hotel
         }
         private Cliente CrearCliente()
         {
-            return new Cliente(ClienteServicio.ProximoId(),txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtMail.Text);
+            return new Cliente(ClienteServicio.ProximoId(), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtMail.Text);
         }
-
-        private void AltaClienteForm_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            BorrarCampos();
-        }
-
         private void BorrarCampos()
         {
             txtNombre.Clear();
@@ -72,13 +47,6 @@ namespace Grupo5_Hotel
             txtTelefono.Clear();
             txtMail.Clear();
         }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            this.Owner.Show();
-            this.Hide();
-        }
-
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space))
@@ -86,7 +54,6 @@ namespace Grupo5_Hotel
                 e.Handled = true;
             }
         }
-
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space))
@@ -94,6 +61,36 @@ namespace Grupo5_Hotel
                 e.Handled = true;
             }
         }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(this.Errores))
+                    throw new FormatException("Error en los campos: " + "\n" + this.Errores);
+                ClienteServicio.InsertarCliente(CrearCliente());
+                MessageBox.Show("Se ha ingresado correctamente el cliente");
+                BorrarCampos();
+            }
+            catch (FormatException fex)
+            {
+                MessageBox.Show(fex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            BorrarCampos();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Hide();
+        }
+
     }
 }
 

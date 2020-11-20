@@ -15,12 +15,10 @@ namespace Grupo5_Hotel
 {
     public partial class AltaHotelForm : Form
     {
-        //HotelServicio hotelServicio;
         HotelForm hotelForm;
         public AltaHotelForm()
         {
             InitializeComponent();
-            //hotelServicio = new HotelServicio();
             comboEstrellas.Items.Add("1");
             comboEstrellas.Items.Add("2");
             comboEstrellas.Items.Add("3");
@@ -28,29 +26,34 @@ namespace Grupo5_Hotel
             comboEstrellas.Items.Add("5");
             this.comboEstrellas.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+        private void AltaHotelForm_Load(object sender, EventArgs e)
+        {
+            hotelForm = new HotelForm();
+
+        }
         private string Errores
         {
             get
             {
                 return (Validacion.ValidarString(textNombre.Text, "Nombre") +
                         Validacion.ValidarString(textDireccion.Text, "Dirección") +
-                        Validacion.ValidarNumero(comboEstrellas.Text, "Estrellas"));       
+                        Validacion.ValidarNumero(comboEstrellas.Text, "Estrellas"));
             }
         }
         private Hotel CrearHotel()
         {
-            //return new Hotel(hotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex , checkBox1.Checked);
             return new Hotel(HotelServicio.ProximoId(), textNombre.Text, textDireccion.Text, comboEstrellas.SelectedIndex, rbSi.Checked);
-           
+
         }
-
-
-        private void AltaHotelForm_Load(object sender, EventArgs e)
+        private void BorrarCampos()
         {
-            hotelForm = new HotelForm();
-
+            textNombre.Clear();
+            textDireccion.Clear();
+            comboEstrellas.SelectedIndex = -1;
+            rbSi.Checked = false;
+            rbNo.Checked = false;
+            lblAmenities.ForeColor = System.Drawing.Color.White;
         }
-
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -79,30 +82,11 @@ namespace Grupo5_Hotel
             }
         }
 
-        private void BorrarCampos()
-        {
-            textNombre.Clear();
-            textDireccion.Clear();
-            comboEstrellas.SelectedIndex = -1;
-            rbSi.Checked = false;
-            rbNo.Checked = false;
-            lblAmenities.ForeColor = System.Drawing.Color.White;
-        }
-
         private void buttonVolver_Click(object sender, EventArgs e)
         {
             hotelForm.Show();
             this.Close();
         }
 
-        private void panelAmenities_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void comboEstrellas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -16,25 +16,17 @@ namespace Grupo5_Hotel
     public partial class ReporteHabitacionesXHotelForm : Form
     {
 
-        //HotelServicio hotelservicio;
-        //ReservaServicio reservaservicio;
-        //private Menu menuForm;
-
         public ReporteHabitacionesXHotelForm()
         {
             InitializeComponent();
-            //habitacionservicio = new HabitacionServicio();
-            //hotelservicio = new HotelServicio();
-            //reservaservicio = new ReservaServicio();
-            //menuForm = new Menu();
+ 
             this.cmbHotel.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void ReporteHabitacionesXHotelForm_Load(object sender, EventArgs e)
         {
-
-            LlenarResumenGerencial();
             LlenarCmbHotel();
+            LlenarResumenGerencial();
             lblQFacTot.Hide();
             lblQOcupProm.Hide();
             lblQFacProm.Hide();
@@ -50,6 +42,25 @@ namespace Grupo5_Hotel
             Visualoff();
 
         }
+        private void Visualon()
+        {
+
+            lblFacturacionPromedio.Show();
+            lblFacturacionTotal.Show();
+            lblOcupacionPromedio.Show();
+            btmQFacProm.Show();
+            btmQFacTot.Show();
+            btmQOcProm.Show();
+        }
+        private void Visualoff()
+        {
+            lblFacturacionPromedio.Hide();
+            lblFacturacionTotal.Hide();
+            lblOcupacionPromedio.Hide();
+            btmQFacProm.Hide();
+            btmQFacTot.Hide();
+            btmQOcProm.Hide();
+        }
         private void LlenarCmbHotel()
         {
             cmbHotel.DataSource = HotelServicio.TraerHoteles();
@@ -57,20 +68,12 @@ namespace Grupo5_Hotel
         }
         private void LlenarResumenGerencial()
         {
-            //List<Reserva> listadoReservas = new List<Reserva>();
-            //listadoReservas = reservaservicio.TraerReservas();
-
             List<ReservaWrapper> listadoReservas = new List<ReservaWrapper>();
             listadoReservas = ReservaServicio.TraerReservaWrapper();
 
-            //foreach (Hotel hotel in hotelservicio.TraerHoteles())
-            //{
-            //    listadohabitaciones.AddRange(habitacionservicio.TraerHabitacionesPorId(hotel.Id));
-            //}
-
-            txtboxFacturacionTotal.Text = FacturacionTotal(listadoReservas).ToString();
-            txtboxOcupacionPromedio.Text = ((OcupacionPromedio(listadoReservas)*100).ToString() + " %");
-            txtboxFacturacionPromedio.Text = FacturacionPromedio(double.Parse(txtboxFacturacionTotal.Text), listadoReservas).ToString();
+            txtboxFacturacionTotal.Text = (FacturacionTotal(listadoReservas).ToString());
+            txtboxOcupacionPromedio.Text = (Math.Round((OcupacionPromedio(listadoReservas)*100)).ToString() + " %");
+            txtboxFacturacionPromedio.Text = Math.Round(FacturacionPromedio(double.Parse(txtboxFacturacionTotal.Text), listadoReservas)).ToString();
         }
 
         private Double FacturacionTotal(List<ReservaWrapper> reservas)
@@ -101,7 +104,11 @@ namespace Grupo5_Hotel
                     ocupacionesPromedio += (reservaW.Reserva.CantidadHuespedes) / (reservaW.Habitacion.CantidadPlazas);
                 }
             }
-            return ocupacionesPromedioTotal = ocupacionesPromedio / reservasTotal;
+            ocupacionesPromedioTotal = ocupacionesPromedio / reservasTotal;
+           if (ocupacionesPromedioTotal.ToString() == "NeuN")
+            { return ocupacionesPromedioTotal = 0; }
+           else 
+            { return ocupacionesPromedioTotal; }
         }
         private double FacturacionPromedio (double facturacion, List<ReservaWrapper> reservas)
         {
@@ -117,8 +124,8 @@ namespace Grupo5_Hotel
             List<ReservaWrapper> listadoReservasHotel = new List<ReservaWrapper>();
             listadoReservasHotel = ReservaServicio.TraerReservasPorHotel(hotel);
             txtboxFacturacionTotalHotel.Text = FacturacionTotal(listadoReservasHotel).ToString();
-            txtboxOcupacionPromedioHotel.Text = ((OcupacionPromedio(listadoReservasHotel) * 100).ToString() + " %");
-            txtboxFacturacionPromedioHotel.Text = FacturacionPromedio(double.Parse(txtboxFacturacionTotalHotel.Text), listadoReservasHotel).ToString();
+            txtboxOcupacionPromedioHotel.Text = (Math.Round((OcupacionPromedio(listadoReservasHotel)) * 100).ToString() + " %");
+            txtboxFacturacionPromedioHotel.Text = Math.Round(FacturacionPromedio(double.Parse(txtboxFacturacionTotalHotel.Text), listadoReservasHotel)).ToString();
 
         }
 
@@ -126,40 +133,13 @@ namespace Grupo5_Hotel
         {   
             Hotel hotel = (Hotel)cmbHotel.SelectedValue;
             if (hotel != null)
-                LlenarResumenHotel(hotel);
-        }
-
-        private void btmAtras_Click(object sender, EventArgs e)
-        {
-            this.Owner.Show();
-            this.Hide();
-        }
-
-        private void btmQFacTot_MouseHover(object sender, EventArgs e)
-        {
-            lblQFacTot.Show();
-        }
-        private void btmQFacTot_MouseLeave(object sender, EventArgs e)
-        {
-            lblQFacTot.Hide();
-        }
-
-        private void btmQOcProm_MouseHover(object sender, EventArgs e)
-        {
-            lblQOcupProm.Show();
-        }
-        private void btmQOcProm_MouseLeave(object sender, EventArgs e)
-        {
-            lblQOcupProm.Hide();
-        }
-        private void btmQFacProm_MouseHover(object sender, EventArgs e)
-        {
-            lblQFacProm.Show();
-        }
-
-        private void btmQFacProm_MouseLeave(object sender, EventArgs e)
-        {
-            lblQFacProm.Hide();
+             LlenarResumenHotel(hotel);
+            else
+            { 
+                txtboxFacturacionTotalHotel.Text = null;
+                txtboxFacturacionPromedioHotel.Text = null;
+                txtboxOcupacionPromedioHotel.Text = null;
+            }
         }
 
         private void btmGeneral_Click(object sender, EventArgs e)
@@ -209,24 +189,37 @@ namespace Grupo5_Hotel
             reportereservaform.Show();
             this.Hide();
         }
-        private void Visualon()
+        private void btmAtras_Click(object sender, EventArgs e)
         {
-
-            lblFacturacionPromedio.Show();
-            lblFacturacionTotal.Show();
-            lblOcupacionPromedio.Show();
-            btmQFacProm.Show();
-            btmQFacTot.Show();
-            btmQOcProm.Show();
+            this.Owner.Show();
+            this.Hide();
         }
-        private void Visualoff()
-        { 
-            lblFacturacionPromedio.Hide();
-            lblFacturacionTotal.Hide();
-            lblOcupacionPromedio.Hide();
-            btmQFacProm.Hide();
-            btmQFacTot.Hide();
-            btmQOcProm.Hide();
+
+        private void btmQFacTot_MouseHover(object sender, EventArgs e)
+        {
+            lblQFacTot.Show();
+        }
+        private void btmQFacTot_MouseLeave(object sender, EventArgs e)
+        {
+            lblQFacTot.Hide();
+        }
+
+        private void btmQOcProm_MouseHover(object sender, EventArgs e)
+        {
+            lblQOcupProm.Show();
+        }
+        private void btmQOcProm_MouseLeave(object sender, EventArgs e)
+        {
+            lblQOcupProm.Hide();
+        }
+        private void btmQFacProm_MouseHover(object sender, EventArgs e)
+        {
+            lblQFacProm.Show();
+        }
+
+        private void btmQFacProm_MouseLeave(object sender, EventArgs e)
+        {
+            lblQFacProm.Hide();
         }
     }
 }

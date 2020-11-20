@@ -14,7 +14,6 @@ namespace Grupo5_Hotel
 {
     public partial class HotelForm : Form
     {
-        //HotelServicio hotelServicio;
         private Menu menu;
         public HotelForm()
         {
@@ -22,21 +21,17 @@ namespace Grupo5_Hotel
             menu = new Menu();
         }
 
+        private void HotelesForm_Load(object sender, EventArgs e)
+        {
+            dataHotel.Hide();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             dataHotel.DataSource = HotelServicio.TraerHoteles();
             dataHotel.Show();
-           
+
         }
-
-        private void HotelesForm_Load(object sender, EventArgs e)
-        {
-
-            dataHotel.Hide();
-            
-            //hotelServicio = new HotelServicio();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             AltaHotelForm altaHotel = new AltaHotelForm();

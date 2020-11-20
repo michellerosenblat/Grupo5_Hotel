@@ -30,50 +30,6 @@ namespace Grupo5_Hotel
             cmbHabitacion.Hide();
         }
 
-        private void btmAtras_Click(object sender, EventArgs e)
-        {
-            this.Owner.Show();
-            this.Close();
-        }
-        private void btmLimpiar_Click(object sender, EventArgs e)
-        {
-            BorrarCampos();
-        }
-
-        private void btmAgregar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!string.IsNullOrEmpty(this.Errores))
-                    throw new FormatException("Error en los campos: " + "\n" + this.Errores);
-                ReservaServicio.InsertarReserva(CrearReserva());
-                MessageBox.Show("Se ha ingresado correctamente la reserva");
-               /* if (comboClientes.SelectedIndex.Equals(comboClientes))
-                {
-                    
-                }+*/
-                BorrarCampos();
-            }
-            catch (CantHuespedesException cantEx)
-            {
-                MessageBox.Show(cantEx.Message);
-            }
-            catch (FechaIncorrectaException fechaEx)
-            {
-                MessageBox.Show(fechaEx.Message);
-            }
-            catch (FormatException fex)
-            {
-                MessageBox.Show(fex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-        }
-
         private string Errores
         {
             get
@@ -101,11 +57,6 @@ namespace Grupo5_Hotel
             dtpEgreso.Value = DateTime.Now;
 
         }
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            ListarClientes();
-        }
-
         private void ListarClientes()
         {
             comboClientes.DataSource = ClienteServicio.TraerClientes();
@@ -116,19 +67,59 @@ namespace Grupo5_Hotel
             cmbHotel.DataSource = HotelServicio.TraerHoteles();
         }
 
+        private void btmAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(this.Errores))
+                    throw new FormatException("Error en los campos: " + "\n" + this.Errores);
+                ReservaServicio.InsertarReserva(CrearReserva());
+                MessageBox.Show("Se ha ingresado correctamente la reserva");
+
+                BorrarCampos();
+            }
+            catch (CantHuespedesException cantEx)
+            {
+                MessageBox.Show(cantEx.Message);
+            }
+            catch (FechaIncorrectaException fechaEx)
+            {
+                MessageBox.Show(fechaEx.Message);
+            }
+            catch (FormatException fex)
+            {
+                MessageBox.Show(fex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            ListarClientes();
+        }
+        private void btmAtras_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
+        private void btmLimpiar_Click(object sender, EventArgs e)
+        {
+            BorrarCampos();
+        }
+
         private void cmbHotel_SelectedIndexChanged(object sender, EventArgs e)
         {
             Hotel hotel = (Hotel)cmbHotel.SelectedItem;
-            if (!(hotel is null)) {
-                cmbHabitacion.Enabled = true;
-                cmbHabitacion.DataSource = HabitacionServicio.TraerHabitacionesPorId(hotel.Id);
-                cmbHabitacion.Show();
-            }
-           
-        }
-
-        private void cmbHabitacion_Click(object sender, EventArgs e)
-        {
+            if (!(hotel is null)) 
+            {
+                    cmbHabitacion.Enabled = true;
+                    cmbHabitacion.DataSource = HabitacionServicio.TraerHabitacionesPorId(hotel.Id);
+                    cmbHabitacion.Show();
+            }   
            
         }
 
@@ -136,12 +127,5 @@ namespace Grupo5_Hotel
         {
             BorrarCampos();
         }
-
-
-        private void cmbHotel_DisplayMemberChanged(object sender, EventArgs e)
-        {
-            
-        }
-
     }
 }

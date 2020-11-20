@@ -15,14 +15,11 @@ namespace Grupo5_Hotel
     public partial class AltaHabitacionForm : Form
     {
 
-        //private HotelServicio hotelServicio;
-        //private HabitacionServicio habitacionServicio;
         private int hotelSeleccionado;
         public AltaHabitacionForm(int hotelSeleccionado)
         {
             InitializeComponent();
-            //hotelServicio = new HotelServicio();
-            //habitacionServicio = new HabitacionServicio();
+
             this.hotelSeleccionado = hotelSeleccionado;
             this.cmbHotel.DropDownStyle = ComboBoxStyle.DropDownList;
             this.cmbPlazas.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -41,7 +38,6 @@ namespace Grupo5_Hotel
         private void AltaHabitacionForm_Load(object sender, EventArgs e)
         {
             cmbHotel.DataSource = HotelServicio.TraerHoteles();
-            //cmbHotel.SelectedItem = cmbHotel.Items.Equals(hotelSeleccionado);
             cmbHotel.SelectedIndex = hotelSeleccionado;
             CargarPlazas();
             CargarCategorias();
@@ -56,42 +52,27 @@ namespace Grupo5_Hotel
             rbNo.Checked = false;
             lblCancelable.ForeColor = System.Drawing.Color.White;
         }
-        private void cmbHotel_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void cmbHotel_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cmbPlazas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbPlazas_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cmbCategoria_Click(object sender, EventArgs e)
-        {
-           
-        }
         private void CargarCategorias()
         {
             cmbCategoria.Items.Add("Estandar");
             cmbCategoria.Items.Add("De lujo");
             cmbCategoria.Items.Add("Presidencial");
         }
-
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        private string Errores
         {
-
+            get
+            {
+                return Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
+                    Validacion.ValidarComboBox(cmbPlazas.SelectedIndex, "Cantidad de plazas")
+                    + Validacion.ValidarComboBox(cmbCategoria.SelectedIndex, "Categoría") +
+                    Validacion.ValidarNumero(txtPrecio.Text, "Precio");
+            }
         }
-
+        private Habitacion CrearHabitacion()
+        {
+            return new Habitacion(((Hotel)cmbHotel.SelectedItem).Id, int.Parse(cmbPlazas.SelectedItem.ToString()), cmbCategoria.SelectedItem.ToString(), int.Parse(txtPrecio.Text), rbSi.Checked);
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -120,20 +101,7 @@ namespace Grupo5_Hotel
                 MessageBox.Show(fex.Message);
             }
         }
-        private string Errores
-        {
-            get
-            {
-                return Validacion.ValidarComboBox(cmbHotel.SelectedIndex, "Hotel") +
-                    Validacion.ValidarComboBox (cmbPlazas.SelectedIndex, "Cantidad de plazas")
-                    + Validacion.ValidarComboBox (cmbCategoria.SelectedIndex, "Categoría") +
-                    Validacion.ValidarNumero(txtPrecio.Text, "Precio");
-            }
-        }
-        private Habitacion CrearHabitacion()
-        {
-           return new Habitacion(((Hotel)cmbHotel.SelectedItem).Id, int.Parse(cmbPlazas.SelectedItem.ToString()), cmbCategoria.SelectedItem.ToString(), int.Parse(txtPrecio.Text), rbSi.Checked);
-        }
+
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
@@ -146,9 +114,5 @@ namespace Grupo5_Hotel
             BorrarCampos();
         }
 
-        private void rbSi_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

@@ -44,7 +44,6 @@ namespace Grupo5_Hotel.Negocio
             
             foreach (Reserva r in cacheReservas)
             {
-                //Habitacion habitacion = DevolverHabitacionDe(r);
                 Hotel hotel = listaHoteles.SingleOrDefault(x => x.Habitaciones.Any(d => d.Id == r.IdHabitacion));
                 Cliente cliente = listaClientes.Find(c => c.Id == r.IdCliente);
                 listaReservaWrapper.Add(new ReservaWrapper(r,  cliente, hotel));
@@ -54,8 +53,7 @@ namespace Grupo5_Hotel.Negocio
 
         private static void LlenarListas()
         {
-            //listaHoteles = HotelServicio.TraerHoteles();
-            //listaClientes = ClienteServicio.TraerClientes();
+ 
             listaHabitaciones = new List<Habitacion>();
             foreach (Hotel h in listaHoteles)
             {
@@ -112,8 +110,6 @@ namespace Grupo5_Hotel.Negocio
                throw new CantHuespedesException();
             }
         }
-        //esto quedó medio desprolijo, no se si es mejor que la lista sea una propiedad, pero creo que 
-        //empeoro mas la performance
         public static List<ReservaWrapper> TraerReservasPorHotel(Hotel hotel)
         {
             List<ReservaWrapper> reservasporhotel = new List<ReservaWrapper>();
@@ -127,9 +123,6 @@ namespace Grupo5_Hotel.Negocio
         {
             List<ReservaWrapper> reservasPorCliente = new List <ReservaWrapper>();
             reservasPorCliente = listaReservaWrapper.FindAll(r => r.Reserva.IdCliente == idcliente);
-            /*foreach (ReservaWrapper r in listaReservaWrapper)
-                if (r.Reserva.IdCliente== idcliente)
-                    reservasPorCliente.Add(r);*/
             return reservasPorCliente;
         }
 

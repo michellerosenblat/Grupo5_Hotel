@@ -17,17 +17,17 @@ namespace Grupo5_Hotel
             InitializeComponent();
         }
 
-        private void btnCliente_Click(object sender, EventArgs e)
-        {
-            ClienteForm clienteForm = new ClienteForm ();
-            clienteForm.Owner = this;
-            clienteForm.Show();
-            this.Hide();
-        }
         private void Menu_Load(object sender, EventArgs e)
         {
 
 
+        }
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            ClienteForm clienteForm = new ClienteForm();
+            clienteForm.Owner = this;
+            clienteForm.Show();
+            this.Hide();
         }
 
         private void btnHotel_Click(object sender, EventArgs e)

@@ -12,11 +12,6 @@ namespace Grupo5_Hotel.Negocio
 {
     public static class HabitacionServicio
     {
-        //private HabitacionMapper mapper;
-        /*public static HabitacionServicio()
-        {
-            //mapper = new HabitacionMapper();
-        }*/
         public static List <Habitacion>TraerHabitacionesPorId(int idHotel)
         {
             return HabitacionMapper.TraerHabitacionesPorId(idHotel);

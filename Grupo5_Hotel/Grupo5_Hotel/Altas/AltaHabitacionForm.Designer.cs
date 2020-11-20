@@ -59,8 +59,6 @@
             this.cmbHotel.Name = "cmbHotel";
             this.cmbHotel.Size = new System.Drawing.Size(298, 28);
             this.cmbHotel.TabIndex = 0;
-            this.cmbHotel.SelectedIndexChanged += new System.EventHandler(this.cmbHotel_SelectedIndexChanged);
-            this.cmbHotel.Click += new System.EventHandler(this.cmbHotel_Click);
             // 
             // Hotel
             // 
@@ -95,8 +93,6 @@
             this.cmbPlazas.Name = "cmbPlazas";
             this.cmbPlazas.Size = new System.Drawing.Size(298, 28);
             this.cmbPlazas.TabIndex = 3;
-            this.cmbPlazas.SelectedIndexChanged += new System.EventHandler(this.cmbPlazas_SelectedIndexChanged);
-            this.cmbPlazas.Click += new System.EventHandler(this.cmbPlazas_Click);
             // 
             // label2
             // 
@@ -119,7 +115,6 @@
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(298, 28);
             this.cmbCategoria.TabIndex = 5;
-            this.cmbCategoria.Click += new System.EventHandler(this.cmbCategoria_Click);
             // 
             // Precio
             // 
@@ -141,7 +136,6 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(299, 26);
             this.txtPrecio.TabIndex = 7;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // lblCancelable
             // 
@@ -205,7 +199,6 @@
             this.rbSi.TabStop = true;
             this.rbSi.Text = "Si";
             this.rbSi.UseVisualStyleBackColor = true;
-            this.rbSi.CheckedChanged += new System.EventHandler(this.rbSi_CheckedChanged);
             // 
             // rbNo
             // 
